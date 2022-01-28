@@ -1,0 +1,211 @@
+$ 
+$$$$ Combo ITF $$$$
+$ 
+$ Cap Unit: 1e-12 F
+$ Res Unit: 1000 ohm
+$ 
+$ 
+$$ begin_min_ITF
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$ ITF file: saed90nm.itf
+$ STARRCXT process file for SAED 90NM Logic 1P9M 1.2V/2.5V
+$ Author : SAED team
+$ Based on : SAED Design Rule: SAED_90_LO_DR_01
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$ Revision History:
+$ Rev.		Date		Who		What
+$ ----------------------------------------------------------------------------------------
+$ Rev.1.0 	2008/09/25	Tigran Sh.	Initial version.
+$ ----------------------------------------------------------------------------------------
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$ Copyright (c), 2007-2008 Synopsys, Inc. All rights reserved.
+$ This process description file and the associated documentation are confidential 
+$ and proprietary to Synopsys, Inc. 
+$ 
+$ DISCLAIMER
+$ The information contained herein is provided by Synopsys, Inc. on 
+$ an "AS IS" basis without any warranty, and Synopsys has no obligation 
+$ to support or otherwise maintain the information.
+$
+$ Synopsys, Inc. disclaims any representation that the information 
+$ does not infringe any intellectual property rights or proprietary
+$ rights of any third parties. There are no other warranties given by
+$ Synopsys, whether express, implied or statutory, including, without
+$ limitation, implied warranties of merchantability and fitness for a
+$ particular purpose.
+$
+$ Synopsys, Inc. reserves the right to make changes to the information 
+$ at any time and without notice.
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+TECHNOLOGY=saed90nm_1p9m_1t_Cmin
+DIELECTRIC PASS { THICKNESS = 5.00 ER=3.9 }
+CONDUCTOR M9 { THICKNESS = 0.75 WMIN=0.45 SMIN=0.45 RPSQ=0.028 }
+DIELECTRIC D9 { THICKNESS = 1.09 ER=3.9 }
+
+CONDUCTOR M8 { THICKNESS = 0.23 WMIN=0.16 SMIN=0.16 RPSQ=0.09 }
+DIELECTRIC D8 { THICKNESS = 1.09 ER=3.9 }
+
+CONDUCTOR M7 { THICKNESS = 0.23 WMIN=0.16 SMIN=0.16 RPSQ=0.09 }
+DIELECTRIC D7 { THICKNESS = 1.09 ER=3.9 }
+
+CONDUCTOR M6 { THICKNESS = 0.23 WMIN=0.16 SMIN=0.16 RPSQ=0.09 }
+DIELECTRIC D6 { THICKNESS = 1.09 ER=3.9 }
+
+CONDUCTOR M5 { THICKNESS = 0.23 WMIN=0.16 SMIN=0.16 RPSQ=0.09 }
+DIELECTRIC D5 { THICKNESS = 1.09 ER=3.9 }
+
+CONDUCTOR M4 { THICKNESS = 0.23 WMIN=0.16 SMIN=0.16 RPSQ=0.09 }
+DIELECTRIC D4 { THICKNESS = 1.09 ER=3.9 }
+
+CONDUCTOR M3 { THICKNESS = 0.23 WMIN=0.16 SMIN=0.16 RPSQ=0.09 }
+DIELECTRIC D3 { THICKNESS = 1.09 ER=3.9 }
+
+CONDUCTOR M2 { THICKNESS = 0.23 WMIN=0.16 SMIN=0.16 RPSQ=0.09 }
+DIELECTRIC D2 { THICKNESS = 1.09 ER=3.9 }
+
+CONDUCTOR M1 { THICKNESS = 0.23 WMIN=0.14 SMIN=0.14 RPSQ=0.09 }
+DIELECTRIC D1 { THICKNESS = 1.09 ER=3.9 }
+
+CONDUCTOR POLY { THICKNESS = 0.8 WMIN=0.1 SMIN=0.18 RPSQ=11 }
+DIELECTRIC GOX { THICKNESS = 0.1465 ER=3.9 }
+CONDUCTOR  DIFF   {IS_DIFF THICKNESS=0.1445 WMIN=0.12 SMIN=0.14 RPSQ=10}
+DIELECTRIC D0 { THICKNESS = 0.06 ER=3.9 }
+
+VIA SUBCONT  { FROM=SUBSTRATE TO=DIFF RPV=0.00001 AREA=0.0144}
+VIA DIFFCONT { FROM=DIFF TO=M1 AREA=0.0169 RPV=10 }
+VIA POLYCONT { FROM=POLY TO=M1 AREA=0.0169 RPV=8 }
+VIA VIA1 { FROM=M1 TO=M2 AREA=0.0196 RPV=0.9 }
+VIA VIA2 { FROM=M2 TO=M3 AREA=0.0196 RPV=0.9 }
+VIA VIA3 { FROM=M3 TO=M4 AREA=0.0196 RPV=0.9 }
+VIA VIA4 { FROM=M4 TO=M5 AREA=0.0196 RPV=0.9 }
+VIA VIA5 { FROM=M5 TO=M6 AREA=0.0196 RPV=0.9 }
+VIA VIA6 { FROM=M6 TO=M7 AREA=0.0196 RPV=0.9 }
+VIA VIA7 { FROM=M7 TO=M8 AREA=0.0196 RPV=0.9 }
+VIA VIA8 { FROM=M8 TO=M9 AREA=0.1156 RPV=0.1525 }
+
+
+$$ end_min_ITF
+$ 
+$$ begin_max_ITF
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$ ITF file: saed90nm.itf
+$ STARRCXT process file for SAED 90NM Logic 1P9M 1.2V/2.5V
+$ Author : SAED team
+$ Based on : SAED Design Rule: SAED_90_LO_DR_01
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$ Revision History:
+$ Rev.		Date		Who		What
+$ ----------------------------------------------------------------------------------------
+$ Rev.1.0 	2008/09/25	Tigran Sh.	Initial version.
+$ ----------------------------------------------------------------------------------------
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$ Copyright (c), 2007-2008 Synopsys, Inc. All rights reserved.
+$ This process description file and the associated documentation are confidential 
+$ and proprietary to Synopsys, Inc. 
+$ 
+$ DISCLAIMER
+$ The information contained herein is provided by Synopsys, Inc. on 
+$ an "AS IS" basis without any warranty, and Synopsys has no obligation 
+$ to support or otherwise maintain the information.
+$
+$ Synopsys, Inc. disclaims any representation that the information 
+$ does not infringe any intellectual property rights or proprietary
+$ rights of any third parties. There are no other warranties given by
+$ Synopsys, whether express, implied or statutory, including, without
+$ limitation, implied warranties of merchantability and fitness for a
+$ particular purpose.
+$
+$ Synopsys, Inc. reserves the right to make changes to the information 
+$ at any time and without notice.
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+TECHNOLOGY=saed90nm_1p9m_1t_Cmax
+DIELECTRIC PASS { THICKNESS = 5.00 ER=3.9 }
+CONDUCTOR M9 { THICKNESS = 1.1 WMIN=0.45 SMIN=0.45 RPSQ=0.028 }
+DIELECTRIC D9 { THICKNESS = 0.8 ER=3.9 }
+
+CONDUCTOR M8 { THICKNESS = 0.3 WMIN=0.16 SMIN=0.16 RPSQ=0.09 }
+DIELECTRIC D8 { THICKNESS = 0.8 ER=3.9 }
+
+CONDUCTOR M7 { THICKNESS = 0.3 WMIN=0.16 SMIN=0.16 RPSQ=0.09 }
+DIELECTRIC D7 { THICKNESS = 0.8 ER=3.9 }
+
+CONDUCTOR M6 { THICKNESS = 0.3 WMIN=0.16 SMIN=0.16 RPSQ=0.09 }
+DIELECTRIC D6 { THICKNESS = 0.8 ER=3.9 }
+
+CONDUCTOR M5 { THICKNESS = 0.3 WMIN=0.16 SMIN=0.16 RPSQ=0.09 }
+DIELECTRIC D5 { THICKNESS = 0.8 ER=3.9 }
+
+CONDUCTOR M4 { THICKNESS = 0.3 WMIN=0.16 SMIN=0.16 RPSQ=0.09 }
+DIELECTRIC D4 { THICKNESS = 0.8 ER=3.9 }
+
+CONDUCTOR M3 { THICKNESS = 0.3 WMIN=0.16 SMIN=0.16 RPSQ=0.09 }
+DIELECTRIC D3 { THICKNESS = 0.8 ER=3.9 }
+
+CONDUCTOR M2 { THICKNESS = 0.3 WMIN=0.16 SMIN=0.16 RPSQ=0.09 }
+DIELECTRIC D2 { THICKNESS = 0.8 ER=3.9 }
+
+CONDUCTOR M1 { THICKNESS = 0.3 WMIN=0.14 SMIN=0.14 RPSQ=0.09 }
+DIELECTRIC D1 { THICKNESS = 0.8 ER=3.9 }
+
+CONDUCTOR POLY { THICKNESS = 0.11 WMIN=0.1 SMIN=0.18 RPSQ=11 }
+DIELECTRIC GOX { THICKNESS = 0.1465 ER=3.9 }
+CONDUCTOR  DIFF   {IS_DIFF THICKNESS=0.1445 WMIN=0.12 SMIN=0.14 RPSQ=10}
+DIELECTRIC D0 { THICKNESS = 0.049 ER=3.9 }
+
+VIA SUBCONT  { FROM=SUBSTRATE TO=DIFF RPV=0.00001 AREA=0.0144}
+VIA DIFFCONT { FROM=DIFF TO=M1 AREA=0.0169 RPV=10 }
+VIA POLYCONT { FROM=POLY TO=M1 AREA=0.0169 RPV=8 }
+VIA VIA1 { FROM=M1 TO=M2 AREA=0.0196 RPV=0.9 }
+VIA VIA2 { FROM=M2 TO=M3 AREA=0.0196 RPV=0.9 }
+VIA VIA3 { FROM=M3 TO=M4 AREA=0.0196 RPV=0.9 }
+VIA VIA4 { FROM=M4 TO=M5 AREA=0.0196 RPV=0.9 }
+VIA VIA5 { FROM=M5 TO=M6 AREA=0.0196 RPV=0.9 }
+VIA VIA6 { FROM=M6 TO=M7 AREA=0.0196 RPV=0.9 }
+VIA VIA7 { FROM=M7 TO=M8 AREA=0.0196 RPV=0.9 }
+VIA VIA8 { FROM=M8 TO=M9 AREA=0.1156 RPV=0.1525 }
+
+
+
+$$ end_max_ITF
+$ 
+$$ begin_mapping_file
+$ conducting_layers
+$         DIFF     DIFF
+$ 	PO	 POLY
+$ 	M1	 M1	   
+$ 	M2	 M2	   
+$ 	M3	 M3	   
+$ 	M4	 M4
+$ 	M5	 M5	   
+$ 	M6	 M6	   
+$ 	M7	 M7	   
+$ 	M8	 M8	   
+$ 	M9	 M9		  
+$ 	
+$ via_layers
+$ 	CO	 POLYCONT 
+$ 	VIA1	 VIA1 
+$ 	VIA2	 VIA2   	 
+$ 	VIA3	 VIA3   	 
+$ 	VIA4	 VIA4   	 
+$ 	VIA5	 VIA5   	 
+$ 	VIA6	 VIA6   	 
+$ 	VIA7	 VIA7   	 
+$ 	VIA8	 VIA8   		
+$ 
+$ marker_layers
+$ 	metal1_pin
+$ 	metal2_pin
+$ 	metal3_pin
+$ 	metal4_pin
+$ 	metal5_pin
+$ 	metal6_pin
+$ 	metal7_pin
+$ 	metal8_pin	
+$ 	metal9_pin	
+$ 
+$$ end_mapping_file
