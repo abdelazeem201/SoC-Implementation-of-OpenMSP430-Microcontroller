@@ -1,0 +1,574 @@
+Info:  Net r:/WORK/omsp_watchdog/per_dout_15_ is undriven.
+Info:  Net r:/WORK/omsp_watchdog/per_dout_13_ is undriven.
+Info:  Net r:/WORK/omsp_watchdog/per_dout_12_ is undriven.
+Info:  Net r:/WORK/omsp_watchdog/per_dout_10_ is undriven.
+Info:  Net r:/WORK/omsp_watchdog/per_dout_9_ is undriven.
+Info:  Net r:/WORK/omsp_watchdog/per_dout_8_ is undriven.
+Info:  Net r:/WORK/omsp_watchdog/per_dout_5_ is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[31] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[30] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[29] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[28] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[27] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[26] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[25] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[24] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[23] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[22] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[21] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[20] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[19] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[18] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[17] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[16] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[15] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[14] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[13] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[12] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[11] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[10] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[9] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[8] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[7] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[6] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[5] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[4] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[3] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[2] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[1] is undriven.
+Info:  Net r:/WORK/omsp_sfr/cpu_id[0] is undriven.
+Info:  Net r:/WORK/omsp_sfr/per_dout[15] is undriven.
+Info:  Net r:/WORK/omsp_sfr/per_dout[14] is undriven.
+Info:  Net r:/WORK/omsp_sfr/per_dout[13] is undriven.
+Info:  Net r:/WORK/omsp_sfr/per_dout[11] is undriven.
+Info:  Net r:/WORK/omsp_sfr/per_dout[10] is undriven.
+Info:  Net r:/WORK/omsp_sfr/per_dout[8] is undriven.
+Info:  Net r:/WORK/omsp_sfr/per_dout[7] is undriven.
+Info:  Net r:/WORK/omsp_sfr/per_dout[5] is undriven.
+Info:  Net r:/WORK/omsp_sfr/per_dout[2] is undriven.
+Info:  Net r:/WORK/omsp_mem_backbone/per_addr[13] is undriven.
+Info:  Net r:/WORK/omsp_mem_backbone/per_addr[12] is undriven.
+Info:  Net r:/WORK/omsp_mem_backbone/per_addr[11] is undriven.
+Info:  Net r:/WORK/omsp_mem_backbone/per_addr[10] is undriven.
+Info:  Net r:/WORK/omsp_mem_backbone/per_addr[9] is undriven.
+Info:  Net r:/WORK/omsp_mem_backbone/per_addr[8] is undriven.
+Info:  Net r:/WORK/omsp_execution_unit/mab[0] is undriven.
+Info:  Net r:/WORK/omsp_frontend/inst_ad[7] is undriven.
+Info:  Net r:/WORK/omsp_frontend/inst_ad[5] is undriven.
+Info:  Net r:/WORK/omsp_frontend/inst_ad[4] is undriven.
+Info:  Net r:/WORK/omsp_frontend/inst_ad[3] is undriven.
+Info:  Net r:/WORK/omsp_frontend/inst_ad[2] is undriven.
+Info:  Net r:/WORK/omsp_frontend/inst_ad[1] is undriven.
+Info:  Net r:/WORK/omsp_frontend/inst_jmp[7] is undriven.
+Info:  Net r:/WORK/omsp_frontend/inst_so[2] is undriven.
+Info:  Net r:/WORK/omsp_frontend/mab[0] is undriven.
+Info:  Net r:/WORK/omsp_clock_module/aclk_en is undriven.
+Info:  Net r:/WORK/omsp_clock_module/smclk_en is undriven.
+Info:  Net r:/WORK/omsp_sync_cell_6/data_out is undriven.
+Info:  Net r:/WORK/omsp_sync_cell_8/data_out is undriven.
+Info:  Net r:/WORK/omsp_sync_cell_10/data_out is undriven.
+Info:  Net r:/WORK/omsp_sync_cell_14/data_out is undriven.
+Info:  Net r:/WORK/omsp_sync_cell_16/data_out is undriven.
+Info:  Net i:/WORK/omsp_watchdog/per_dout_15_ is undriven.
+Info:  Net i:/WORK/omsp_watchdog/per_dout_13_ is undriven.
+Info:  Net i:/WORK/omsp_watchdog/per_dout_12_ is undriven.
+Info:  Net i:/WORK/omsp_watchdog/per_dout_10_ is undriven.
+Info:  Net i:/WORK/omsp_watchdog/per_dout_9_ is undriven.
+Info:  Net i:/WORK/omsp_watchdog/per_dout_8_ is undriven.
+Info:  Net i:/WORK/omsp_watchdog/per_dout_5_ is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[31] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[30] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[29] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[28] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[27] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[26] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[25] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[24] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[23] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[22] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[21] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[20] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[19] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[18] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[17] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[16] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[15] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[14] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[13] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[12] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[11] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[10] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[9] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[8] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[7] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[6] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[5] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[4] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[3] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[2] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[1] is undriven.
+Info:  Net i:/WORK/omsp_sfr/cpu_id[0] is undriven.
+Info:  Net i:/WORK/omsp_sfr/per_dout[15] is undriven.
+Info:  Net i:/WORK/omsp_sfr/per_dout[14] is undriven.
+Info:  Net i:/WORK/omsp_sfr/per_dout[13] is undriven.
+Info:  Net i:/WORK/omsp_sfr/per_dout[11] is undriven.
+Info:  Net i:/WORK/omsp_sfr/per_dout[10] is undriven.
+Info:  Net i:/WORK/omsp_sfr/per_dout[8] is undriven.
+Info:  Net i:/WORK/omsp_sfr/per_dout[7] is undriven.
+Info:  Net i:/WORK/omsp_sfr/per_dout[5] is undriven.
+Info:  Net i:/WORK/omsp_sfr/per_dout[2] is undriven.
+Info:  Net i:/WORK/omsp_mem_backbone/per_addr[13] is undriven.
+Info:  Net i:/WORK/omsp_mem_backbone/per_addr[12] is undriven.
+Info:  Net i:/WORK/omsp_mem_backbone/per_addr[11] is undriven.
+Info:  Net i:/WORK/omsp_mem_backbone/per_addr[10] is undriven.
+Info:  Net i:/WORK/omsp_mem_backbone/per_addr[9] is undriven.
+Info:  Net i:/WORK/omsp_mem_backbone/per_addr[8] is undriven.
+Info:  Net i:/WORK/omsp_execution_unit/mab[0] is undriven.
+Info:  Net i:/WORK/omsp_frontend/inst_ad[7] is undriven.
+Info:  Net i:/WORK/omsp_frontend/inst_ad[5] is undriven.
+Info:  Net i:/WORK/omsp_frontend/inst_ad[4] is undriven.
+Info:  Net i:/WORK/omsp_frontend/inst_ad[3] is undriven.
+Info:  Net i:/WORK/omsp_frontend/inst_ad[2] is undriven.
+Info:  Net i:/WORK/omsp_frontend/inst_ad[1] is undriven.
+Info:  Net i:/WORK/omsp_frontend/inst_jmp[7] is undriven.
+Info:  Net i:/WORK/omsp_frontend/inst_so[2] is undriven.
+Info:  Net i:/WORK/omsp_frontend/mab[0] is undriven.
+Info:  Net i:/WORK/omsp_clock_module/aclk_en is undriven.
+Info:  Net i:/WORK/omsp_clock_module/smclk_en is undriven.
+Info:  Net i:/WORK/omsp_sync_cell_6/data_out is undriven.
+Info:  Net i:/WORK/omsp_sync_cell_8/data_out is undriven.
+Info:  Net i:/WORK/omsp_sync_cell_10/data_out is undriven.
+Info:  Net i:/WORK/omsp_sync_cell_14/data_out is undriven.
+Info:  Net i:/WORK/omsp_sync_cell_16/data_out is undriven.
+Info:  guide_replace 18 (Line: 104)  Could not find pre_resource 'sub_167' in design 'omsp_mem_backbone'.
+Info:  guide_replace 19 (Line: 114)  Could not find pre_resource 'sub_159' in design 'omsp_mem_backbone'.
+Info:  guide_replace 20 (Line: 124)  Could not find pre_resource 'sub_163' in design 'omsp_mem_backbone'.
+Info:  guide_replace 56 (Line: 280)  Could not find pre_resource 'add_102_C185' in design 'omsp_alu'.
+Info:  SVF Operation 56 (Line: 280) - replace.  Status: rejected
+
+Info:  guide_replace 57 (Line: 295)  Could not find pre_resource 'add_102_C186' in design 'omsp_alu'.
+Info:  SVF Operation 57 (Line: 295) - replace.  Status: rejected
+
+Info:  guide_replace 58 (Line: 310)  Could not find pre_resource 'add_102_C187' in design 'omsp_alu'.
+Info:  SVF Operation 58 (Line: 310) - replace.  Status: rejected
+
+Info:  guide_replace 59 (Line: 325)  Could not find pre_resource 'add_102_C188' in design 'omsp_alu'.
+Info:  SVF Operation 59 (Line: 325) - replace.  Status: rejected
+
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare nets 'scan_enable' and 'enable'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare pins 'IN1' and 'IN1'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare cell pins 'IN1' and 'IN1'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare cells 'U2' and 'U2'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare design cells 'U2' and 'U2'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare designs 'omsp_clock_gate_0' and 'omsp_clock_gate_18'.
+Info:  guide_uniquify 67 (Line: 369)  Can't uniquify, designs are not identical.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare design ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare designs 'omsp_sync_cell_0' and 'omsp_sync_cell_2'.
+Info:  guide_uniquify 67 (Line: 369)  Can't uniquify, designs are not identical.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare design ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare designs 'omsp_sync_cell_0' and 'omsp_sync_cell_3'.
+Info:  guide_uniquify 67 (Line: 369)  Can't uniquify, designs are not identical.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare design ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare designs 'omsp_sync_cell_0' and 'omsp_sync_cell_4'.
+Info:  guide_uniquify 67 (Line: 369)  Can't uniquify, designs are not identical.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare design ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare designs 'omsp_sync_cell_0' and 'omsp_sync_cell_5'.
+Info:  guide_uniquify 67 (Line: 369)  Can't uniquify, designs are not identical.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare nets 'n4' and 'n1'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare pins 'ZN' and 'ZN'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare cell pins 'ZN' and 'ZN'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare cells 'U3' and 'U3'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare design cells 'U3' and 'U3'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare designs 'omsp_wakeup_cell_0' and 'omsp_wakeup_cell'.
+Info:  guide_uniquify 67 (Line: 369)  Can't uniquify, designs are not identical.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare nets 'scan_enable' and 'enable'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare pins 'IN1' and 'IN1'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare cell pins 'IN1' and 'IN1'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare cells 'U2' and 'U2'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare design cells 'U2' and 'U2'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare designs 'omsp_clock_gate_0' and 'omsp_clock_gate_15'.
+Info:  guide_uniquify 67 (Line: 369)  Can't uniquify, designs are not identical.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare design ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare designs 'omsp_sync_cell_0' and 'omsp_sync_cell_6'.
+Info:  guide_uniquify 67 (Line: 369)  Can't uniquify, designs are not identical.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare nets 'n5' and 'n2'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare pins 'ZN' and 'ZN'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare cell pins 'ZN' and 'ZN'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare cells 'U4' and 'U4'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare design cells 'U4' and 'U4'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare designs 'omsp_sync_reset_0' and 'omsp_sync_reset'.
+Info:  guide_uniquify 67 (Line: 369)  Can't uniquify, designs are not identical.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare design ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare designs 'omsp_sync_cell_0' and 'omsp_sync_cell_7'.
+Info:  guide_uniquify 67 (Line: 369)  Can't uniquify, designs are not identical.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare design ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare designs 'omsp_sync_cell_0' and 'omsp_sync_cell_8'.
+Info:  guide_uniquify 67 (Line: 369)  Can't uniquify, designs are not identical.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare nets 'test_so1' and 'in0_select_s'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare pins 'D' and 'D'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare cell pins 'D' and 'D'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare cells 'in0_select_ss_reg' and 'in0_select_ss_reg'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare design cells 'in0_select_ss_reg' and 'in0_select_ss_reg'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare designs 'omsp_clock_mux_0' and 'omsp_clock_mux_2'.
+Info:  guide_uniquify 67 (Line: 369)  Can't uniquify, designs are not identical.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare design ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare designs 'omsp_sync_cell_0' and 'omsp_sync_cell_9'.
+Info:  guide_uniquify 67 (Line: 369)  Can't uniquify, designs are not identical.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare design ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare designs 'omsp_sync_cell_0' and 'omsp_sync_cell_10'.
+Info:  guide_uniquify 67 (Line: 369)  Can't uniquify, designs are not identical.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare nets 'n2' and 'n1'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare pins 'ZN' and 'ZN'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare cell pins 'ZN' and 'ZN'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare cells 'U4' and 'U4'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare design cells 'U4' and 'U4'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare designs 'omsp_clock_gate_0' and 'omsp_clock_gate'.
+Info:  guide_uniquify 67 (Line: 369)  Can't uniquify, designs are not identical.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare design ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare designs 'omsp_sync_cell_0' and 'omsp_sync_cell_11'.
+Info:  guide_uniquify 67 (Line: 369)  Can't uniquify, designs are not identical.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare nets 'test_so1' and 'in0_select_s'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare pins 'D' and 'D'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare cell pins 'D' and 'D'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare cells 'in0_select_ss_reg' and 'in0_select_ss_reg'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare design cells 'in0_select_ss_reg' and 'in0_select_ss_reg'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare designs 'omsp_clock_mux_0' and 'omsp_clock_mux'.
+Info:  guide_uniquify 67 (Line: 369)  Can't uniquify, designs are not identical.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare design ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare designs 'omsp_sync_cell_0' and 'omsp_sync_cell_12'.
+Info:  guide_uniquify 67 (Line: 369)  Can't uniquify, designs are not identical.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare design ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare designs 'omsp_sync_cell_0' and 'omsp_sync_cell_13'.
+Info:  guide_uniquify 67 (Line: 369)  Can't uniquify, designs are not identical.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare design ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare designs 'omsp_sync_cell_0' and 'omsp_sync_cell_14'.
+Info:  guide_uniquify 67 (Line: 369)  Can't uniquify, designs are not identical.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare nets 'data_in_func' and '<null>'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare pins 'data_in_func' and 'data_in_func'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare ports 'data_in_func' and 'data_in_func'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare design ports 'data_in_func' and 'data_in_func'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare designs 'omsp_scan_mux_0' and 'omsp_scan_mux_12'.
+Info:  guide_uniquify 67 (Line: 369)  Can't uniquify, designs are not identical.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare design ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare designs 'omsp_sync_cell_0' and 'omsp_sync_cell_15'.
+Info:  guide_uniquify 67 (Line: 369)  Can't uniquify, designs are not identical.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare design ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare designs 'omsp_sync_cell_0' and 'omsp_sync_cell_16'.
+Info:  guide_uniquify 67 (Line: 369)  Can't uniquify, designs are not identical.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare nets 'data_in_func' and '<null>'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare pins 'data_in_func' and 'data_in_func'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare ports 'data_in_func' and 'data_in_func'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare design ports 'data_in_func' and 'data_in_func'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare designs 'omsp_scan_mux_0' and 'omsp_scan_mux_14'.
+Info:  guide_uniquify 67 (Line: 369)  Can't uniquify, designs are not identical.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare design ports 'data_out_BAR' and 'data_out'.
+Info:  guide_uniquify 67 (Line: 369)  Failed - compare designs 'omsp_sync_cell_0' and 'omsp_sync_cell'.
+Info:  guide_uniquify 67 (Line: 369)  Can't uniquify, designs are not identical.
+Info:  guide_uniquify 67 (Line: 369)  Cannot find object 'sfr_0/wakeup_cell_nmi/scan_mux_rst' in design 'openMSP430'.
+Info:  guide_uniquify 67 (Line: 369)  Cannot find object 'sfr_0/wakeup_cell_nmi/scan_mux_clk' in design 'openMSP430'.
+Info:  SVF Operation 67 (Line: 369) - uniquify.  Status: rejected
+
+Info:  guide_change_names 68 (Line: 467)  Cannot find or apply name change to cell 'add_122' in design 'omsp_register_file'.
+Info:  SVF Operation 68 (Line: 467) - change_names.  Status: rejected
+
+Info:  guide_reg_merging 69 (Line: 471) Cannot find master reference cell 'r2_reg[9]'.
+Info:  SVF Operation 69 (Line: 471) - reg_merging.  Status: rejected
+
+Info:  guide_change_names 70 (Line: 478)  Cannot find or apply name change to cell 'ne_233' in design 'omsp_frontend'.
+Info:  SVF Operation 70 (Line: 478) - change_names.  Status: rejected
+
+Info:  guide_change_names 71 (Line: 482)  Cannot find or apply name change to cell 'add_361' in design 'omsp_frontend'.
+Info:  SVF Operation 71 (Line: 482) - change_names.  Status: rejected
+
+Info:  guide_change_names 72 (Line: 486)  Cannot find or apply name change to cell 'add_410' in design 'omsp_frontend'.
+Info:  SVF Operation 72 (Line: 486) - change_names.  Status: rejected
+
+Info:  guide_change_names 73 (Line: 490)  Cannot find or apply name change to cell 'add_762' in design 'omsp_frontend'.
+Info:  SVF Operation 73 (Line: 490) - change_names.  Status: rejected
+
+Info:  guide_reg_merging 74 (Line: 494) Cannot find master reference cell 'inst_ad_reg[2]'.
+Info:  SVF Operation 74 (Line: 494) - reg_merging.  Status: rejected
+
+Info:  guide_reg_merging 75 (Line: 499) Cannot find master reference cell 'inst_src_bin_reg[2]'.
+Info:  SVF Operation 75 (Line: 499) - reg_merging.  Status: rejected
+
+Info:  guide_reg_merging 76 (Line: 504) Cannot find master reference cell 'inst_src_bin_reg[3]'.
+Info:  SVF Operation 76 (Line: 504) - reg_merging.  Status: rejected
+
+Info:  guide_inv_push 77 (Line: 509)  Cannot find register 'inst_type_reg[1]'..
+Info:  SVF Operation 77 (Line: 509) - inv_push.  Status: rejected
+
+Info:  guide_inv_push 78 (Line: 513)  Cannot find register 'inst_type_reg[0]'..
+Info:  SVF Operation 78 (Line: 513) - inv_push.  Status: rejected
+
+Info:  guide_inv_push 79 (Line: 517)  Cannot find register 'inst_jmp_bin_reg[2]'..
+Info:  SVF Operation 79 (Line: 517) - inv_push.  Status: rejected
+
+Info:  guide_inv_push 80 (Line: 521)  Cannot find register 'inst_dest_bin_reg[1]'..
+Info:  SVF Operation 80 (Line: 521) - inv_push.  Status: rejected
+
+Info:  guide_inv_push 81 (Line: 525)  Cannot find register 'inst_src_bin_reg[1]'..
+Info:  SVF Operation 81 (Line: 525) - inv_push.  Status: rejected
+
+Info:  guide_inv_push 82 (Line: 529)  Cannot find register 'inst_src_bin_reg[0]'..
+Info:  SVF Operation 82 (Line: 529) - inv_push.  Status: rejected
+
+Info:  guide_inv_push 83 (Line: 533)  Cannot find register 'inst_alu_reg[1]'..
+Info:  SVF Operation 83 (Line: 533) - inv_push.  Status: rejected
+
+Info:  guide_change_names 84 (Line: 537)  Cannot find or apply name change to cell 'add_596_S2' in design 'omsp_clock_module'.
+Info:  SVF Operation 84 (Line: 537) - change_names.  Status: rejected
+
+Info:  guide_change_names 85 (Line: 541)  Cannot find or apply name change to cell 'add_691_S2' in design 'omsp_clock_module'.
+Info:  SVF Operation 85 (Line: 541) - change_names.  Status: rejected
+
+Info:  guide_change_names 86 (Line: 545)  Cannot find or apply name change to cell 'add_833_S2' in design 'omsp_clock_module'.
+Info:  SVF Operation 86 (Line: 545) - change_names.  Status: rejected
+
+Info:  guide_reg_merging 87 (Line: 549) Cannot find master reference cell 'bcsctl2_reg[0]'.
+Info:  SVF Operation 87 (Line: 549) - reg_merging.  Status: rejected
+
+Info:  guide_reg_merging 88 (Line: 554) Cannot find master reference cell 'bcsctl1_reg[0]'.
+Info:  SVF Operation 88 (Line: 554) - reg_merging.  Status: rejected
+
+Info:  guide_inv_push 89 (Line: 559)  Cannot find register 'divax_s_reg[1]'..
+Info:  SVF Operation 89 (Line: 559) - inv_push.  Status: rejected
+
+Info:  guide_inv_push 90 (Line: 563)  Cannot find register 'divax_ss_reg[1]'..
+Info:  SVF Operation 90 (Line: 563) - inv_push.  Status: rejected
+
+Info:  guide_inv_push 91 (Line: 567)  Cannot find register 'divax_s_reg[0]'..
+Info:  SVF Operation 91 (Line: 567) - inv_push.  Status: rejected
+
+Info:  guide_inv_push 92 (Line: 571)  Cannot find register 'divax_ss_reg[0]'..
+Info:  SVF Operation 92 (Line: 571) - inv_push.  Status: rejected
+
+Info:  guide_inv_push 93 (Line: 575)  Cannot find register 'divsx_s_reg[1]'..
+Info:  SVF Operation 93 (Line: 575) - inv_push.  Status: rejected
+
+Info:  guide_inv_push 94 (Line: 579)  Cannot find register 'divsx_ss_reg[1]'..
+Info:  SVF Operation 94 (Line: 579) - inv_push.  Status: rejected
+
+Info:  guide_inv_push 95 (Line: 583)  Cannot find register 'divsx_s_reg[0]'..
+Info:  SVF Operation 95 (Line: 583) - inv_push.  Status: rejected
+
+Info:  guide_inv_push 96 (Line: 587)  Cannot find register 'divsx_ss_reg[0]'..
+Info:  SVF Operation 96 (Line: 587) - inv_push.  Status: rejected
+
+Info:  guide_uniquify 98 (Line: 597)  Cannot find object 'U1' in design 'omsp_divider_16b'.
+Info:  SVF Operation 98 (Line: 597) - uniquify.  Status: rejected
+
+Info:  guide_multiplier 99 (Line: 601) Cannot find reference cell for instance 'U1' in design 'omsp_divider_16b'.
+Info:  SVF Operation 99 (Line: 601) - multiplier.  Status: rejected
+
+Info:  guide_change_names 100 (Line: 608)  Cannot find or apply name change to cell 'add_416' in design 'omsp_dbg'.
+Info:  SVF Operation 100 (Line: 608) - change_names.  Status: rejected
+
+Info:  guide_change_names 101 (Line: 612)  Cannot find or apply name change to cell 'add_429' in design 'omsp_dbg'.
+Info:  SVF Operation 101 (Line: 612) - change_names.  Status: rejected
+
+Info:  guide_merge 102 (Line: 616)  Could not find pre_resource 'add_171' in design 'omsp_alu'.
+Info:  guide_merge 102 (Line: 616)  Could not find pre_resource 'add_180' in design 'omsp_alu'.
+Info:  SVF Operation 102 (Line: 616) - merge.  Status: rejected
+
+Info:  guide_replace 103 (Line: 629)  Could not find pre_resource 'add_100_C185' in design 'omsp_alu'.
+Info:  guide_replace 103 (Line: 629)  Could not find pre_resource 'add_100_2_C185' in design 'omsp_alu'.
+Info:  SVF Operation 103 (Line: 629) - replace.  Status: rejected
+
+Info:  guide_merge 104 (Line: 643)  Could not find pre_resource 'EXTRA_ADD_63_1' in design 'omsp_alu'.
+Info:  guide_merge 104 (Line: 643)  Could not find pre_resource 'EXTRA_ADD_63' in design 'omsp_alu'.
+Info:  guide_merge 104 (Line: 643)  Could not find pre_resource 'lt_101_C185' in design 'omsp_alu'.
+Info:  guide_merge 104 (Line: 643)  Could not find pre_resource 'add_102_C185_aco' in design 'omsp_alu'.
+Info:  SVF Operation 104 (Line: 643) - merge.  Status: rejected
+
+Info:  guide_replace 105 (Line: 659)  Could not find pre_resource 'add_100_C186' in design 'omsp_alu'.
+Info:  guide_replace 105 (Line: 659)  Could not find pre_resource 'add_100_2_C186' in design 'omsp_alu'.
+Info:  SVF Operation 105 (Line: 659) - replace.  Status: rejected
+
+Info:  guide_merge 106 (Line: 673)  Could not find pre_resource 'EXTRA_ADD_64_1' in design 'omsp_alu'.
+Info:  guide_merge 106 (Line: 673)  Could not find pre_resource 'EXTRA_ADD_64' in design 'omsp_alu'.
+Info:  guide_merge 106 (Line: 673)  Could not find pre_resource 'lt_101_C186' in design 'omsp_alu'.
+Info:  guide_merge 106 (Line: 673)  Could not find pre_resource 'add_102_C186_aco' in design 'omsp_alu'.
+Info:  SVF Operation 106 (Line: 673) - merge.  Status: rejected
+
+Info:  guide_replace 107 (Line: 689)  Could not find pre_resource 'add_100_C187' in design 'omsp_alu'.
+Info:  guide_replace 107 (Line: 689)  Could not find pre_resource 'add_100_2_C187' in design 'omsp_alu'.
+Info:  SVF Operation 107 (Line: 689) - replace.  Status: rejected
+
+Info:  guide_merge 108 (Line: 703)  Could not find pre_resource 'EXTRA_ADD_65_1' in design 'omsp_alu'.
+Info:  guide_merge 108 (Line: 703)  Could not find pre_resource 'EXTRA_ADD_65' in design 'omsp_alu'.
+Info:  guide_merge 108 (Line: 703)  Could not find pre_resource 'lt_101_C187' in design 'omsp_alu'.
+Info:  guide_merge 108 (Line: 703)  Could not find pre_resource 'add_102_C187_aco' in design 'omsp_alu'.
+Info:  SVF Operation 108 (Line: 703) - merge.  Status: rejected
+
+Info:  guide_replace 109 (Line: 719)  Could not find pre_resource 'add_100_C188' in design 'omsp_alu'.
+Info:  guide_replace 109 (Line: 719)  Could not find pre_resource 'add_100_2_C188' in design 'omsp_alu'.
+Info:  SVF Operation 109 (Line: 719) - replace.  Status: rejected
+
+Info:  guide_merge 110 (Line: 733)  Could not find pre_resource 'EXTRA_ADD_66_1' in design 'omsp_alu'.
+Info:  guide_merge 110 (Line: 733)  Could not find pre_resource 'EXTRA_ADD_66' in design 'omsp_alu'.
+Info:  guide_merge 110 (Line: 733)  Could not find pre_resource 'lt_101_C188' in design 'omsp_alu'.
+Info:  guide_merge 110 (Line: 733)  Could not find pre_resource 'add_102_C188_aco' in design 'omsp_alu'.
+Info:  SVF Operation 110 (Line: 733) - merge.  Status: rejected
+
+Info:  guide_uniquify 111 (Line: 749)  Cannot find object 'DP_OP_71J4_128_7159' in design 'omsp_alu'.
+Info:  guide_uniquify 112 (Line: 753)  Cannot find object 'DP_OP_70J4_127_7159' in design 'omsp_alu'.
+Info:  guide_uniquify 113 (Line: 757)  Cannot find object 'DP_OP_69J4_126_7159' in design 'omsp_alu'.
+Info:  guide_uniquify 114 (Line: 761)  Cannot find object 'DP_OP_68J4_125_7159' in design 'omsp_alu'.
+Info:  guide_uniquify 115 (Line: 765)  Cannot find object 'DP_OP_67J4_124_3245' in design 'omsp_alu'.
+Info:  SVF Operation 115 (Line: 765) - uniquify.  Status: rejected
+
+Info:  guide_datapath 133 (Line: 1133) Cannot find reference cell for instance 'DP_OP_71J4_128_7159' in design 'omsp_alu'.
+Info:  SVF Operation 133 (Line: 1133) - datapath.  Status: rejected
+
+Info:  guide_datapath 134 (Line: 1138) Cannot find reference cell for instance 'DP_OP_70J4_127_7159' in design 'omsp_alu'.
+Info:  SVF Operation 134 (Line: 1138) - datapath.  Status: rejected
+
+Info:  guide_datapath 135 (Line: 1143) Cannot find reference cell for instance 'DP_OP_69J4_126_7159' in design 'omsp_alu'.
+Info:  SVF Operation 135 (Line: 1143) - datapath.  Status: rejected
+
+Info:  guide_datapath 136 (Line: 1148) Cannot find reference cell for instance 'DP_OP_68J4_125_7159' in design 'omsp_alu'.
+Info:  SVF Operation 136 (Line: 1148) - datapath.  Status: rejected
+
+Info:  guide_datapath 137 (Line: 1153) Cannot find reference cell for instance 'DP_OP_67J4_124_3245' in design 'omsp_alu'.
+Info:  SVF Operation 137 (Line: 1153) - datapath.  Status: rejected
+
+Info:  guide_change_names 138 (Line: 1158)  Cannot find or apply name change to cell 'add_322' in design 'omsp_watchdog'.
+Info:  SVF Operation 138 (Line: 1158) - change_names.  Status: rejected
+
+Info:  guide_inv_push 139 (Line: 1162)  Cannot find register 'wdtisx_s_reg[0]'..
+Info:  SVF Operation 139 (Line: 1162) - inv_push.  Status: rejected
+
+Info:  guide_inv_push 140 (Line: 1166)  Cannot find register 'wdtisx_ss_reg[0]'..
+Info:  SVF Operation 140 (Line: 1166) - inv_push.  Status: rejected
+
+Info:  guide_inv_push 141 (Line: 1170)  Cannot find register 'wdtisx_s_reg[1]'..
+Info:  SVF Operation 141 (Line: 1170) - inv_push.  Status: rejected
+
+Info:  guide_inv_push 142 (Line: 1174)  Cannot find register 'wdtisx_ss_reg[1]'..
+Info:  SVF Operation 142 (Line: 1174) - inv_push.  Status: rejected
+
+Info:  guide_inv_push 144 (Line: 1182)  Cannot find register 'data_sync_reg[1]'..
+Info:  SVF Operation 144 (Line: 1182) - inv_push.  Status: rejected
+
+Info:  guide_change_names 145 (Line: 1188)  Cannot find or apply name change to cell 'mult_393' in design 'omsp_multiplier'.
+Info:  SVF Operation 145 (Line: 1188) - change_names.  Status: rejected
+
+Info:  guide_change_names 146 (Line: 1192)  Cannot find or apply name change to cell 'add_399' in design 'omsp_multiplier'.
+Info:  SVF Operation 146 (Line: 1192) - change_names.  Status: rejected
+
+Info:  guide_uniquify 147 (Line: 1196)  Cannot find object 'mult_x_8' in design 'omsp_multiplier'.
+Info:  SVF Operation 147 (Line: 1196) - uniquify.  Status: rejected
+
+Info:  guide_inv_push 148 (Line: 1200)  Cannot find register 'cycle_reg[0]'..
+Info:  SVF Operation 148 (Line: 1200) - inv_push.  Status: rejected
+
+Info:  guide_inv_push 149 (Line: 1204)  Cannot find register 'cycle_reg[1]'..
+Info:  SVF Operation 149 (Line: 1204) - inv_push.  Status: rejected
+
+Info:  guide_multiplier 151 (Line: 1212) Cannot find reference cell for instance 'mult_x_8' in design 'omsp_multiplier'.
+Info:  SVF Operation 151 (Line: 1212) - multiplier.  Status: rejected
+
+Info:  guide_change_names 152 (Line: 1218)  Cannot find or apply name change to cell 'add_215_S2' in design 'omsp_dbg_uart'.
+Info:  SVF Operation 152 (Line: 1218) - change_names.  Status: rejected
+
+Info:  guide_change_names 153 (Line: 1222)  Cannot find or apply name change to cell 'add_241_S2' in design 'omsp_dbg_uart'.
+Info:  SVF Operation 153 (Line: 1222) - change_names.  Status: rejected
+
+Info:  guide_change_names 154 (Line: 1226)  Cannot find or apply name change to cell 'add_247_S2' in design 'omsp_dbg_uart'.
+Info:  SVF Operation 154 (Line: 1226) - change_names.  Status: rejected
+
+Info:  guide_change_names 155 (Line: 1230)  Cannot find or apply name change to cell 'sub_143' in design 'omsp_mem_backbone'.
+Info:  SVF Operation 155 (Line: 1230) - change_names.  Status: rejected
+
+Info:  guide_change_names 156 (Line: 1234)  Cannot find or apply name change to cell 'sub_138' in design 'omsp_mem_backbone'.
+Info:  SVF Operation 156 (Line: 1234) - change_names.  Status: rejected
+
+Info:  guide_change_names 157 (Line: 1238)  Cannot find or apply name change to cell 'lt_136' in design 'omsp_mem_backbone'.
+Info:  SVF Operation 157 (Line: 1238) - change_names.  Status: rejected
+
+Info:  guide_change_names 158 (Line: 1242)  Cannot find or apply name change to cell 'lt_141' in design 'omsp_mem_backbone'.
+Info:  SVF Operation 158 (Line: 1242) - change_names.  Status: rejected
+
+Info:  guide_change_names 159 (Line: 1246)  Cannot find or apply name change to cell 'gte_158' in design 'omsp_mem_backbone'.
+Info:  SVF Operation 159 (Line: 1246) - change_names.  Status: rejected
+
+Info:  guide_change_names 160 (Line: 1250)  Cannot find or apply name change to cell 'gte_162' in design 'omsp_mem_backbone'.
+Info:  SVF Operation 160 (Line: 1250) - change_names.  Status: rejected
+
+Info:  guide_change_names 161 (Line: 1254)  Cannot find or apply name change to cell 'gte_166' in design 'omsp_mem_backbone'.
+Info:  SVF Operation 161 (Line: 1254) - change_names.  Status: rejected
+
+Info:  guide_inv_push 163 (Line: 1262)  Cannot find register 'eu_mdb_in_sel_reg[1]'..
+Info:  SVF Operation 163 (Line: 1262) - inv_push.  Status: rejected
+
+Info:  guide_ungroup 165 (Line: 1357)  Cannot find cell 'div0/U1' in design 'openMSP430'.
+Info:  SVF Operation 165 (Line: 1357) - ungroup.  Status: rejected
+
+Info:  guide_replace 166 (Line: 1361)  Could not find pre_resource 'RSOP_25_ADD_3' in design 'omsp_mem_backbone'.
+Info:  guide_replace 166 (Line: 1361)  Could not find pre_resource 'RSOP_25_ADD_1' in design 'omsp_mem_backbone'.
+Info:  SVF Operation 166 (Line: 1361) - replace.  Status: rejected
+
+Info:  guide_merge 167 (Line: 1379)  Could not find pre_resource 'RSOP_25_ADD_6' in design 'omsp_mem_backbone'.
+Info:  SVF Operation 167 (Line: 1379) - merge.  Status: rejected
+
+Info:  guide_datapath 172 (Line: 1433) Cannot find reference cell for instance 'DP_OP_12J5_124_4891' in design 'omsp_mem_backbone'.
+Info:  SVF Operation 172 (Line: 1433) - datapath.  Status: rejected
+
+Info:  guide_inv_push 174 (Line: 1442)  Cannot find register 'frontend_0/inst_src_bin_reg[3]'..
+Info:  SVF Operation 174 (Line: 1442) - inv_push.  Status: rejected
+
+Info:  guide_scan_input 177 (Line: 1453)  synopsys_auto_setup is false, ignoring Scan Input guidance.
+Info:  SVF Operation 177 (Line: 1453) - scan_input.  Status: rejected
+
+Info:  guide_change_names 185 (Line: 1772)  Cannot find or apply name change to port 'per_dout[15]' in design 'omsp_watchdog'.
+Info:  guide_change_names 185 (Line: 1772)  Cannot find or apply name change to port 'per_dout[14]' in design 'omsp_watchdog'.
+Info:  guide_change_names 185 (Line: 1772)  Cannot find or apply name change to port 'per_dout[13]' in design 'omsp_watchdog'.
+Info:  guide_change_names 185 (Line: 1772)  Cannot find or apply name change to port 'per_dout[12]' in design 'omsp_watchdog'.
+Info:  guide_change_names 185 (Line: 1772)  Cannot find or apply name change to port 'per_dout[11]_BAR' in design 'omsp_watchdog'.
+Info:  guide_change_names 185 (Line: 1772)  Cannot find or apply name change to port 'per_dout[10]' in design 'omsp_watchdog'.
+Info:  guide_change_names 185 (Line: 1772)  Cannot find or apply name change to port 'per_dout[9]' in design 'omsp_watchdog'.
+Info:  guide_change_names 185 (Line: 1772)  Cannot find or apply name change to port 'per_dout[8]' in design 'omsp_watchdog'.
+Info:  guide_change_names 185 (Line: 1772)  Cannot find or apply name change to port 'per_dout[7]' in design 'omsp_watchdog'.
+Info:  guide_change_names 185 (Line: 1772)  Cannot find or apply name change to port 'per_dout[6]' in design 'omsp_watchdog'.
+Info:  guide_change_names 185 (Line: 1772)  Cannot find or apply name change to port 'per_dout[5]' in design 'omsp_watchdog'.
+Info:  guide_change_names 185 (Line: 1772)  Cannot find or apply name change to port 'per_dout[4]' in design 'omsp_watchdog'.
+Info:  guide_change_names 185 (Line: 1772)  Cannot find or apply name change to port 'per_dout[3]' in design 'omsp_watchdog'.
+Info:  guide_change_names 185 (Line: 1772)  Cannot find or apply name change to port 'per_dout[2]' in design 'omsp_watchdog'.
+Info:  guide_change_names 185 (Line: 1772)  Cannot find or apply name change to port 'per_dout[1]' in design 'omsp_watchdog'.
+Info:  guide_change_names 185 (Line: 1772)  Cannot find or apply name change to port 'per_dout[0]' in design 'omsp_watchdog'.
+Info:  SVF Operation 185 (Line: 1772) - change_names.  Status: rejected
+
+Info:  guide_change_names 189 (Line: 2306)  Cannot find reference design 'omsp_sync_cell_0'.
+Info:  SVF Operation 189 (Line: 2306) - change_names.  Status: rejected
+
+Info:  guide_change_names 195 (Line: 2336)  Cannot find reference design 'omsp_clock_mux_0'.
+Info:  SVF Operation 195 (Line: 2336) - change_names.  Status: rejected
+
+Info:  guide_change_names 202 (Line: 2371)  Cannot find reference design 'omsp_sync_reset_0'.
+Info:  SVF Operation 202 (Line: 2371) - change_names.  Status: rejected
+
+Info:  guide_change_names 206 (Line: 2686)  Cannot find reference design 'omsp_wakeup_cell_0'.
+Info:  SVF Operation 206 (Line: 2686) - change_names.  Status: rejected
+
+Info:  guide_constraints 119 (Line: 830)  -body 'omsp_alu_DP_OP_71J4_128_7159_J4_0' not applied.
+Info:  guide_constraints 122 (Line: 894)  -body 'omsp_alu_DP_OP_70J4_127_7159_J4_0' not applied.
+Info:  guide_constraints 125 (Line: 958)  -body 'omsp_alu_DP_OP_69J4_126_7159_J4_0' not applied.
+Info:  guide_constraints 128 (Line: 1022)  -body 'omsp_alu_DP_OP_68J4_125_7159_J4_0' not applied.
+Info:  guide_constraints 131 (Line: 1124)  -body 'omsp_alu_DP_OP_67J4_124_3245_J4_0' not applied.
