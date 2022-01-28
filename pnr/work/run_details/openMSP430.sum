@@ -1,0 +1,1769 @@
+Mon Apr 30 12:56:43 2012
+EV_Engine (R) Hierarchical Design Rule Checker, Release Y-2006.12.2061    2007/01/16
+
+  (C) Copyright 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+                2006, 2007.
+  Synopsys, Inc.  All rights reserved.
+
+Called as: ev_engine adrc/adrc.ev
+
+Running Single-Threaded code
+#VARIABLE  STRING  layer_name="NULL";
+#VARIABLE  DOUBLE  ignoreBlockage=0;
+#VARIABLE  DOUBLE  readCellView=0;
+#VARIABLE  DOUBLE  ignoreFRAM_Err=0;
+#VARIABLE  DOUBLE  ignoreContactCodeSpacing=0;
+#VARIABLE  DOUBLE  checkCrossHierShort=0;
+#VARIABLE  DOUBLE  ignoreChildCell=0;
+#VARIABLE  DOUBLE  router_ignoreSameNetAdjacentViaDRC=0;
+#VARIABLE  DOUBLE  router_parallelLengthNetMode=0;
+#VARIABLE  DOUBLE  fatTblSpacingMode=0;
+#VARIABLE  DOUBLE  fatTblMinEnclosedAreaMode=0;
+#VARIABLE  DOUBLE  fatWireExtensionMode=0;
+#VARIABLE  DOUBLE  minEdgeMode=0;
+#VARIABLE  DOUBLE  minLengthMode=0;
+#VARIABLE  DOUBLE  parallelLengthMode=0;
+#VARIABLE  DOUBLE  minWidth=0;
+#VARIABLE  DOUBLE  maxWidth=0;
+#VARIABLE  DOUBLE  minArea=0;
+#VARIABLE  DOUBLE  minEnclosedArea=0;
+#VARIABLE  DOUBLE  minEnclosedWidth=0;
+#VARIABLE  DOUBLE  windowSize=0;
+#VARIABLE  DOUBLE  maxDensity=0;
+#VARIABLE  DOUBLE  minDensity=0;
+#VARIABLE  DOUBLE  gradientWindowSize=0;
+#VARIABLE  DOUBLE  maxGradientDensity=0;
+#VARIABLE  STRING  layer2_name="NULL";
+#VARIABLE  DOUBLE  numOfMultiLayer=0;
+#VARIABLE  DOUBLE  consecutiveWindowSize=0;
+#VARIABLE  DOUBLE  maxConsecutiveDensity=0;
+#VARIABLE  DOUBLE  maxNumMinEdge=0;
+#VARIABLE  DOUBLE  maxTotalMinEdgeLength=0;
+#VARIABLE  DOUBLE  minEdgeLength=0;
+#VARIABLE  DOUBLE  minEdgeLength2=0;
+#VARIABLE  DOUBLE  minEdgeLength3=0;
+#VARIABLE  DOUBLE  minSpacing=0;
+#VARIABLE  DOUBLE  sameNetMinSpacing=0;
+#VARIABLE  DOUBLE  sameNetWidthThreshold=0;
+#VARIABLE  DOUBLE  stub2StubSpacing=0;
+#VARIABLE  DOUBLE  stubSpacing=0;
+#VARIABLE  DOUBLE  sideStubExt=0;
+#VARIABLE  DOUBLE  sideStubThreshold=0;
+#VARIABLE  DOUBLE  stubThreshold=0;
+#VARIABLE  DOUBLE  stubRange=0;
+#VARIABLE  DOUBLE  stubMode=0;
+#VARIABLE  DOUBLE  fatWireThreshold=0;
+#VARIABLE  DOUBLE  fatThinMinSpacing=0;
+#VARIABLE  DOUBLE  fatFatMinSpacing=0;
+#VARIABLE  DOUBLE  fatTblDimension=0;
+#VARIABLE  DOUBLE  fatTblThreshold=0;
+#VARIABLE  DOUBLE  fatTblNextThreshold=0;
+#VARIABLE  DOUBLE  fatTblThreshold_Start=0;
+#VARIABLE  DOUBLE  fatTblThreshold_End=0;
+#VARIABLE  DOUBLE  fatTblThreshold_1=0;
+#VARIABLE  DOUBLE  fatTblExtensionRange=0;
+#VARIABLE  DOUBLE  fatTblParallelLength=0;
+#VARIABLE  DOUBLE  fatTblSpacing=0;
+#VARIABLE  DOUBLE  fatTblSpacing_dg=0;
+#VARIABLE  DOUBLE  fatTblEnclosedArea=0;
+#VARIABLE  DOUBLE  cornerSpacingMode=0;
+#VARIABLE  DOUBLE  cut_size=0;
+#VARIABLE  DOUBLE  metalLayer1_minSpacing=0;
+#VARIABLE  DOUBLE  metalLayer2_minSpacing=0;
+#VARIABLE  DOUBLE  cut_minSpacing=0;
+#VARIABLE  DOUBLE  cut_sameNetMinSpacing=0;
+#VARIABLE  DOUBLE  cut_cornerMinSpacing=0;
+#VARIABLE  DOUBLE  cutBlkg_minSpacing=0;
+#VARIABLE  DOUBLE  cut_maxNumAdjacentCut=0;
+#VARIABLE  DOUBLE  cut_adjacentCutRange=0;
+#VARIABLE  DOUBLE  cut_width=0;
+#VARIABLE  DOUBLE  cut_lineTblThreshold=0;
+#VARIABLE  DOUBLE  cut_lineTblNextThreshold=0;
+#VARIABLE  DOUBLE  cut_lineTblMinSpacing=0;
+#VARIABLE  DOUBLE  cut_matrixTblThreshold=0;
+#VARIABLE  DOUBLE  cut_matrixTblNextThreshold=0;
+#VARIABLE  DOUBLE  cut_matrixTblMinSpacing=0;
+#VARIABLE  DOUBLE  cut_enclosedCutNeighborRange=0;
+#VARIABLE  DOUBLE  cut_enclosedCutNumNeighbor=0;
+#VARIABLE  DOUBLE  cut_enclosedCutMinSpacing=0;
+#VARIABLE  DOUBLE  cut_enclosedCutToNeighborMinSpacing=0;
+#VARIABLE  DOUBLE  cut_enclosedCutDiagViaExcluded=0;
+#VARIABLE  DOUBLE  cut_defaultContactMinSpacing=0;
+#VARIABLE  DOUBLE  cut_fatContactThreshold1=0;
+#VARIABLE  DOUBLE  cut_fatContactThreshold2=0;
+#VARIABLE  DOUBLE  cut_fatContactMinSpacing=0;
+#VARIABLE  DOUBLE  cut_maxStackLevel=0;
+#VARIABLE  DOUBLE  cut_maxCutSpacing=0;
+#VARIABLE  DOUBLE  cut_fatTblDimension=0;
+#VARIABLE  DOUBLE  cut_fatTblThreshold_1=0;
+#VARIABLE  DOUBLE  cut_fatTblThreshold_2=0;
+#VARIABLE  DOUBLE  cut_fatTblNextThreshold_1=0;
+#VARIABLE  DOUBLE  cut_fatTblNextThreshold_2=0;
+#VARIABLE  DOUBLE  cut_fatMetalAndMode=0;
+#VARIABLE  DOUBLE  cut_fatTblExtensionRange=0;
+#VARIABLE  DOUBLE  cut_fatTblMinCuts=0;
+#VARIABLE  DOUBLE  cut_fatTblMinSpacing=0;
+#VARIABLE  DOUBLE  cut_fatTblExtensionMinCuts=0;
+#VARIABLE  DOUBLE  cut_fatTblExtensionMinSpacing=0;
+#VARIABLE  DOUBLE  cut_ViaFarm_spacing=0;
+#VARIABLE  DOUBLE  cut_ViaFarm_maxNum=0;
+#VARIABLE  DOUBLE  cut_minEnclosure1=-1;
+#VARIABLE  DOUBLE  cut_minEnclosure2=-1;
+#VARIABLE  DOUBLE  cut_EOLEnclosure1=0;
+#VARIABLE  DOUBLE  cut_EOLEnclosure2=0;
+#VARIABLE  DOUBLE  cut_ExtViaFarm_spacing=0;
+#VARIABLE  DOUBLE  cut_ExtViaFarm_maxNum=0;
+#VARIABLE  DOUBLE  cut_ExtMinEnclosure1=-1;
+#VARIABLE  DOUBLE  cut_ExtMinEnclosure2=-1;
+#VARIABLE  DOUBLE  cut_ExtEOLEnclosure1=0;
+#VARIABLE  DOUBLE  cut_ExtEOLEnclosure2=0;
+#VARIABLE  DOUBLE  diff_minSpacing=0;
+#VARIABLE  DOUBLE  diff_netMinSpacing=0;
+#VARIABLE  DOUBLE  diff_cornerMinSpacing=0;
+#VARIABLE  DOUBLE  diff_minEnclosure=0;
+#VARIABLE  DOUBLE  diff_endOfLineMode=0;
+#VARIABLE  DOUBLE  diff_endOfLineEnclosure=0;
+#VARIABLE  DOUBLE  diff_not_stackable=0;
+#VARIABLE  DOUBLE  diff_fatTblViaKeepoutThreshold=0;
+#VARIABLE  DOUBLE  diff_fatTblViaKeepoutNextThreshold=0;
+#VARIABLE  DOUBLE  diff_fatTblViaKeepoutMinSize=0;
+#VARIABLE  DOUBLE  diff_fatTblViaKeepoutEnclosure=0;
+#VARIABLE  DOUBLE  cut_stackLevelSpacing=0;
+#VARIABLE  DOUBLE  minLength=0;
+#VARIABLE  DOUBLE  maxLength=0;
+#VARIABLE  DOUBLE  fatPolyContactRule=0;
+#VARIABLE  DOUBLE  fatTblThresh_protru=0;
+#VARIABLE  DOUBLE  fatTblLength_protru=0;
+#VARIABLE  DOUBLE  fatTblWidth_protru=0;
+#VARIABLE  DOUBLE  viaFarm_maxNum=0;
+#VARIABLE  DOUBLE  viaFarm_spacing=0;
+#VARIABLE  DOUBLE  via_minEnclosure1=-1;
+#VARIABLE  DOUBLE  via_EOLEnclosure1=0;
+#VARIABLE  DOUBLE  via_minEnclosure2=-1;
+#VARIABLE  DOUBLE  via_EOLEnclosure2=0;
+#VARIABLE  DOUBLE  temporary_1=0;
+#VARIABLE  DOUBLE  temporary_2=0;
+#VARIABLE  DOUBLE  addEmptyMetalCheck=1;
+#VARIABLE  DOUBLE  addEmptyViaCheck=1;
+
+Runset file ......................  adrc/adrc.ev
+Current Directory ................  /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/icc/work
+Hostname .........................  class5.ee.Virginia.EDU
+Platform type ....................  AMD64_L24
+MILKYWAY input library path ......  /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/icc/work/
+MILKYWAY input file name .........  COUNT
+MILKYWAY block name ..............  openMSP430
+MILKYWAY output library path .....  /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/icc/work/run_details/
+MILKYWAY output file name ........  hercules_out
+MILKYWAY output_block name .......  EV_OUTPUT
+Run details ......................  /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/icc/work/run_details
+Group file directory .............  /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/icc/work/run_details/group
+Retain group files ...............  smart
+Check reference structures .......  yes
+
+NOTE : adrc/adrc_check_metal.ev:9: COPY command removed; it has no contribution
+NOTE : Optimization removed 9 unneeded commands
+RUNSET WARNING : adrc/adrc.ev:915: DISCONNECT output control "__CNTL_CONNECT_REFERENT" is never used
+OPTIONS {
+	ALL_TEXT_GLOBAL=FALSE
+	ASCII_ONLY=FALSE
+	ATTACH_TEXT=FALSE
+	BOX_CORNER=FALSE
+	CHECK_REF_LIB=TRUE
+	COUNT_TRAPS=FALSE
+	ERR_LIMIT_PER_CHECK = UNLIMITED
+	ERR_PREFIX = ERR
+	EXPLODE_AREFS=FALSE
+	EXPLODE_HOLDING_CELL_LIMIT=0
+	EXPLODE_LIMIT=0
+	FLAG_ALL_AREF_ERRORS=FALSE
+	FLAT_COUNT=FALSE
+	FLAT_ERROR=FALSE
+	GENERATE_INSTANCE_NAME=TRUE
+	HIERARCHICAL_DELIMITER = \
+	IGNORE_CASE=FALSE
+	INCREMENTAL_CELLS=FALSE
+	INCREMENTAL_CELLS_FILE = 
+	INSTANCE_PREFIX = 
+	NET_PREFIX = 
+	SELECT_CELL_TO_NO_EXPLODE=TRUE
+	EQUIV_TO_NO_EXPLODE=TRUE
+	SCHEMATIC_TO_NO_EXPLODE=TRUE
+	BLACK_BOX_TO_NO_EXPLODE=TRUE
+	PROTOTYPE_PLACEMENTS=FALSE
+	NO_MERGE=FALSE
+	GENERATE_INSTANCE_NAME=TRUE
+	PRINT_ERRSUM_FILE=TRUE
+	MAXIMUM_CELLNAME_LENGTH=127
+	SIZE_ENDPOINTS=FALSE
+	SNAP_RES=TRUE
+	SQUARE_CORNER=FALSE
+	STOP_ON_GROUP_ERROR=TRUE
+	TEXT_RECT=0
+	USE_EXPLODED_TEXT=FALSE
+	EXPLORER_DATA=FALSE
+	WIDTH=0
+	MAGNIFICATION_FACTOR=1
+	OUTPUT_MAGNIFICATION_FACTOR=1
+	POLYGON_COUNT_IN_ASSIGN = FALSE
+	FLAT_POLYGON_COUNT = FALSE
+	CREATE_VUE_OUTPUT = FALSE
+	REMOVE_DANGLING_PORT = UNTEXTED
+}
+PREPROCESS_OPTIONS {
+	CELL_PROFILE = FALSE
+	CELL_PROFILE_CNT=20
+	CHECK_PATH_ENDPOINTS = TRUE
+	CHECK_PATH_45 = TRUE
+	CHECK_PATH_90 = TRUE
+	DESIGN_STATS = TRUE
+	TREE = TRUE
+	CELL_STATS = TRUE
+	PRINT_PREPROCESS_FILES = TRUE
+}
+TECHNOLOGY_OPTIONS {
+	VIA_AUTO_EXPLODE = TRUE
+	SUBLEAF_AUTO_EXPLODE = 6
+	ALLOW_EXPLODE_WITH_TEXT = TRUE
+	POST_VCELL_EXPLODE_CELL_SIZE <= 10
+	EXPLODE_CELL_SIZE_PERCENT = 70
+	CELL_SIZE_AUTO_EXPLODE <= 10
+	EXPLODE_AREFS = FALSE
+	EXPLODE_1XN_AREFS = FALSE
+	EXPLODE_DATA_CELL_LIMIT = 4
+	POST_VCELL_EXPLODE_DATA_CELL_LIMIT = 12
+	EXPLODE_CELL_SIZE_PERCENT_OF_TOP = 70
+	EXPLODE_BIG_SPARSE_CELL = TRUE
+	EXPLODE_HOLDING_CELL_LIMIT = 1
+	EXPLODE_PLACEMENT_LIMIT = 1
+	POST_VCELL_EXPLODE_HIER_SPARSE_CELL = TRUE
+}
+EVACCESS_OPTIONS {
+	PATH = /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/icc/work/run_details/evaccess
+	LIBRARY = openMSP430
+	CREATE_MSG_VIEW = TRUE
+	CREATE_NETLIST_VIEW = TRUE
+	CREATE_XREF_VIEW = TRUE
+	CREATE_GRAF_VIEW = TRUE
+}
+EXPLODE_OPTIONS {
+	EXPLODE_ALL = { * }
+}
+DRC_OPTIONS {
+	DRC_ERROR_BOX=0.01
+}
+ASSIGN { 
+	metal1_pin	(11)
+		{ { VIEW =  { FRAM }, OBJECT_TYPE =  { PIN } }
+		}
+	metal1_top	(11)
+		{ { VIEW =  { CEL } }
+		}
+	metal1_rbkg	(11)
+		{ { VIEW =  { FRAM }, OBJECT_TYPE =  { *, !PIN } }
+		}
+	metal2_pin	(12)
+		{ { VIEW =  { FRAM }, OBJECT_TYPE =  { PIN } }
+		}
+	metal2_top	(12)
+		{ { VIEW =  { CEL } }
+		}
+	metal2_rbkg	(12)
+		{ { VIEW =  { FRAM }, OBJECT_TYPE =  { *, !PIN } }
+		}
+	metal3_pin	(13)
+		{ { VIEW =  { FRAM }, OBJECT_TYPE =  { PIN } }
+		}
+	metal3_top	(13)
+		{ { VIEW =  { CEL } }
+		}
+	metal3_rbkg	(13)
+		{ { VIEW =  { FRAM }, OBJECT_TYPE =  { *, !PIN } }
+		}
+	metal4_pin	(14)
+		{ { VIEW =  { FRAM }, OBJECT_TYPE =  { PIN } }
+		}
+	metal4_top	(14)
+		{ { VIEW =  { CEL } }
+		}
+	metal4_rbkg	(14)
+		{ { VIEW =  { FRAM }, OBJECT_TYPE =  { *, !PIN } }
+		}
+	metal5_pin	(15)
+		{ { VIEW =  { FRAM }, OBJECT_TYPE =  { PIN } }
+		}
+	metal5_top	(15)
+		{ { VIEW =  { CEL } }
+		}
+	metal5_rbkg	(15)
+		{ { VIEW =  { FRAM }, OBJECT_TYPE =  { *, !PIN } }
+		}
+	metal6_pin	(16)
+		{ { VIEW =  { FRAM }, OBJECT_TYPE =  { PIN } }
+		}
+	metal6_top	(16)
+		{ { VIEW =  { CEL } }
+		}
+	metal6_rbkg	(16)
+		{ { VIEW =  { FRAM }, OBJECT_TYPE =  { *, !PIN } }
+		}
+	metal7_pin	(17)
+		{ { VIEW =  { FRAM }, OBJECT_TYPE =  { PIN } }
+		}
+	metal7_top	(17)
+		{ { VIEW =  { CEL } }
+		}
+	metal7_rbkg	(17)
+		{ { VIEW =  { FRAM }, OBJECT_TYPE =  { *, !PIN } }
+		}
+	metal8_pin	(18)
+		{ { VIEW =  { FRAM }, OBJECT_TYPE =  { PIN } }
+		}
+	metal8_top	(18)
+		{ { VIEW =  { CEL } }
+		}
+	metal8_rbkg	(18)
+		{ { VIEW =  { FRAM }, OBJECT_TYPE =  { *, !PIN } }
+		}
+	metal9_pin	(19)
+		{ { VIEW =  { FRAM }, OBJECT_TYPE =  { PIN } }
+		}
+	metal9_top	(19)
+		{ { VIEW =  { CEL } }
+		}
+	metal9_rbkg	(19)
+		{ { VIEW =  { FRAM }, OBJECT_TYPE =  { *, !PIN } }
+		}
+	metal1_blockage	(218)
+	metal2_blockage	(219)
+	metal3_blockage	(220)
+	metal4_blockage	(216)
+	metal5_blockage	(239)
+	metal6_blockage	(240)
+	metal7_blockage	(208)
+	metal8_blockage	(210)
+	metal9_blockage	(214)
+	via1_top	(21)
+		{ { VIEW =  { CEL } }
+		}
+	via1_fram	(21)
+		{ { VIEW =  { FRAM } }
+		}
+	via2_top	(22)
+		{ { VIEW =  { CEL } }
+		}
+	via2_fram	(22)
+		{ { VIEW =  { FRAM } }
+		}
+	via3_top	(23)
+		{ { VIEW =  { CEL } }
+		}
+	via3_fram	(23)
+		{ { VIEW =  { FRAM } }
+		}
+	via4_top	(24)
+		{ { VIEW =  { CEL } }
+		}
+	via4_fram	(24)
+		{ { VIEW =  { FRAM } }
+		}
+	via5_top	(25)
+		{ { VIEW =  { CEL } }
+		}
+	via5_fram	(25)
+		{ { VIEW =  { FRAM } }
+		}
+	via6_top	(26)
+		{ { VIEW =  { CEL } }
+		}
+	via6_fram	(26)
+		{ { VIEW =  { FRAM } }
+		}
+	via7_top	(27)
+		{ { VIEW =  { CEL } }
+		}
+	via7_fram	(27)
+		{ { VIEW =  { FRAM } }
+		}
+	via8_top	(28)
+		{ { VIEW =  { CEL } }
+		}
+	via8_fram	(28)
+		{ { VIEW =  { FRAM } }
+		}
+	via1_blockage	(224)
+	via2_blockage	(225)
+	via3_blockage	(217)
+	via4_blockage	(241)
+	via5_blockage	(242)
+	via6_blockage	(243)
+	via7_blockage	(209)
+	via8_blockage	(211)
+	PR_BNDY	(255)
+	empty	(255;255)}HIERARCHY = ERR_1.HIERARCHY
+DATABASE_OPTIONS {
+	DB_MODE=DRC_BLACK_BOX
+	GENERATE_PIN_TEXT=ALL
+	USE_REF_CONTROL_FILE=TRUE
+	HIER_REF_LIB_MODE=TRUE
+	IGNORE_MISSING_CELL=TRUE
+	DB_CELL_LIST= { * }
+}
+
+DATATYPE_OFFSET=FALSE. There will be no datatype difference
+between FRAM and CEL views.
+Input Library Format:  127 char cellnames
+Output Library Format:  No output library
+
+  Reading hierarchy time = 0:00:01  User=0.67 Sys=0.11 Mem=55.355
+
+  Updating hierarchy time = 0:00:00  User=0.00 Sys=0.00 Mem=53.012
+
+Preprocessing group files...
+Preprocess Step 1 : Exploding
+  BLACK_BOX_TO_NO_EXPLODE changed 1 cells to NO_EXPLODE
+  Exploding time = 0:00:00  User=0.02 Sys=0.00 Mem=53.027
+
+TECHNOLOGY_OPTIONS {
+	VCELL_PASS   {
+		STYLE = PAIRS
+		ITERATE_MAX = 15
+		ARRAY_ID = TRUE
+		EXPLODE_INTO_VCELL = SMART
+		MIN_COUNT = 20
+		TOP_PERCENT_OF_VALUE = 40 
+	}
+}
+Preprocess Step 2 : Vcell_pass Arrays and Pairs Iteration 1
+    Pairs time = 0:00:00  User=0.00 Sys=0.00 Mem=46.566
+
+VCELL_PASS 1, no changes.
+
+   Combined VCELL time = 0:00:00  User=0.01 Sys=0.00 Mem=49.504
+
+   Post VCell time = 0:00:00  User=0.00 Sys=0.00 Mem=46.441
+
+URG: +------------------+ y =  0.000000
+   Determine Region time = 0:00:00  User=0.00 Sys=0.00 Mem=46.457
+
+0 Total self_intersect errors found.
+   Create Layer Setup time = 0:00:00  User=0.03 Sys=0.01 Mem=48.535
+
+  Preparation time = 0:00:00  User=0.07 Sys=0.03 Mem=49.504
+
+ERROR_PROPERTY {
+	COMMENT_PROPERTY (51)
+}
+Checking database:
+
+
+CREATE_LAYER metal1_pin  {
+} TEMP=metal1_pin
+24241 unique polygons written.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.21 Sys=0.01 Mem=69.597
+
+CREATE_LAYER metal1_top  {
+} TEMP=metal1_top
+23742 unique polygons written.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.04 Sys=0.00 Mem=42.598
+
+CREATE_LAYER metal1_rbkg  {
+} TEMP=metal1_rbkg
+15618 unique polygons written.
+0 Total self_intersect errors found.
+    Check time = 0:00:01  User=0.09 Sys=0.00 Mem=55.597
+
+CREATE_LAYER metal2_pin  {
+} TEMP=metal2_pin
+No output written.
+Layer "metal2_pin" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=37.379
+
+CREATE_LAYER metal2_top  {
+} TEMP=metal2_top
+28893 unique polygons written.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.19 Sys=0.00 Mem=51.582
+
+CREATE_LAYER metal2_rbkg  {
+} TEMP=metal2_rbkg
+No output written.
+Layer "metal2_rbkg" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=36.379
+
+CREATE_LAYER metal3_pin  {
+} TEMP=metal3_pin
+No output written.
+Layer "metal3_pin" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=36.379
+
+CREATE_LAYER metal3_top  {
+} TEMP=metal3_top
+18797 unique polygons written.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.09 Sys=0.00 Mem=45.582
+
+CREATE_LAYER metal3_rbkg  {
+} TEMP=metal3_rbkg
+No output written.
+Layer "metal3_rbkg" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=36.379
+
+CREATE_LAYER metal4_pin  {
+} TEMP=metal4_pin
+No output written.
+Layer "metal4_pin" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=36.379
+
+CREATE_LAYER metal4_top  {
+} TEMP=metal4_top
+5644 unique polygons written.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.04 Sys=0.00 Mem=41.598
+
+CREATE_LAYER metal4_rbkg  {
+} TEMP=metal4_rbkg
+No output written.
+Layer "metal4_rbkg" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=36.379
+
+CREATE_LAYER metal5_pin  {
+} TEMP=metal5_pin
+No output written.
+Layer "metal5_pin" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=36.379
+
+CREATE_LAYER metal5_top  {
+} TEMP=metal5_top
+1744 unique polygons written.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.01 Sys=0.00 Mem=38.582
+
+CREATE_LAYER metal5_rbkg  {
+} TEMP=metal5_rbkg
+No output written.
+Layer "metal5_rbkg" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=36.379
+
+CREATE_LAYER metal6_pin  {
+} TEMP=metal6_pin
+No output written.
+Layer "metal6_pin" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=36.379
+
+CREATE_LAYER metal6_top  {
+} TEMP=metal6_top
+456 unique polygons written.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.02 Sys=0.00 Mem=39.582
+
+CREATE_LAYER metal6_rbkg  {
+} TEMP=metal6_rbkg
+No output written.
+Layer "metal6_rbkg" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=37.364
+
+CREATE_LAYER metal7_pin  {
+} TEMP=metal7_pin
+No output written.
+Layer "metal7_pin" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=37.364
+
+CREATE_LAYER metal7_top  {
+} TEMP=metal7_top
+No output written.
+Layer "metal7_top" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=37.364
+
+CREATE_LAYER metal7_rbkg  {
+} TEMP=metal7_rbkg
+No output written.
+Layer "metal7_rbkg" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=37.364
+
+CREATE_LAYER metal8_pin  {
+} TEMP=metal8_pin
+No output written.
+Layer "metal8_pin" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=37.364
+
+CREATE_LAYER metal8_top  {
+} TEMP=metal8_top
+No output written.
+Layer "metal8_top" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=37.364
+
+CREATE_LAYER metal8_rbkg  {
+} TEMP=metal8_rbkg
+No output written.
+Layer "metal8_rbkg" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=37.364
+
+CREATE_LAYER metal9_pin  {
+} TEMP=metal9_pin
+No output written.
+Layer "metal9_pin" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=37.364
+
+CREATE_LAYER metal9_top  {
+} TEMP=metal9_top
+No output written.
+Layer "metal9_top" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=37.364
+
+CREATE_LAYER metal9_rbkg  {
+} TEMP=metal9_rbkg
+No output written.
+Layer "metal9_rbkg" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=37.364
+
+CREATE_LAYER via1_top  {
+} TEMP=via1_top
+50768 unique polygons written.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.05 Sys=0.00 Mem=45.582
+
+CREATE_LAYER via1_fram  {
+} TEMP=via1_fram
+No output written.
+Layer "via1_fram" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=37.379
+
+CREATE_LAYER via2_top  {
+} TEMP=via2_top
+58096 unique polygons written.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.07 Sys=0.01 Mem=46.597
+
+CREATE_LAYER via2_fram  {
+} TEMP=via2_fram
+No output written.
+Layer "via2_fram" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=37.379
+
+CREATE_LAYER via3_top  {
+} TEMP=via3_top
+24404 unique polygons written.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.02 Sys=0.00 Mem=43.598
+
+CREATE_LAYER via3_fram  {
+} TEMP=via3_fram
+No output written.
+Layer "via3_fram" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=37.379
+
+CREATE_LAYER via4_top  {
+} TEMP=via4_top
+10598 unique polygons written.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.02 Sys=0.00 Mem=40.598
+
+CREATE_LAYER via4_fram  {
+} TEMP=via4_fram
+No output written.
+Layer "via4_fram" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=37.379
+
+CREATE_LAYER via5_top  {
+} TEMP=via5_top
+228 unique polygons written.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.01 Sys=0.00 Mem=39.551
+
+CREATE_LAYER via5_fram  {
+} TEMP=via5_fram
+No output written.
+Layer "via5_fram" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=37.379
+
+CREATE_LAYER via6_top  {
+} TEMP=via6_top
+No output written.
+Layer "via6_top" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=37.379
+
+CREATE_LAYER via6_fram  {
+} TEMP=via6_fram
+No output written.
+Layer "via6_fram" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=37.379
+
+CREATE_LAYER via7_top  {
+} TEMP=via7_top
+No output written.
+Layer "via7_top" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=37.379
+
+CREATE_LAYER via7_fram  {
+} TEMP=via7_fram
+No output written.
+Layer "via7_fram" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=37.379
+
+CREATE_LAYER via8_top  {
+} TEMP=via8_top
+No output written.
+Layer "via8_top" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=37.379
+
+CREATE_LAYER via8_fram  {
+} TEMP=via8_fram
+No output written.
+Layer "via8_fram" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=37.379
+
+CREATE_LAYER empty  {
+} TEMP=empty
+No output written.
+Layer "empty" is empty.
+0 Total self_intersect errors found.
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=37.379
+
+HIERARCHY_CLEANUP HIERARCHY = ERR_2.HIERARCHY
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=37.379
+
+REMOVE_HIERARCHY { HIERARCHY = ERR_1.HIERARCHY }
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=35.348
+
+CLEAN_PREPROCESSOR
+    Check time = 0:00:00  User=0.00 Sys=0.00 Mem=35.348
+
+   Total Create Layer time = 0:00:01  User=0.86 Sys=0.02 Mem=69.597
+
+BOOLEAN metal1_top OR metal1_pin { } TEMP=metal1_top
+24509 unique polygons written.
+   Check time = 0:00:00  User=0.07 Sys=0.00 Mem=41.738
+
+
+BOOLEAN metal1_top OR metal1_rbkg { } TEMP=metal1
+40127 unique polygons written.
+   Check time = 0:00:00  User=0.10 Sys=0.00 Mem=43.691
+
+BOOLEAN metal2_top OR metal2_pin { } TEMP=metal2_top
+Input layer "metal2_pin" is empty.
+28893 unique polygons written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=38.379
+
+
+BOOLEAN metal2_top OR metal2_rbkg { } TEMP=metal2
+Input layer "metal2_rbkg" is empty.
+28893 unique polygons written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=38.395
+
+BOOLEAN metal3_top OR metal3_pin { } TEMP=metal3_top
+Input layer "metal3_pin" is empty.
+18797 unique polygons written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=38.379
+
+
+BOOLEAN metal3_top OR metal3_rbkg { } TEMP=metal3
+Input layer "metal3_rbkg" is empty.
+18797 unique polygons written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=38.395
+
+BOOLEAN metal4_top OR metal4_pin { } TEMP=metal4_top
+Input layer "metal4_pin" is empty.
+5644 unique polygons written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=38.379
+
+
+BOOLEAN metal4_top OR metal4_rbkg { } TEMP=metal4
+Input layer "metal4_rbkg" is empty.
+5644 unique polygons written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=38.395
+
+BOOLEAN metal5_top OR metal5_pin { } TEMP=metal5_top
+Input layer "metal5_pin" is empty.
+1744 unique polygons written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=38.379
+
+
+BOOLEAN metal5_top OR metal5_rbkg { } TEMP=metal5
+Input layer "metal5_rbkg" is empty.
+1744 unique polygons written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=38.395
+
+BOOLEAN metal6_top OR metal6_pin { } TEMP=metal6_top
+Input layer "metal6_pin" is empty.
+456 unique polygons written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=38.379
+
+
+BOOLEAN metal6_top OR metal6_rbkg { } TEMP=metal6
+Input layer "metal6_rbkg" is empty.
+456 unique polygons written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=38.395
+
+BOOLEAN metal7_top OR metal7_pin { } TEMP=metal7_top
+Input layer "metal7_top" is empty.
+Input layer "metal7_pin" is empty.
+No output written.
+Layer "metal7_top" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=38.379
+
+
+BOOLEAN metal7_top OR metal7_rbkg { } TEMP=metal7
+Input layer "metal7_top" is empty.
+Input layer "metal7_rbkg" is empty.
+No output written.
+Layer "metal7" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=38.379
+
+BOOLEAN metal8_top OR metal8_pin { } TEMP=metal8_top
+Input layer "metal8_top" is empty.
+Input layer "metal8_pin" is empty.
+No output written.
+Layer "metal8_top" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=38.379
+
+
+BOOLEAN metal8_top OR metal8_rbkg { } TEMP=metal8
+Input layer "metal8_top" is empty.
+Input layer "metal8_rbkg" is empty.
+No output written.
+Layer "metal8" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=38.379
+
+BOOLEAN metal9_top OR metal9_pin { } TEMP=metal9_top
+Input layer "metal9_top" is empty.
+Input layer "metal9_pin" is empty.
+No output written.
+Layer "metal9_top" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=38.379
+
+
+BOOLEAN metal9_top OR metal9_rbkg { } TEMP=metal9
+Input layer "metal9_top" is empty.
+Input layer "metal9_rbkg" is empty.
+No output written.
+Layer "metal9" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=38.379
+
+BOOLEAN via1_top OR via1_fram { } TEMP=via1
+Input layer "via1_fram" is empty.
+50768 unique polygons written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=38.395
+
+
+BOOLEAN via2_top OR via2_fram { } TEMP=via2
+Input layer "via2_fram" is empty.
+58096 unique polygons written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=38.395
+
+
+BOOLEAN via3_top OR via3_fram { } TEMP=via3
+Input layer "via3_fram" is empty.
+24404 unique polygons written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=38.395
+
+
+BOOLEAN via4_top OR via4_fram { } TEMP=via4
+Input layer "via4_fram" is empty.
+10598 unique polygons written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=38.395
+
+
+BOOLEAN via5_top OR via5_fram { } TEMP=via5
+Input layer "via5_fram" is empty.
+228 unique polygons written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=38.395
+
+
+BOOLEAN via6_top OR via6_fram { } TEMP=via6
+Input layer "via6_top" is empty.
+Input layer "via6_fram" is empty.
+No output written.
+Layer "via6" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=38.379
+
+
+BOOLEAN via7_top OR via7_fram { } TEMP=via7
+Input layer "via7_top" is empty.
+Input layer "via7_fram" is empty.
+No output written.
+Layer "via7" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=38.379
+
+
+BOOLEAN via8_top OR via8_fram { } TEMP=via8
+Input layer "via8_top" is empty.
+Input layer "via8_fram" is empty.
+No output written.
+Layer "via8" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=38.379
+
+
+CONNECT {
+	metal1 metal2 BY [ OVERLAP TOUCH ] via1
+	metal2 metal3 BY [ OVERLAP TOUCH ] via2
+	metal3 metal4 BY [ OVERLAP TOUCH ] via3
+	metal4 metal5 BY [ OVERLAP TOUCH ] via4
+	metal5 metal6 BY [ OVERLAP TOUCH ] via5
+	metal6 metal7 BY [ OVERLAP TOUCH ] via6
+	metal7 metal8 BY [ OVERLAP TOUCH ] via7
+	metal8 metal9 BY [ OVERLAP TOUCH ] via8
+} CONNECT_DB = all_layer
+Layer "via6" is empty.
+Layer "metal7" is empty.
+Layer "via7" is empty.
+Layer "metal8" is empty.
+Layer "via8" is empty.
+Layer "metal9" is empty.
+   Check time = 0:00:01  User=0.23 Sys=0.01 Mem=64.174
+
+BOOLEAN metal1 NOT metal1_rbkg { } TEMP=fat_candidate
+24509 unique polygons written.
+   Check time = 0:00:00  User=0.17 Sys=0.00 Mem=61.159
+
+INTERNAL metal1 {
+	COMMENT = "Met1 MinWidth  : minimum width = 0.14 um"
+	SPACING<0.14 
+	POINT_TOUCH=FALSE } (11)
+0 width violations found.
+   Check time = 0:00:01  User=0.79 Sys=0.01 Mem=71.361
+
+SIZE fat_candidate { 
+	COMMENT = "Met1 MaxWidth  : maximum width = 1000 um"
+	UNDER_OVER=500 } (11)
+No output written.
+   Check time = 0:00:00  User=0.06 Sys=0.00 Mem=69.252
+
+AREA metal1 { 
+	COMMENT = "Met1 MinArea   : minimum area = 0.06 um*um"
+	RANGE = [2.5e-07,0.05999975]} (11)
+No output written.
+   Check time = 0:00:00  User=0.11 Sys=0.00 Mem=62.112
+
+EXTERNAL metal1 { 
+	COMMENT = "Met1 Spacing   : minimum spacing = 0.14 um"
+	SPACING<0.14 
+	POINT_TOUCH=TRUE 
+	NON_PARALLEL=TRUE 
+	BOX_CORNER=FALSE 
+	CHECK_SAME_POLYGON=TRUE } (11)
+WARNING - 32 spacing violations found.
+   Check time = 0:00:01  User=0.91 Sys=0.01 Mem=72.346
+
+COPY metal1_rbkg { } TEMP=all_blockage
+15618 unique polygons written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=54.933
+
+
+BOOLEAN all_blockage AND metal1_top { } TEMP=overlap_shape1
+No output written.
+Layer "overlap_shape1" is empty.
+   Check time = 0:00:00  User=0.05 Sys=0.00 Mem=59.214
+
+EXTERNAL all_blockage metal1_top { 
+	SPACING<=0 
+	TOUCH=TRUE } TEMP=overlap_shape2
+0 spacing violations found.
+   Check time = 0:00:00  User=0.13 Sys=0.00 Mem=71.712
+
+
+BOOLEAN overlap_shape1 OR overlap_shape2 { 
+	COMMENT = "Met1 Overlap   : metal & blockage overlap"} (11)
+Input layer "overlap_shape1" is empty.
+Input layer "overlap_shape2" is empty.
+No output written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=52.886
+
+BOOLEAN empty OR empty { 
+	COMMENT = "Met1 Empty: Dummy Output"} (11)
+Input layer "empty" is empty.
+Input layer "empty" is empty.
+No output written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=52.886
+
+BOOLEAN metal2 NOT metal2_rbkg { } TEMP=fat_candidate
+Input layer "metal2_rbkg" is empty.
+28893 unique polygons written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=52.886
+
+INTERNAL metal2 {
+	COMMENT = "Met2 MinWidth  : minimum width = 0.16 um"
+	SPACING<0.16 
+	POINT_TOUCH=FALSE } (12)
+0 width violations found.
+   Check time = 0:00:00  User=0.34 Sys=0.00 Mem=59.447
+
+SIZE fat_candidate { 
+	COMMENT = "Met2 MaxWidth  : maximum width = 1000 um"
+	UNDER_OVER=500 } (12)
+No output written.
+   Check time = 0:00:00  User=0.04 Sys=0.00 Mem=65.213
+
+AREA metal2 { 
+	COMMENT = "Met2 MinArea   : minimum area = 0.07 um*um"
+	RANGE = [2.5e-07,0.06999975000000001]} (12)
+No output written.
+   Check time = 0:00:00  User=0.04 Sys=0.00 Mem=56.073
+
+EXTERNAL metal2 { 
+	COMMENT = "Met2 Spacing   : minimum spacing = 0.16 um"
+	SPACING<0.16 
+	POINT_TOUCH=TRUE 
+	NON_PARALLEL=TRUE 
+	BOX_CORNER=FALSE 
+	CHECK_SAME_POLYGON=TRUE } (12)
+0 spacing violations found.
+   Check time = 0:00:01  User=0.24 Sys=0.00 Mem=60.401
+
+COPY metal2_rbkg { } TEMP=all_blockage
+Input layer "metal2_rbkg" is empty.
+No output written.
+Layer "all_blockage" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=50.824
+
+
+BOOLEAN all_blockage AND metal2_top { } TEMP=overlap_shape1
+Input layer "all_blockage" is empty.
+No output written.
+Layer "overlap_shape1" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=49.793
+
+EXTERNAL all_blockage metal2_top { 
+	SPACING<=0 
+	TOUCH=TRUE } TEMP=overlap_shape2
+Input layer "all_blockage" is empty.
+0 spacing violations found.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=49.793
+
+
+BOOLEAN overlap_shape1 OR overlap_shape2 { 
+	COMMENT = "Met2 Overlap   : metal & blockage overlap"} (12)
+Input layer "overlap_shape1" is empty.
+Input layer "overlap_shape2" is empty.
+No output written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=48.746
+
+BOOLEAN metal3 NOT metal3_rbkg { } TEMP=fat_candidate
+Input layer "metal3_rbkg" is empty.
+18797 unique polygons written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=48.762
+
+INTERNAL metal3 {
+	COMMENT = "Met3 MinWidth  : minimum width = 0.16 um"
+	SPACING<0.16 
+	POINT_TOUCH=FALSE } (13)
+0 width violations found.
+   Check time = 0:00:00  User=0.06 Sys=0.00 Mem=55.323
+
+SIZE fat_candidate { 
+	COMMENT = "Met3 MaxWidth  : maximum width = 1000 um"
+	UNDER_OVER=500 } (13)
+No output written.
+   Check time = 0:00:00  User=0.02 Sys=0.00 Mem=57.136
+
+AREA metal3 { 
+	COMMENT = "Met3 MinArea   : minimum area = 0.07 um*um"
+	RANGE = [2.5e-07,0.06999975000000001]} (13)
+No output written.
+   Check time = 0:00:00  User=0.02 Sys=0.00 Mem=51.855
+
+EXTERNAL metal3 { 
+	COMMENT = "Met3 Spacing   : minimum spacing = 0.16 um"
+	SPACING<0.16 
+	POINT_TOUCH=TRUE 
+	NON_PARALLEL=TRUE 
+	BOX_CORNER=FALSE 
+	CHECK_SAME_POLYGON=TRUE } (13)
+0 spacing violations found.
+   Check time = 0:00:00  User=0.05 Sys=0.00 Mem=56.276
+
+COPY metal3_rbkg { } TEMP=all_blockage
+Input layer "metal3_rbkg" is empty.
+No output written.
+Layer "all_blockage" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=48.730
+
+
+BOOLEAN all_blockage AND metal3_top { } TEMP=overlap_shape1
+Input layer "all_blockage" is empty.
+No output written.
+Layer "overlap_shape1" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=48.746
+
+EXTERNAL all_blockage metal3_top { 
+	SPACING<=0 
+	TOUCH=TRUE } TEMP=overlap_shape2
+Input layer "all_blockage" is empty.
+0 spacing violations found.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=48.746
+
+
+BOOLEAN overlap_shape1 OR overlap_shape2 { 
+	COMMENT = "Met3 Overlap   : metal & blockage overlap"} (13)
+Input layer "overlap_shape1" is empty.
+Input layer "overlap_shape2" is empty.
+No output written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=47.699
+
+BOOLEAN metal4 NOT metal4_rbkg { } TEMP=fat_candidate
+Input layer "metal4_rbkg" is empty.
+5644 unique polygons written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=47.715
+
+INTERNAL metal4 {
+	COMMENT = "Met4 MinWidth  : minimum width = 0.16 um"
+	SPACING<0.16 
+	POINT_TOUCH=FALSE } (14)
+0 width violations found.
+   Check time = 0:00:00  User=0.11 Sys=0.00 Mem=52.307
+
+SIZE fat_candidate { 
+	COMMENT = "Met4 MaxWidth  : maximum width = 1000 um"
+	UNDER_OVER=500 } (14)
+No output written.
+   Check time = 0:00:00  User=0.02 Sys=0.00 Mem=55.089
+
+AREA metal4 { 
+	COMMENT = "Met4 MinArea   : minimum area = 0.07 um*um"
+	RANGE = [2.5e-07,0.06999975000000001]} (14)
+No output written.
+   Check time = 0:00:00  User=0.01 Sys=0.00 Mem=51.933
+
+EXTERNAL metal4 { 
+	COMMENT = "Met4 Spacing   : minimum spacing = 0.16 um"
+	SPACING<0.16 
+	POINT_TOUCH=TRUE 
+	NON_PARALLEL=TRUE 
+	BOX_CORNER=FALSE 
+	CHECK_SAME_POLYGON=TRUE } (14)
+0 spacing violations found.
+   Check time = 0:00:00  User=0.06 Sys=0.00 Mem=53.260
+
+COPY metal4_rbkg { } TEMP=all_blockage
+Input layer "metal4_rbkg" is empty.
+No output written.
+Layer "all_blockage" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=47.684
+
+
+BOOLEAN all_blockage AND metal4_top { } TEMP=overlap_shape1
+Input layer "all_blockage" is empty.
+No output written.
+Layer "overlap_shape1" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=47.699
+
+EXTERNAL all_blockage metal4_top { 
+	SPACING<=0 
+	TOUCH=TRUE } TEMP=overlap_shape2
+Input layer "all_blockage" is empty.
+0 spacing violations found.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=47.699
+
+
+BOOLEAN overlap_shape1 OR overlap_shape2 { 
+	COMMENT = "Met4 Overlap   : metal & blockage overlap"} (14)
+Input layer "overlap_shape1" is empty.
+Input layer "overlap_shape2" is empty.
+No output written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=46.652
+
+BOOLEAN metal5 NOT metal5_rbkg { } TEMP=fat_candidate
+Input layer "metal5_rbkg" is empty.
+1744 unique polygons written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=46.668
+
+INTERNAL metal5 {
+	COMMENT = "Met5 MinWidth  : minimum width = 0.16 um"
+	SPACING<0.16 
+	POINT_TOUCH=FALSE } (15)
+0 width violations found.
+   Check time = 0:00:00  User=0.01 Sys=0.00 Mem=51.245
+
+SIZE fat_candidate { 
+	COMMENT = "Met5 MaxWidth  : maximum width = 1000 um"
+	UNDER_OVER=500 } (15)
+No output written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=52.026
+
+AREA metal5 { 
+	COMMENT = "Met5 MinArea   : minimum area = 0.07 um*um"
+	RANGE = [2.5e-07,0.06999975000000001]} (15)
+No output written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=49.761
+
+EXTERNAL metal5 { 
+	COMMENT = "Met5 Spacing   : minimum spacing = 0.16 um"
+	SPACING<0.16 
+	POINT_TOUCH=TRUE 
+	NON_PARALLEL=TRUE 
+	BOX_CORNER=FALSE 
+	CHECK_SAME_POLYGON=TRUE } (15)
+0 spacing violations found.
+   Check time = 0:00:00  User=0.01 Sys=0.00 Mem=51.214
+
+COPY metal5_rbkg { } TEMP=all_blockage
+Input layer "metal5_rbkg" is empty.
+No output written.
+Layer "all_blockage" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=46.637
+
+
+BOOLEAN all_blockage AND metal5_top { } TEMP=overlap_shape1
+Input layer "all_blockage" is empty.
+No output written.
+Layer "overlap_shape1" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=46.652
+
+EXTERNAL all_blockage metal5_top { 
+	SPACING<=0 
+	TOUCH=TRUE } TEMP=overlap_shape2
+Input layer "all_blockage" is empty.
+0 spacing violations found.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=46.652
+
+
+BOOLEAN overlap_shape1 OR overlap_shape2 { 
+	COMMENT = "Met5 Overlap   : metal & blockage overlap"} (15)
+Input layer "overlap_shape1" is empty.
+Input layer "overlap_shape2" is empty.
+No output written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=45.606
+
+BOOLEAN metal6 NOT metal6_rbkg { } TEMP=fat_candidate
+Input layer "metal6_rbkg" is empty.
+456 unique polygons written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=45.621
+
+INTERNAL metal6 {
+	COMMENT = "Met6 MinWidth  : minimum width = 0.16 um"
+	SPACING<0.16 
+	POINT_TOUCH=FALSE } (16)
+0 width violations found.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=48.182
+
+SIZE fat_candidate { 
+	COMMENT = "Met6 MaxWidth  : maximum width = 1000 um"
+	UNDER_OVER=500 } (16)
+No output written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=48.980
+
+AREA metal6 { 
+	COMMENT = "Met6 MinArea   : minimum area = 0.07 um*um"
+	RANGE = [2.5e-07,0.06999975000000001]} (16)
+No output written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=48.808
+
+EXTERNAL metal6 { 
+	COMMENT = "Met6 Spacing   : minimum spacing = 0.16 um"
+	SPACING<0.16 
+	POINT_TOUCH=TRUE 
+	NON_PARALLEL=TRUE 
+	BOX_CORNER=FALSE 
+	CHECK_SAME_POLYGON=TRUE } (16)
+0 spacing violations found.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=48.151
+
+COPY metal6_rbkg { } TEMP=all_blockage
+Input layer "metal6_rbkg" is empty.
+No output written.
+Layer "all_blockage" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=45.590
+
+
+BOOLEAN all_blockage AND metal6_top { } TEMP=overlap_shape1
+Input layer "all_blockage" is empty.
+No output written.
+Layer "overlap_shape1" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=45.606
+
+EXTERNAL all_blockage metal6_top { 
+	SPACING<=0 
+	TOUCH=TRUE } TEMP=overlap_shape2
+Input layer "all_blockage" is empty.
+0 spacing violations found.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=45.606
+
+
+BOOLEAN overlap_shape1 OR overlap_shape2 { 
+	COMMENT = "Met6 Overlap   : metal & blockage overlap"} (16)
+Input layer "overlap_shape1" is empty.
+Input layer "overlap_shape2" is empty.
+No output written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.559
+
+BOOLEAN metal7 NOT metal7_rbkg { } TEMP=fat_candidate
+Input layer "metal7" is empty.
+Input layer "metal7_rbkg" is empty.
+No output written.
+Layer "fat_candidate" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.559
+
+INTERNAL metal7 {
+	COMMENT = "Met7 MinWidth  : minimum width = 0.16 um"
+	SPACING<0.16 
+	POINT_TOUCH=FALSE } (17)
+Input layer "metal7" is empty.
+0 width violations found.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.559
+
+SIZE fat_candidate { 
+	COMMENT = "Met7 MaxWidth  : maximum width = 1000 um"
+	UNDER_OVER=500 } (17)
+Input layer "fat_candidate" is empty.
+No output written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.543
+
+AREA metal7 { 
+	COMMENT = "Met7 MinArea   : minimum area = 0.07 um*um"
+	RANGE = [2.5e-07,0.06999975000000001]} (17)
+Input layer "metal7" is empty.
+No output written.
+0 area violations found.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.543
+
+EXTERNAL metal7 { 
+	COMMENT = "Met7 Spacing   : minimum spacing = 0.16 um"
+	SPACING<0.16 
+	POINT_TOUCH=TRUE 
+	NON_PARALLEL=TRUE 
+	BOX_CORNER=FALSE 
+	CHECK_SAME_POLYGON=TRUE } (17)
+Input layer "metal7" is empty.
+0 spacing violations found.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.559
+
+COPY metal7_rbkg { } TEMP=all_blockage
+Input layer "metal7_rbkg" is empty.
+No output written.
+Layer "all_blockage" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.543
+
+
+BOOLEAN all_blockage AND metal7_top { } TEMP=overlap_shape1
+Input layer "all_blockage" is empty.
+Input layer "metal7_top" is empty.
+No output written.
+Layer "overlap_shape1" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.559
+
+EXTERNAL all_blockage metal7_top { 
+	SPACING<=0 
+	TOUCH=TRUE } TEMP=overlap_shape2
+Input layer "all_blockage" is empty.
+0 spacing violations found.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.559
+
+
+BOOLEAN overlap_shape1 OR overlap_shape2 { 
+	COMMENT = "Met7 Overlap   : metal & blockage overlap"} (17)
+Input layer "overlap_shape1" is empty.
+Input layer "overlap_shape2" is empty.
+No output written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.559
+
+BOOLEAN metal8 NOT metal8_rbkg { } TEMP=fat_candidate
+Input layer "metal8" is empty.
+Input layer "metal8_rbkg" is empty.
+No output written.
+Layer "fat_candidate" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.559
+
+INTERNAL metal8 {
+	COMMENT = "Met8 MinWidth  : minimum width = 0.16 um"
+	SPACING<0.16 
+	POINT_TOUCH=FALSE } (18)
+Input layer "metal8" is empty.
+0 width violations found.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.559
+
+SIZE fat_candidate { 
+	COMMENT = "Met8 MaxWidth  : maximum width = 1000 um"
+	UNDER_OVER=500 } (18)
+Input layer "fat_candidate" is empty.
+No output written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.543
+
+AREA metal8 { 
+	COMMENT = "Met8 MinArea   : minimum area = 0.07 um*um"
+	RANGE = [2.5e-07,0.06999975000000001]} (18)
+Input layer "metal8" is empty.
+No output written.
+0 area violations found.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.543
+
+EXTERNAL metal8 { 
+	COMMENT = "Met8 Spacing   : minimum spacing = 0.16 um"
+	SPACING<0.16 
+	POINT_TOUCH=TRUE 
+	NON_PARALLEL=TRUE 
+	BOX_CORNER=FALSE 
+	CHECK_SAME_POLYGON=TRUE } (18)
+Input layer "metal8" is empty.
+0 spacing violations found.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.559
+
+COPY metal8_rbkg { } TEMP=all_blockage
+Input layer "metal8_rbkg" is empty.
+No output written.
+Layer "all_blockage" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.543
+
+
+BOOLEAN all_blockage AND metal8_top { } TEMP=overlap_shape1
+Input layer "all_blockage" is empty.
+Input layer "metal8_top" is empty.
+No output written.
+Layer "overlap_shape1" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.559
+
+EXTERNAL all_blockage metal8_top { 
+	SPACING<=0 
+	TOUCH=TRUE } TEMP=overlap_shape2
+Input layer "all_blockage" is empty.
+0 spacing violations found.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.559
+
+
+BOOLEAN overlap_shape1 OR overlap_shape2 { 
+	COMMENT = "Met8 Overlap   : metal & blockage overlap"} (18)
+Input layer "overlap_shape1" is empty.
+Input layer "overlap_shape2" is empty.
+No output written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.559
+
+BOOLEAN metal9 NOT metal9_rbkg { } TEMP=fat_candidate
+Input layer "metal9" is empty.
+Input layer "metal9_rbkg" is empty.
+No output written.
+Layer "fat_candidate" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.559
+
+INTERNAL metal9 {
+	COMMENT = "Met9 MinWidth  : minimum width = 0.45 um"
+	SPACING<0.45 
+	POINT_TOUCH=FALSE } (19)
+Input layer "metal9" is empty.
+0 width violations found.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.559
+
+SIZE fat_candidate { 
+	COMMENT = "Met9 MaxWidth  : maximum width = 1000 um"
+	UNDER_OVER=500 } (19)
+Input layer "fat_candidate" is empty.
+No output written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.543
+
+
+AREA metal9 { 
+	COMMENT = "Met9 MinArea   : minimum area = 0.6 um*um"
+	RANGE = [2.5e-07,0.5999997499999999]} (19)
+Input layer "metal9" is empty.
+No output written.
+0 area violations found.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.543
+
+EXTERNAL metal9 { 
+	COMMENT = "Met9 Spacing   : minimum spacing = 0.45 um"
+	SPACING<0.45 
+	POINT_TOUCH=TRUE 
+	NON_PARALLEL=TRUE 
+	BOX_CORNER=FALSE 
+	CHECK_SAME_POLYGON=TRUE } (19)
+Input layer "metal9" is empty.
+0 spacing violations found.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.559
+
+COPY metal9_rbkg { } TEMP=all_blockage
+Input layer "metal9_rbkg" is empty.
+No output written.
+Layer "all_blockage" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.543
+
+
+BOOLEAN all_blockage AND metal9_top { } TEMP=overlap_shape1
+Input layer "all_blockage" is empty.
+Input layer "metal9_top" is empty.
+No output written.
+Layer "overlap_shape1" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.559
+
+EXTERNAL all_blockage metal9_top { 
+	SPACING<=0 
+	TOUCH=TRUE } TEMP=overlap_shape2
+Input layer "all_blockage" is empty.
+0 spacing violations found.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.559
+
+
+BOOLEAN overlap_shape1 OR overlap_shape2 { 
+	COMMENT = "Met9 Overlap   : metal & blockage overlap"} (19)
+Input layer "overlap_shape1" is empty.
+Input layer "overlap_shape2" is empty.
+No output written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.559
+
+
+COPY via1 { } TEMP=default_via1
+50768 unique polygons written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.559
+
+EXTERNAL default_via1 { 
+	COMMENT = "Via1 Spacing   : minimum spacing = 0.14 um"
+	SPACING<0.14 
+	POINT_TOUCH=TRUE 
+	NON_PARALLEL=TRUE 
+	BOX_CORNER=FALSE } (21)
+0 spacing violations found.
+   Check time = 0:00:00  User=0.06 Sys=0.00 Mem=59.182
+
+
+BOOLEAN empty OR empty { 
+	COMMENT = "Via1 Empty: Dummy Output"} (21)
+Input layer "empty" is empty.
+Input layer "empty" is empty.
+No output written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.559
+
+
+COPY via2 { } TEMP=default_via2
+58096 unique polygons written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.559
+
+EXTERNAL default_via2 { 
+	COMMENT = "Via2 Spacing   : minimum spacing = 0.14 um"
+	SPACING<0.14 
+	POINT_TOUCH=TRUE 
+	NON_PARALLEL=TRUE 
+	BOX_CORNER=FALSE } (22)
+0 spacing violations found.
+   Check time = 0:00:00  User=0.06 Sys=0.00 Mem=60.182
+
+
+COPY via3 { } TEMP=default_via3
+24404 unique polygons written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.559
+
+EXTERNAL default_via3 { 
+	COMMENT = "Via3 Spacing   : minimum spacing = 0.14 um"
+	SPACING<0.14 
+	POINT_TOUCH=TRUE 
+	NON_PARALLEL=TRUE 
+	BOX_CORNER=FALSE } (23)
+0 spacing violations found.
+   Check time = 0:00:00  User=0.02 Sys=0.00 Mem=55.182
+
+
+COPY via4 { } TEMP=default_via4
+10598 unique polygons written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.559
+
+EXTERNAL default_via4 { 
+	COMMENT = "Via4 Spacing   : minimum spacing = 0.14 um"
+	SPACING<0.14 
+	POINT_TOUCH=TRUE 
+	NON_PARALLEL=TRUE 
+	BOX_CORNER=FALSE } (24)
+0 spacing violations found.
+   Check time = 0:00:00  User=0.01 Sys=0.00 Mem=54.182
+
+
+COPY via5 { } TEMP=default_via5
+228 unique polygons written.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.559
+
+EXTERNAL default_via5 { 
+	COMMENT = "Via5 Spacing   : minimum spacing = 0.14 um"
+	SPACING<0.14 
+	POINT_TOUCH=TRUE 
+	NON_PARALLEL=TRUE 
+	BOX_CORNER=FALSE } (25)
+0 spacing violations found.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=46.260
+
+
+COPY via6 { } TEMP=default_via6
+Input layer "via6" is empty.
+No output written.
+Layer "default_via6" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.543
+
+EXTERNAL default_via6 { 
+	COMMENT = "Via6 Spacing   : minimum spacing = 0.14 um"
+	SPACING<0.14 
+	POINT_TOUCH=TRUE 
+	NON_PARALLEL=TRUE 
+	BOX_CORNER=FALSE } (26)
+Input layer "default_via6" is empty.
+0 spacing violations found.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.559
+
+
+COPY via7 { } TEMP=default_via7
+Input layer "via7" is empty.
+No output written.
+Layer "default_via7" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.543
+
+EXTERNAL default_via7 { 
+	COMMENT = "Via7 Spacing   : minimum spacing = 0.16 um"
+	SPACING<0.16 
+	POINT_TOUCH=TRUE 
+	NON_PARALLEL=TRUE 
+	BOX_CORNER=FALSE } (27)
+Input layer "default_via7" is empty.
+0 spacing violations found.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.559
+
+
+COPY via8 { } TEMP=default_via8
+Input layer "via8" is empty.
+No output written.
+Layer "default_via8" is empty.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.543
+
+EXTERNAL default_via8 { 
+	COMMENT = "Via8 Spacing   : minimum spacing = 0.34 um"
+	SPACING<0.34 
+	POINT_TOUCH=TRUE 
+	NON_PARALLEL=TRUE 
+	BOX_CORNER=FALSE } (28)
+Input layer "default_via8" is empty.
+0 spacing violations found.
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.559
+
+
+DISCONNECT
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.574
+
+LOAD_CONNECT_DB all_layer
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.543
+
+DISCONNECT
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.574
+
+LOAD_CONNECT_DB all_layer
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.543
+
+DISCONNECT
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.574
+
+LOAD_CONNECT_DB all_layer
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.543
+
+DISCONNECT
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.574
+
+LOAD_CONNECT_DB all_layer
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.543
+
+DISCONNECT
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.574
+
+LOAD_CONNECT_DB all_layer
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.543
+
+DISCONNECT
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.574
+
+LOAD_CONNECT_DB all_layer
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.543
+
+DISCONNECT
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.574
+
+LOAD_CONNECT_DB all_layer
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.543
+
+DISCONNECT
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.574
+
+LOAD_CONNECT_DB all_layer
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.543
+
+DISCONNECT
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.574
+
+LOAD_CONNECT_DB all_layer
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.543
+
+DISCONNECT
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.574
+
+LOAD_CONNECT_DB all_layer
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.543
+
+DISCONNECT
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.574
+
+LOAD_CONNECT_DB all_layer
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.543
+
+DISCONNECT
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.574
+
+LOAD_CONNECT_DB all_layer
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.543
+
+DISCONNECT
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.574
+
+LOAD_CONNECT_DB all_layer
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.543
+
+DISCONNECT
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.574
+
+LOAD_CONNECT_DB all_layer
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.543
+
+DISCONNECT
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.574
+
+LOAD_CONNECT_DB all_layer
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.543
+
+DISCONNECT
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=44.574
+
+REMOVE_CONNECT_DB all_layer
+   Check time = 0:00:00  User=0.00 Sys=0.00 Mem=45.559
+
+Checks complete.
+  Total check time = 0:00:05  User=4.66 Sys=0.06 Mem=72.346
+
+No technology file is specified. A default file "hx2mw.tf"
+will be used to create new milkyway library
+Technology file hx2mw.tf has been loaded successfully.
+  Saving ERR & PERM data time = 0:00:01  User=0.11 Sys=0.03 Mem=42.559
+
+  EVaccess message view creation time = 0:00:00  User=0.00 Sys=0.01 Mem=18.733
+
+ Overall ev_engine time = 0:00:07  User=5.80 Sys=0.29 Mem=72.346
+
