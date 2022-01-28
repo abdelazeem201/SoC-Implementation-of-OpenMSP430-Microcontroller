@@ -1,0 +1,164 @@
+****************************************
+Report : power
+        -analysis_effort medium
+Design : openMSP430
+Version: K-2015.06
+Date   : Wed Jan 26 23:20:09 2022
+****************************************
+
+
+Library(s) Used:
+
+    saed90nm_typ_ht (File: /home/IC/Desktop/Abdelazeem/Course/thesis/OpenMSP40_Microcontrller/ref/models/saed90nm_typ_ht.db)
+
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ_ht
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+openMSP430             140000            saed90nm_typ_ht
+omsp_clock_module      8000              saed90nm_typ_ht
+omsp_frontend          16000             saed90nm_typ_ht
+omsp_execution_unit    35000             saed90nm_typ_ht
+omsp_mem_backbone      8000              saed90nm_typ_ht
+omsp_sfr               8000              saed90nm_typ_ht
+omsp_watchdog          8000              saed90nm_typ_ht
+omsp_multiplier        16000             saed90nm_typ_ht
+omsp_divider_16b       16000             saed90nm_typ_ht
+omsp_dbg               16000             saed90nm_typ_ht
+omsp_and_gate_20       ForQA             saed90nm_typ_ht
+omsp_sync_cell_16      ForQA             saed90nm_typ_ht
+omsp_scan_mux_10       ForQA             saed90nm_typ_ht
+omsp_clock_mux_2       ForQA             saed90nm_typ_ht
+omsp_clock_gate_32     ForQA             saed90nm_typ_ht
+omsp_sync_reset_1      ForQA             saed90nm_typ_ht
+omsp_register_file     16000             saed90nm_typ_ht
+omsp_alu               8000              saed90nm_typ_ht
+omsp_wakeup_cell_1     ForQA             saed90nm_typ_ht
+omsp_dbg_uart          8000              saed90nm_typ_ht
+omsp_and_gate_0        ForQA             saed90nm_typ_ht
+omsp_and_gate_1        ForQA             saed90nm_typ_ht
+omsp_and_gate_2        ForQA             saed90nm_typ_ht
+omsp_and_gate_3        ForQA             saed90nm_typ_ht
+omsp_and_gate_4        ForQA             saed90nm_typ_ht
+omsp_and_gate_5        ForQA             saed90nm_typ_ht
+omsp_and_gate_6        ForQA             saed90nm_typ_ht
+omsp_and_gate_7        ForQA             saed90nm_typ_ht
+omsp_and_gate_8        ForQA             saed90nm_typ_ht
+omsp_and_gate_9        ForQA             saed90nm_typ_ht
+omsp_and_gate_10       ForQA             saed90nm_typ_ht
+omsp_and_gate_11       ForQA             saed90nm_typ_ht
+omsp_and_gate_12       ForQA             saed90nm_typ_ht
+omsp_and_gate_13       ForQA             saed90nm_typ_ht
+omsp_and_gate_14       ForQA             saed90nm_typ_ht
+omsp_and_gate_15       ForQA             saed90nm_typ_ht
+omsp_and_gate_16       ForQA             saed90nm_typ_ht
+omsp_and_gate_17       ForQA             saed90nm_typ_ht
+omsp_and_gate_18       ForQA             saed90nm_typ_ht
+omsp_and_gate_19       ForQA             saed90nm_typ_ht
+omsp_sync_cell_0       ForQA             saed90nm_typ_ht
+omsp_sync_cell_1       ForQA             saed90nm_typ_ht
+omsp_sync_cell_2       ForQA             saed90nm_typ_ht
+omsp_sync_cell_3       ForQA             saed90nm_typ_ht
+omsp_sync_cell_4       ForQA             saed90nm_typ_ht
+omsp_sync_cell_5       ForQA             saed90nm_typ_ht
+omsp_sync_cell_6       ForQA             saed90nm_typ_ht
+omsp_sync_cell_7       ForQA             saed90nm_typ_ht
+omsp_sync_cell_8       ForQA             saed90nm_typ_ht
+omsp_sync_cell_9       ForQA             saed90nm_typ_ht
+omsp_sync_cell_10      ForQA             saed90nm_typ_ht
+omsp_sync_cell_11      ForQA             saed90nm_typ_ht
+omsp_sync_cell_12      ForQA             saed90nm_typ_ht
+omsp_sync_cell_13      ForQA             saed90nm_typ_ht
+omsp_sync_cell_14      ForQA             saed90nm_typ_ht
+omsp_sync_cell_15      ForQA             saed90nm_typ_ht
+omsp_scan_mux_0        ForQA             saed90nm_typ_ht
+omsp_scan_mux_1        ForQA             saed90nm_typ_ht
+omsp_scan_mux_2        ForQA             saed90nm_typ_ht
+omsp_scan_mux_3        ForQA             saed90nm_typ_ht
+omsp_scan_mux_4        ForQA             saed90nm_typ_ht
+omsp_scan_mux_5        ForQA             saed90nm_typ_ht
+omsp_scan_mux_6        ForQA             saed90nm_typ_ht
+omsp_scan_mux_7        ForQA             saed90nm_typ_ht
+omsp_scan_mux_8        ForQA             saed90nm_typ_ht
+omsp_scan_mux_9        ForQA             saed90nm_typ_ht
+omsp_clock_mux_0       ForQA             saed90nm_typ_ht
+omsp_clock_mux_1       ForQA             saed90nm_typ_ht
+omsp_clock_gate_0      ForQA             saed90nm_typ_ht
+omsp_clock_gate_1      ForQA             saed90nm_typ_ht
+omsp_clock_gate_2      ForQA             saed90nm_typ_ht
+omsp_clock_gate_3      ForQA             saed90nm_typ_ht
+omsp_clock_gate_4      ForQA             saed90nm_typ_ht
+omsp_clock_gate_5      ForQA             saed90nm_typ_ht
+omsp_clock_gate_6      ForQA             saed90nm_typ_ht
+omsp_clock_gate_7      ForQA             saed90nm_typ_ht
+omsp_clock_gate_8      ForQA             saed90nm_typ_ht
+omsp_clock_gate_9      ForQA             saed90nm_typ_ht
+omsp_clock_gate_10     ForQA             saed90nm_typ_ht
+omsp_clock_gate_11     ForQA             saed90nm_typ_ht
+omsp_clock_gate_12     ForQA             saed90nm_typ_ht
+omsp_clock_gate_13     ForQA             saed90nm_typ_ht
+omsp_clock_gate_14     ForQA             saed90nm_typ_ht
+omsp_clock_gate_15     ForQA             saed90nm_typ_ht
+omsp_clock_gate_16     ForQA             saed90nm_typ_ht
+omsp_clock_gate_17     ForQA             saed90nm_typ_ht
+omsp_clock_gate_18     ForQA             saed90nm_typ_ht
+omsp_clock_gate_19     ForQA             saed90nm_typ_ht
+omsp_clock_gate_20     ForQA             saed90nm_typ_ht
+omsp_clock_gate_21     ForQA             saed90nm_typ_ht
+omsp_clock_gate_22     ForQA             saed90nm_typ_ht
+omsp_clock_gate_23     ForQA             saed90nm_typ_ht
+omsp_clock_gate_24     ForQA             saed90nm_typ_ht
+omsp_clock_gate_25     ForQA             saed90nm_typ_ht
+omsp_clock_gate_26     ForQA             saed90nm_typ_ht
+omsp_clock_gate_27     ForQA             saed90nm_typ_ht
+omsp_clock_gate_28     ForQA             saed90nm_typ_ht
+omsp_clock_gate_29     ForQA             saed90nm_typ_ht
+omsp_clock_gate_30     ForQA             saed90nm_typ_ht
+omsp_clock_gate_31     ForQA             saed90nm_typ_ht
+omsp_sync_reset_0      ForQA             saed90nm_typ_ht
+omsp_wakeup_cell_0     ForQA             saed90nm_typ_ht
+omsp_dbg_uart_DW01_inc_0
+                       8000              saed90nm_typ_ht
+omsp_divider_16b_DW_div_0
+                       8000              saed90nm_typ_ht
+omsp_multiplier_DW01_add_0
+                       8000              saed90nm_typ_ht
+omsp_watchdog_DW01_inc_0
+                       8000              saed90nm_typ_ht
+omsp_alu_DW01_add_9    8000              saed90nm_typ_ht
+omsp_multiplier_DW02_mult_0
+                       8000              saed90nm_typ_ht
+omsp_multiplier_DW01_add_1
+                       8000              saed90nm_typ_ht
+
+
+Global Operating Voltage = 1.2  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+  Cell Internal Power  =   2.3865 uW   (54%)
+  Net Switching Power  =   2.0278 uW   (46%)
+                         ---------
+Total Dynamic Power    =   4.4143 uW  (100%)
+
+Cell Leakage Power     =   1.0326 mW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.4292            1.0769        7.8218e+06            9.3280  (   0.90%)
+register       9.8581e-02        8.8844e-02        3.2790e+08          328.0878  (  31.64%)
+sequential     -3.6331e-04        1.1176e-04        9.7817e+05            0.9779 (   0.09%)
+combinational      1.8590            0.8619        6.9594e+08          698.6592  (  67.37%)
+--------------------------------------------------------------------------------------------------
+Total              2.3865 uW         2.0278 uW     1.0326e+09 pW     1.0371e+03 uW
