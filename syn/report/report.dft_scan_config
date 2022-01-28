@@ -1,0 +1,39 @@
+ 
+****************************************
+Report : Scan configuration
+Design : openMSP430
+Version: K-2015.06
+Date   : Wed Jan 26 23:42:02 2022
+****************************************
+
+========================================
+TEST MODE: all_dft
+VIEW     : Specification
+========================================
+Chain count:                           3
+Scan Style:                            Multiplexed flip-flop
+Maximum scan chain length:             Undefined
+Exact scan chain length:               Undefined
+Physical Partitioning:                 Horizontal
+Replace:                               True
+Preserve multibit segments:            False
+Clock mixing:                          Mix clocks
+Internal clocks:                       none
+Add lockup:                            True
+Lockup type:                           latch
+Insert terminal lockup:                False
+Create dedicated scan out ports:       False
+Shared scan in:                        0
+Bidirectional mode:                    No bidirectional type
+Internal Clock Mixing:                 False
+Test Clocks by System Clocks:          False
+Hierarchical Isolation:                False
+Multiple Scan Enable:                  Disable
+Pipeline Scan Enable:                  Disable
+Voltage Mixing:                        False
+Identify Shift Register:               False
+Power Domain Mixing:                   False
+Reuse MV Isolation Cells:              True
+Multi LSSD:                            Disable
+
+1

@@ -1,0 +1,39 @@
+  Information: Using test design rule information from previous dft_drc run.
+  Architecting Scan Chains
+
+****************************************
+Preview_dft report
+For    : 'Insert_dft' command
+Design : openMSP430
+Version: K-2015.06
+Date   : Wed Jan 26 23:46:52 2022
+****************************************
+
+Number of chains: 3
+Scan methodology: full_scan
+Scan style: multiplexed_flip_flop
+Clock domain: mix_clocks
+Scan enable: scan_enable (no hookup pin)
+
+
+Scan chain '1' (test_si1 --> dbg_uart_txd) contains 272 cells
+
+
+Scan chain '2' (test_si2 --> test_so2) contains 272 cells
+
+
+Scan chain '3' (test_si3 --> test_so3) contains 271 cells
+
+
+
+************ Test Point Plan Report ************
+Total number of test points  : 0
+Number of Autofix test points: 0
+Number of Wrapper test points: 0
+Number of test modes         : 0
+Number of test point enables : 0
+Number of data sources       : 0
+Number of data sinks         : 0
+**************************************************
+
+1

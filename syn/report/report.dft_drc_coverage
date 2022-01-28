@@ -1,0 +1,153 @@
+In mode: Internal_scan...
+  Design has scan chains in this mode
+  Design is scan routed
+  Post-DFT DRC enabled
+
+Information: Starting test design rule checking. (TEST-222)
+  Loading test protocol
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking vector rules...
+  ...checking clock rules...
+  ...checking scan chain rules...
+  ...checking scan compression rules...
+  ...checking X-state rules...
+  ...checking tristate rules...
+  ...extracting scan details...
+  ...saving simulation value info...
+
+-----------------------------------------------------------------
+Begin Clock violations...
+
+ Warning: Clock PIs off did not force off clock input RSTB of nonscan DFF sfr_0/wakeup_cell_nmi/wkup_out_reg. (C2-1)
+Information: There is 1 other cell with the same violation. (TEST-173)
+ Warning: Clock dco_clk can capture new data on TE input CLK of DFF clock_module_0/lfxt_disable_reg. (C6-1)
+         Source of violation: input CLK of DFF execution_unit_0/register_file_0/r2_reg_5_.
+Information: There are 5 other cells with the same violation. (TEST-171)
+ Warning: Clock dco_clk is connected to primary output mclk. (C17-1)
+Information: There are 2 other ports with the same violation. (TEST-299)
+ Warning: Path from clock dco_clk to PO mclk affected by new captured data. (C18-1)
+Information: There is 1 other port with the same violation (TEST-298)
+ Warning: DFF (sfr_0/nmi_capture_rst_reg) connected to input RSTB of unstable DFF (sfr_0/wakeup_cell_nmi/wkup_out_reg). (C23-1)
+Information: There is 1 other cell with the same violation. (TEST-173)
+ Warning: Nonclock PI nmi connected to input CLK of unstable DFF (sfr_0/wakeup_cell_nmi/wkup_out_reg). (C24-1)
+
+Clock violations completed...
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Begin Scan chain violations...
+
+ Warning: Nonscan DFF sfr_0/wakeup_cell_nmi/wkup_out_reg disturbed during time 0 of load_unload procedure. (S19-1)
+Information: There is 1 other cell with the same violation. (TEST-173)
+ Warning: Multiple clocks (dco_clk lfxt_clk) were used to shift scan chain 1. (S22-1)
+ Warning: Latch clock_module_0/clock_gate_mclk/enable_latch_reg not transparent due to connection to clock_po (mclk). (S27-1)
+Information: There are 2 other cells with the same violation. (TEST-171)
+ Warning: Dependent slave clock_module_0/clock_mux_mclk/in1_select_s_reg may not hold same value as master watchdog_0/clock_mux_watchdog/LOCKUP. (S29-1)
+
+Scan chain violations completed...
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+  DRC Report
+
+  Total violations: 25
+
+-----------------------------------------------------------------
+
+18 CLOCK VIOLATIONS
+     2 Unstable nonscan DFF when clocks off violations (C2)
+     6 Trailing edge port captured data affected by new capture violations (C6)
+     3 Clock connected to primary output violations (C17)
+     2 Clock connected to primary output affected by new capture violations (C18)
+     4 State element connected to unstable cell clock input violations (C23)
+     1 Nonclock PI connected to unstable cell clock input violation (C24)
+
+7 SCAN CHAIN VIOLATIONS
+     2 Nonscan cell disturb violations (S19)
+     1 Multiply clocked scan chain violation (S22)
+     3 Clock_po connection for potential transparent latch violations (S27)
+     1 Invalid dependent slave operation violation (S29)
+
+
+Warning: Violations occurred during test design rule checking. (TEST-124)
+
+-----------------------------------------------------------------
+  Sequential Cell Report
+
+  8 out of 852 sequential cells have violations
+
+-----------------------------------------------------------------
+
+SEQUENTIAL CELLS WITH VIOLATIONS
+      *   2 cells have test design rule violations
+      *   6 cells have capture violations
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+      *  33 cells are valid non-scan cells
+      * 811 cells are valid scan cells
+
+Information: Test design rule checking completed. (TEST-123)
+  Running test coverage estimation...
+ 45402 faults were added to fault list.
+ #patterns     #faults     #ATPG faults  test      process
+ stored     detect/active  red/au/abort  coverage  CPU time
+ ---------  -------------  ------------  --------  --------
+ Begin deterministic ATPG: #uncollapsed_faults=37915, abort_limit=10...
+ 0           20615  17300         0/0/0    60.93%      0.09
+ 0            5669  11631         0/0/1    73.45%      0.11
+ 0            2613   9018         0/0/2    79.22%      0.14
+ 0            1457   7561         0/0/2    82.44%      0.15
+ 0            1248   6313         0/0/4    85.19%      0.16
+ 0             824   5489         0/0/5    87.01%      0.17
+ 0            1104   4385         0/0/7    89.45%      0.18
+ 0             520   3864         1/0/8    90.60%      0.19
+ 0             468   3396         1/0/9    91.64%      0.20
+ 0             544   2852        1/0/11    92.84%      0.21
+ 0             269   2582        1/1/13    93.43%      0.22
+ 0             364   2216        2/2/15    94.24%      0.24
+ 0             356   1859        3/2/21    95.02%      0.25
+ 0             164   1695        3/2/22    95.39%      0.25
+ 0             188   1507        3/2/24    95.80%      0.26
+ 0             234   1273        3/2/28    96.32%      0.27
+ 0             134   1138        4/2/31    96.62%      0.28
+ 0             120   1015        6/2/36    96.89%      0.29
+ 0             104    911        6/2/39    97.12%      0.30
+ 0             128    777       11/2/42    97.41%      0.32
+ 0              84    690       12/3/45    97.60%      0.33
+ 0             100    588       14/3/47    97.83%      0.34
+ 0              70    518       14/3/51    97.98%      0.35
+ 0              58    458       16/3/55    98.12%      0.36
+ 0              49    407       18/3/60    98.23%      0.37
+ 0              76    329       20/3/63    98.40%      0.38
+ 0              46    283       20/3/65    98.50%      0.40
+ 0              50    230       23/3/67    98.62%      0.40
+ 0              42    183       27/4/69    98.72%      0.41
+ 0              47    133       29/5/70    98.83%      0.41
+ 0              23    105       32/7/72    98.89%      0.42
+ 96 faults were identified as detected by implication, test coverage is now 99.10%.
+ 
+            Pattern Summary Report
+ -----------------------------------------------
+ #internal patterns                           0
+ -----------------------------------------------
+ 
+
+     Uncollapsed Stuck Fault Summary Report
+ -----------------------------------------------
+ fault class                     code   #faults
+ ------------------------------  ----  ---------
+ Detected                         DT      44844
+ Possibly detected                PT          0
+ Undetectable                     UD        150
+ ATPG untestable                  AU        303
+ Not detected                     ND        105
+ -----------------------------------------------
+ total faults                             45402
+ test coverage                            99.10%
+ -----------------------------------------------
+  Information: The test coverage above may be inferior
+               than the real test coverage with customized
+               protocol and test simulation library.
+Current design is 'openMSP430'.
+Current design is 'openMSP430'.
+1

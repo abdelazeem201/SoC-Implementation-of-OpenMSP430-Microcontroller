@@ -1,0 +1,951 @@
+In mode: all_dft...
+  Pre-DFT DRC enabled
+
+Information: Starting test design rule checking. (TEST-222)
+  Loading test protocol
+  ...basic checks...
+  ...basic sequential cell checks...
+  	...checking for scan equivalents...
+
+Scan equivalent mappings for target library are:
+
+	SDFFSSRX2 -> SDFFSSRX2 SDFFSSRX1 
+	SDFFSSRX1 -> SDFFSSRX2 SDFFSSRX1 
+	DFFX2    -> SDFFX2 SDFFX1 
+	DFFX1    -> SDFFX2 SDFFX1 
+	DFFNX2   -> SDFFNX2 SDFFNX1 
+	DFFNX1   -> SDFFNX2 SDFFNX1 
+	DFFNASX2 -> SDFFNASX2 SDFFNASX1 
+	DFFNASX1 -> SDFFNASX2 SDFFNASX1 
+	DFFNASRX2 -> SDFFNASRX2 SDFFNASRX1 
+	DFFNASRX1 -> SDFFNASRX2 SDFFNASRX1 
+	DFFNASRQX2 -> SDFFNASRX2 SDFFNASRX1 
+	DFFNASRQX1 -> SDFFNASRX2 SDFFNASRX1 
+	DFFNARX2 -> SDFFNARX2 SDFFNARX1 
+	DFFNARX1 -> SDFFNARX2 SDFFNARX1 
+	DFFASX2  -> SDFFASX2 SDFFASX1 
+	DFFASX1  -> SDFFASX2 SDFFASX1 
+	DFFASRX2 -> SDFFASRX2 SDFFASRX1 
+	DFFASRX1 -> SDFFASRX2 SDFFASRX1 
+	DFFARX2  -> SDFFARX2 SDFFARX1 
+	DFFARX1  -> SDFFARX2 SDFFARX1 
+
+  ...checking vector rules...
+  ...checking pre-dft rules...
+  ...saving simulation value info...
+
+-----------------------------------------------------------------
+Begin Modeling violations...
+
+Warning: No scan equivalent exists for cell clock_module_0/clock_gate_mclk/enable_latch_reg (LATCHX1). (TEST-120)
+Information: Cells with this violation : clock_module_0/clock_gate_aclk/enable_latch_reg, clock_module_0/clock_gate_dbg_clk/enable_latch_reg, clock_module_0/clock_gate_mclk/enable_latch_reg, clock_module_0/clock_gate_smclk/enable_latch_reg, execution_unit_0/clock_gate_mdb_in_buf/enable_latch_reg, execution_unit_0/clock_gate_mdb_out_nxt/enable_latch_reg, execution_unit_0/register_file_0/clock_gate_r1/enable_latch_reg, execution_unit_0/register_file_0/clock_gate_r2/enable_latch_reg, execution_unit_0/register_file_0/clock_gate_r3/enable_latch_reg, execution_unit_0/register_file_0/clock_gate_r4/enable_latch_reg, execution_unit_0/register_file_0/clock_gate_r5/enable_latch_reg, execution_unit_0/register_file_0/clock_gate_r6/enable_latch_reg, execution_unit_0/register_file_0/clock_gate_r7/enable_latch_reg, execution_unit_0/register_file_0/clock_gate_r8/enable_latch_reg, execution_unit_0/register_file_0/clock_gate_r9/enable_latch_reg, execution_unit_0/register_file_0/clock_gate_r10/enable_latch_reg, execution_unit_0/register_file_0/clock_gate_r11/enable_latch_reg, execution_unit_0/register_file_0/clock_gate_r12/enable_latch_reg, execution_unit_0/register_file_0/clock_gate_r13/enable_latch_reg, execution_unit_0/register_file_0/clock_gate_r14/enable_latch_reg, execution_unit_0/register_file_0/clock_gate_r15/enable_latch_reg, frontend_0/clock_gate_decode/enable_latch_reg, frontend_0/clock_gate_inst_dext/enable_latch_reg, frontend_0/clock_gate_inst_sext/enable_latch_reg, frontend_0/clock_gate_irq_num/enable_latch_reg, frontend_0/clock_gate_pc/enable_latch_reg, mem_backbone_0/clock_gate_bckup/enable_latch_reg, multiplier_0/clock_gate_op1/enable_latch_reg, multiplier_0/clock_gate_op2/enable_latch_reg, multiplier_0/clock_gate_reshi/enable_latch_reg, multiplier_0/clock_gate_reslo/enable_latch_reg, watchdog_0/clock_gate_wdtcnt/enable_latch_reg, watchdog_0/clock_gate_wdtctl/enable_latch_reg. (TEST-283)
+
+Modeling violations completed...
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Begin Pre-DFT violations...
+
+ Warning: Clock input CLK of DFF sfr_0/wakeup_cell_nmi/wkup_out_reg was not controlled. (D1-1)
+ Warning: Clock input CLK of DFF watchdog_0/wakeup_cell_wdog/wkup_out_reg was not controlled. (D1-2)
+ Warning: Reset input RSTB of DFF sfr_0/wakeup_cell_nmi/wkup_out_reg was not controlled. (D3-1)
+ Warning: Reset input RSTB of DFF watchdog_0/wakeup_cell_wdog/wkup_out_reg was not controlled. (D3-2)
+ Warning: Clock dco_clk can capture new data on TE input CLK of DFF clock_module_0/lfxt_disable_reg. (D14-1)
+         Source of violation: input CLK of DFF execution_unit_0/register_file_0/r2_reg_5_.
+ Warning: Clock dco_clk can capture new data on TE input CLK of DFF clock_module_0/dco_disable_reg. (D14-2)
+         Source of violation: input CLK of DFF execution_unit_0/register_file_0/r2_reg_6_.
+ Warning: Clock dco_clk can capture new data on TE input CLK of DFF clock_module_0/clock_mux_mclk/in0_select_s_reg. (D14-3)
+         Source of violation: input CLK of DFF clock_module_0/bcsctl2_reg_7_.
+ Warning: Clock dco_clk can capture new data on TE input CLK of DFF clock_module_0/sync_cell_dco_wkup/data_sync_reg_0_. (D14-4)
+         Source of violation: input CLK of DFF clock_module_0/bcsctl2_reg_7_.
+ Warning: Clock dco_clk can capture new data on TE input CLK of DFF watchdog_0/clock_mux_watchdog/in0_select_s_reg. (D14-5)
+         Source of violation: input CLK of DFF watchdog_0/wdtctl_reg_2_.
+ Warning: Clock dco_clk can capture new data on TE input CLK of DFF clock_module_0/clock_mux_smclk/in0_select_s_reg. (D14-6)
+         Source of violation: input CLK of DFF clock_module_0/bcsctl2_reg_3_.
+
+Pre-DFT violations completed...
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+  DRC Report
+
+  Total violations: 43
+
+-----------------------------------------------------------------
+
+33 MODELING VIOLATIONS
+    33 Cell has no scan equivalent violations (TEST-120)
+
+10 PRE-DFT VIOLATIONS
+     2 Uncontrollable clock input of flip-flop violations (D1)
+     2 DFF set/reset line not controlled violations (D3)
+     6 Data path affected by clock captured by clock in trailing edge clock_port violations (D14)
+
+
+Warning: Violations occurred during test design rule checking. (TEST-124)
+
+-----------------------------------------------------------------
+  Sequential Cell Report
+
+  41 out of 850 sequential cells have violations
+
+-----------------------------------------------------------------
+
+SEQUENTIAL CELLS WITH VIOLATIONS
+      *  35 cells have test design rule violations
+         clock_module_0/clock_gate_mclk/enable_latch_reg
+         sfr_0/wakeup_cell_nmi/wkup_out_reg
+         execution_unit_0/register_file_0/clock_gate_r15/enable_latch_reg
+         execution_unit_0/register_file_0/clock_gate_r14/enable_latch_reg
+         execution_unit_0/register_file_0/clock_gate_r13/enable_latch_reg
+         execution_unit_0/register_file_0/clock_gate_r12/enable_latch_reg
+         execution_unit_0/register_file_0/clock_gate_r11/enable_latch_reg
+         execution_unit_0/register_file_0/clock_gate_r10/enable_latch_reg
+         execution_unit_0/register_file_0/clock_gate_r9/enable_latch_reg
+         execution_unit_0/register_file_0/clock_gate_r8/enable_latch_reg
+         execution_unit_0/register_file_0/clock_gate_r7/enable_latch_reg
+         execution_unit_0/register_file_0/clock_gate_r6/enable_latch_reg
+         execution_unit_0/register_file_0/clock_gate_r5/enable_latch_reg
+         execution_unit_0/register_file_0/clock_gate_r4/enable_latch_reg
+         execution_unit_0/register_file_0/clock_gate_r3/enable_latch_reg
+         execution_unit_0/register_file_0/clock_gate_r2/enable_latch_reg
+         execution_unit_0/register_file_0/clock_gate_r1/enable_latch_reg
+         multiplier_0/clock_gate_reshi/enable_latch_reg
+         multiplier_0/clock_gate_reslo/enable_latch_reg
+         multiplier_0/clock_gate_op2/enable_latch_reg
+         multiplier_0/clock_gate_op1/enable_latch_reg
+         watchdog_0/clock_gate_wdtcnt/enable_latch_reg
+         watchdog_0/clock_gate_wdtctl/enable_latch_reg
+         mem_backbone_0/clock_gate_bckup/enable_latch_reg
+         execution_unit_0/clock_gate_mdb_in_buf/enable_latch_reg
+         execution_unit_0/clock_gate_mdb_out_nxt/enable_latch_reg
+         frontend_0/clock_gate_decode/enable_latch_reg
+         frontend_0/clock_gate_inst_dext/enable_latch_reg
+         frontend_0/clock_gate_inst_sext/enable_latch_reg
+         frontend_0/clock_gate_pc/enable_latch_reg
+         frontend_0/clock_gate_irq_num/enable_latch_reg
+         clock_module_0/clock_gate_dbg_clk/enable_latch_reg
+         clock_module_0/clock_gate_smclk/enable_latch_reg
+         clock_module_0/clock_gate_aclk/enable_latch_reg
+         watchdog_0/wakeup_cell_wdog/wkup_out_reg
+      *   6 cells have capture violations
+         clock_module_0/lfxt_disable_reg
+         clock_module_0/dco_disable_reg
+         clock_module_0/clock_mux_mclk/in0_select_s_reg
+         clock_module_0/sync_cell_dco_wkup/data_sync_reg_0_
+         watchdog_0/clock_mux_watchdog/in0_select_s_reg
+         clock_module_0/clock_mux_smclk/in0_select_s_reg
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+      * 809 cells are valid scan cells
+         clock_module_0/dbg_rst_noscan_reg
+         clock_module_0/bcsctl1_reg_5_
+         clock_module_0/divax_s_reg_1_
+         clock_module_0/divax_ss_reg_1_
+         clock_module_0/bcsctl1_reg_4_
+         clock_module_0/divax_s_reg_0_
+         clock_module_0/divax_ss_reg_0_
+         clock_module_0/aclk_div_reg_0_
+         clock_module_0/aclk_div_reg_1_
+         clock_module_0/aclk_div_reg_2_
+         clock_module_0/bcsctl2_reg_7_
+         clock_module_0/bcsctl2_reg_5_
+         clock_module_0/bcsctl2_reg_4_
+         clock_module_0/mclk_div_reg_0_
+         clock_module_0/mclk_div_reg_1_
+         clock_module_0/mclk_div_reg_2_
+         clock_module_0/bcsctl2_reg_3_
+         clock_module_0/bcsctl2_reg_2_
+         clock_module_0/divsx_s_reg_1_
+         clock_module_0/divsx_ss_reg_1_
+         clock_module_0/bcsctl2_reg_1_
+         clock_module_0/divsx_s_reg_0_
+         clock_module_0/divsx_ss_reg_0_
+         clock_module_0/smclk_div_reg_0_
+         clock_module_0/smclk_div_reg_1_
+         clock_module_0/smclk_div_reg_2_
+         frontend_0/pmem_busy_reg
+         frontend_0/e_state_reg_0_
+         frontend_0/e_state_reg_1_
+         frontend_0/e_state_reg_2_
+         frontend_0/inst_irq_rst_reg
+         frontend_0/inst_jmp_bin_reg_2_
+         frontend_0/inst_jmp_bin_reg_1_
+         frontend_0/inst_jmp_bin_reg_0_
+         frontend_0/inst_dest_bin_reg_3_
+         frontend_0/inst_dest_bin_reg_2_
+         frontend_0/inst_dest_bin_reg_1_
+         frontend_0/inst_dest_bin_reg_0_
+         frontend_0/inst_src_bin_reg_3_
+         frontend_0/inst_src_bin_reg_2_
+         frontend_0/inst_src_bin_reg_1_
+         frontend_0/inst_src_bin_reg_0_
+         frontend_0/inst_sz_reg_0_
+         frontend_0/i_state_reg_2_
+         frontend_0/dbg_halt_st_reg
+         frontend_0/e_state_reg_3_
+         frontend_0/i_state_reg_0_
+         frontend_0/i_state_reg_1_
+         frontend_0/inst_type_reg_2_
+         frontend_0/inst_mov_reg
+         frontend_0/inst_ad_reg_0_
+         frontend_0/inst_ad_reg_1_
+         frontend_0/inst_ad_reg_6_
+         frontend_0/inst_ad_reg_4_
+         frontend_0/inst_type_reg_1_
+         frontend_0/inst_so_reg_3_
+         frontend_0/inst_so_reg_2_
+         frontend_0/inst_so_reg_6_
+         frontend_0/exec_jmp_reg
+         frontend_0/inst_as_reg_7_
+         frontend_0/inst_as_reg_6_
+         frontend_0/inst_as_reg_1_
+         frontend_0/inst_as_reg_3_
+         frontend_0/inst_as_reg_5_
+         frontend_0/inst_as_reg_4_
+         frontend_0/inst_as_reg_2_
+         frontend_0/inst_as_reg_0_
+         frontend_0/inst_sz_reg_1_
+         frontend_0/inst_type_reg_0_
+         frontend_0/inst_so_reg_0_
+         frontend_0/inst_so_reg_1_
+         frontend_0/inst_so_reg_5_
+         frontend_0/inst_so_reg_4_
+         frontend_0/irq_num_reg_3_
+         frontend_0/irq_num_reg_2_
+         frontend_0/irq_num_reg_1_
+         frontend_0/irq_num_reg_0_
+         frontend_0/inst_so_reg_7_
+         frontend_0/inst_sext_reg_0_
+         frontend_0/inst_dext_reg_15_
+         frontend_0/inst_dext_reg_14_
+         frontend_0/inst_dext_reg_13_
+         frontend_0/inst_dext_reg_12_
+         frontend_0/inst_dext_reg_11_
+         frontend_0/inst_dext_reg_10_
+         frontend_0/inst_dext_reg_9_
+         frontend_0/inst_dext_reg_8_
+         frontend_0/inst_dext_reg_7_
+         frontend_0/inst_dext_reg_6_
+         frontend_0/inst_dext_reg_5_
+         frontend_0/inst_dext_reg_4_
+         frontend_0/inst_dext_reg_3_
+         frontend_0/inst_dext_reg_2_
+         frontend_0/inst_dext_reg_1_
+         frontend_0/exec_dext_rdy_reg
+         frontend_0/exec_src_wr_reg
+         frontend_0/exec_dst_wr_reg
+         frontend_0/inst_bw_reg
+         frontend_0/inst_sext_reg_15_
+         frontend_0/inst_sext_reg_14_
+         frontend_0/inst_sext_reg_13_
+         frontend_0/inst_sext_reg_12_
+         frontend_0/inst_sext_reg_11_
+         frontend_0/inst_sext_reg_10_
+         frontend_0/inst_sext_reg_9_
+         frontend_0/inst_sext_reg_8_
+         frontend_0/inst_sext_reg_7_
+         frontend_0/inst_sext_reg_6_
+         frontend_0/inst_sext_reg_5_
+         frontend_0/inst_sext_reg_4_
+         frontend_0/inst_sext_reg_3_
+         frontend_0/inst_sext_reg_2_
+         frontend_0/inst_sext_reg_1_
+         frontend_0/pc_reg_1_
+         frontend_0/pc_reg_2_
+         frontend_0/pc_reg_3_
+         frontend_0/pc_reg_4_
+         frontend_0/pc_reg_5_
+         frontend_0/pc_reg_6_
+         frontend_0/pc_reg_7_
+         frontend_0/pc_reg_8_
+         frontend_0/pc_reg_9_
+         frontend_0/pc_reg_10_
+         frontend_0/pc_reg_11_
+         frontend_0/pc_reg_12_
+         frontend_0/pc_reg_13_
+         frontend_0/pc_reg_14_
+         frontend_0/pc_reg_15_
+         frontend_0/inst_alu_reg_11_
+         frontend_0/inst_alu_reg_10_
+         frontend_0/inst_alu_reg_9_
+         frontend_0/inst_alu_reg_8_
+         frontend_0/inst_alu_reg_7_
+         frontend_0/inst_alu_reg_6_
+         frontend_0/inst_alu_reg_5_
+         frontend_0/inst_alu_reg_4_
+         frontend_0/inst_alu_reg_3_
+         frontend_0/inst_alu_reg_2_
+         frontend_0/inst_alu_reg_1_
+         frontend_0/inst_alu_reg_0_
+         frontend_0/inst_dext_reg_0_
+         frontend_0/pc_reg_0_
+         execution_unit_0/mdb_in_buf_en_reg
+         execution_unit_0/mdb_in_buf_valid_reg
+         execution_unit_0/mdb_out_nxt_reg_1_
+         execution_unit_0/mdb_out_nxt_reg_2_
+         execution_unit_0/mdb_out_nxt_reg_3_
+         execution_unit_0/mdb_out_nxt_reg_4_
+         execution_unit_0/mdb_out_nxt_reg_5_
+         execution_unit_0/mdb_out_nxt_reg_6_
+         execution_unit_0/mdb_out_nxt_reg_7_
+         execution_unit_0/mdb_out_nxt_reg_8_
+         execution_unit_0/mdb_out_nxt_reg_9_
+         execution_unit_0/mdb_out_nxt_reg_10_
+         execution_unit_0/mdb_out_nxt_reg_11_
+         execution_unit_0/mdb_out_nxt_reg_12_
+         execution_unit_0/mdb_out_nxt_reg_13_
+         execution_unit_0/mdb_out_nxt_reg_14_
+         execution_unit_0/mdb_out_nxt_reg_15_
+         execution_unit_0/mdb_in_buf_reg_8_
+         execution_unit_0/mdb_in_buf_reg_15_
+         execution_unit_0/mdb_in_buf_reg_14_
+         execution_unit_0/mdb_in_buf_reg_13_
+         execution_unit_0/mdb_in_buf_reg_12_
+         execution_unit_0/mdb_in_buf_reg_11_
+         execution_unit_0/mdb_in_buf_reg_10_
+         execution_unit_0/mdb_in_buf_reg_9_
+         execution_unit_0/mdb_in_buf_reg_7_
+         execution_unit_0/mdb_in_buf_reg_6_
+         execution_unit_0/mdb_in_buf_reg_5_
+         execution_unit_0/mdb_in_buf_reg_4_
+         execution_unit_0/mdb_in_buf_reg_3_
+         execution_unit_0/mdb_in_buf_reg_2_
+         execution_unit_0/mdb_in_buf_reg_0_
+         execution_unit_0/mdb_in_buf_reg_1_
+         execution_unit_0/mab_lsb_reg
+         execution_unit_0/mdb_out_nxt_reg_0_
+         mem_backbone_0/per_dout_val_reg_15_
+         mem_backbone_0/per_dout_val_reg_14_
+         mem_backbone_0/per_dout_val_reg_13_
+         mem_backbone_0/per_dout_val_reg_12_
+         mem_backbone_0/per_dout_val_reg_11_
+         mem_backbone_0/per_dout_val_reg_10_
+         mem_backbone_0/per_dout_val_reg_9_
+         mem_backbone_0/per_dout_val_reg_8_
+         mem_backbone_0/per_dout_val_reg_7_
+         mem_backbone_0/per_dout_val_reg_6_
+         mem_backbone_0/per_dout_val_reg_5_
+         mem_backbone_0/per_dout_val_reg_4_
+         mem_backbone_0/per_dout_val_reg_3_
+         mem_backbone_0/per_dout_val_reg_2_
+         mem_backbone_0/per_dout_val_reg_1_
+         mem_backbone_0/per_dout_val_reg_0_
+         mem_backbone_0/fe_pmem_cen_dly_reg
+         mem_backbone_0/pmem_dout_bckup_sel_reg
+         mem_backbone_0/eu_mdb_in_sel_reg_1_
+         mem_backbone_0/eu_mdb_in_sel_reg_0_
+         mem_backbone_0/dbg_mem_din_sel_reg_1_
+         mem_backbone_0/dbg_mem_din_sel_reg_0_
+         mem_backbone_0/pmem_dout_bckup_reg_15_
+         mem_backbone_0/pmem_dout_bckup_reg_14_
+         mem_backbone_0/pmem_dout_bckup_reg_13_
+         mem_backbone_0/pmem_dout_bckup_reg_12_
+         mem_backbone_0/pmem_dout_bckup_reg_11_
+         mem_backbone_0/pmem_dout_bckup_reg_10_
+         mem_backbone_0/pmem_dout_bckup_reg_9_
+         mem_backbone_0/pmem_dout_bckup_reg_8_
+         mem_backbone_0/pmem_dout_bckup_reg_7_
+         mem_backbone_0/pmem_dout_bckup_reg_6_
+         mem_backbone_0/pmem_dout_bckup_reg_5_
+         mem_backbone_0/pmem_dout_bckup_reg_4_
+         mem_backbone_0/pmem_dout_bckup_reg_3_
+         mem_backbone_0/pmem_dout_bckup_reg_2_
+         mem_backbone_0/pmem_dout_bckup_reg_1_
+         mem_backbone_0/pmem_dout_bckup_reg_0_
+         sfr_0/nmie_reg
+         sfr_0/nmi_capture_rst_reg
+         sfr_0/nmi_dly_reg
+         sfr_0/nmiifg_reg
+         sfr_0/wdtie_reg
+         watchdog_0/wdtctl_reg_7_
+         watchdog_0/wdtctl_reg_6_
+         watchdog_0/wdtctl_reg_4_
+         watchdog_0/wdtctl_reg_2_
+         watchdog_0/wdtctl_reg_1_
+         watchdog_0/wdtctl_reg_0_
+         watchdog_0/wdtcnt_clr_toggle_reg
+         watchdog_0/wdtcnt_clr_sync_dly_reg
+         watchdog_0/wdtisx_ss_reg_0_
+         watchdog_0/wdtcnt_reg_0_
+         watchdog_0/wdtcnt_reg_1_
+         watchdog_0/wdtcnt_reg_2_
+         watchdog_0/wdtcnt_reg_3_
+         watchdog_0/wdtcnt_reg_4_
+         watchdog_0/wdtcnt_reg_5_
+         watchdog_0/wdtcnt_reg_6_
+         watchdog_0/wdtcnt_reg_7_
+         watchdog_0/wdtcnt_reg_8_
+         watchdog_0/wdtcnt_reg_9_
+         watchdog_0/wdtcnt_reg_10_
+         watchdog_0/wdtcnt_reg_11_
+         watchdog_0/wdtcnt_reg_12_
+         watchdog_0/wdtcnt_reg_13_
+         watchdog_0/wdtcnt_reg_14_
+         watchdog_0/wdtcnt_reg_15_
+         watchdog_0/wdtisx_s_reg_1_
+         watchdog_0/wdtisx_s_reg_0_
+         watchdog_0/wdtisx_ss_reg_1_
+         watchdog_0/wdt_evt_toggle_reg
+         watchdog_0/wdt_evt_toggle_sync_dly_reg
+         watchdog_0/wdtifg_clr_reg_reg
+         watchdog_0/wdtqn_edge_reg_reg
+         watchdog_0/wdt_wkup_en_reg
+         watchdog_0/wdt_reset_reg
+         watchdog_0/wdtifg_reg
+         multiplier_0/op1_reg_15_
+         multiplier_0/op1_reg_14_
+         multiplier_0/op1_reg_13_
+         multiplier_0/op1_reg_12_
+         multiplier_0/op1_reg_11_
+         multiplier_0/op1_reg_10_
+         multiplier_0/op1_reg_9_
+         multiplier_0/op1_reg_8_
+         multiplier_0/op1_reg_7_
+         multiplier_0/op1_reg_6_
+         multiplier_0/op1_reg_5_
+         multiplier_0/op1_reg_4_
+         multiplier_0/op1_reg_3_
+         multiplier_0/op1_reg_2_
+         multiplier_0/op1_reg_1_
+         multiplier_0/op1_reg_0_
+         multiplier_0/op2_reg_15_
+         multiplier_0/op2_reg_14_
+         multiplier_0/op2_reg_13_
+         multiplier_0/op2_reg_12_
+         multiplier_0/op2_reg_11_
+         multiplier_0/op2_reg_10_
+         multiplier_0/op2_reg_9_
+         multiplier_0/op2_reg_8_
+         multiplier_0/op2_reg_7_
+         multiplier_0/op2_reg_6_
+         multiplier_0/op2_reg_5_
+         multiplier_0/op2_reg_4_
+         multiplier_0/op2_reg_3_
+         multiplier_0/op2_reg_2_
+         multiplier_0/op2_reg_1_
+         multiplier_0/op2_reg_0_
+         multiplier_0/cycle_reg_0_
+         multiplier_0/cycle_reg_1_
+         multiplier_0/reshi_reg_0_
+         multiplier_0/reslo_reg_0_
+         multiplier_0/reslo_reg_1_
+         multiplier_0/reslo_reg_2_
+         multiplier_0/reslo_reg_3_
+         multiplier_0/reslo_reg_4_
+         multiplier_0/reslo_reg_5_
+         multiplier_0/reslo_reg_6_
+         multiplier_0/reslo_reg_7_
+         multiplier_0/reslo_reg_8_
+         multiplier_0/reslo_reg_9_
+         multiplier_0/reshi_reg_1_
+         multiplier_0/reshi_reg_2_
+         multiplier_0/reshi_reg_3_
+         multiplier_0/reshi_reg_4_
+         multiplier_0/reshi_reg_5_
+         multiplier_0/reshi_reg_6_
+         multiplier_0/reshi_reg_7_
+         multiplier_0/reshi_reg_8_
+         multiplier_0/reshi_reg_9_
+         multiplier_0/reshi_reg_10_
+         multiplier_0/reshi_reg_11_
+         multiplier_0/reshi_reg_12_
+         multiplier_0/reshi_reg_13_
+         multiplier_0/reshi_reg_14_
+         multiplier_0/reshi_reg_15_
+         multiplier_0/sign_sel_reg
+         multiplier_0/acc_sel_reg
+         multiplier_0/sumext_s_reg_1_
+         multiplier_0/sumext_s_reg_0_
+         multiplier_0/reslo_reg_15_
+         multiplier_0/reslo_reg_14_
+         multiplier_0/reslo_reg_13_
+         multiplier_0/reslo_reg_12_
+         multiplier_0/reslo_reg_11_
+         multiplier_0/reslo_reg_10_
+         div0/op1_dividend_reg_15_
+         div0/op1_dividend_reg_14_
+         div0/op1_dividend_reg_13_
+         div0/op1_dividend_reg_12_
+         div0/op1_dividend_reg_11_
+         div0/op1_dividend_reg_10_
+         div0/op1_dividend_reg_9_
+         div0/op1_dividend_reg_8_
+         div0/op1_dividend_reg_7_
+         div0/op1_dividend_reg_6_
+         div0/op1_dividend_reg_5_
+         div0/op1_dividend_reg_4_
+         div0/op1_dividend_reg_3_
+         div0/op1_dividend_reg_2_
+         div0/op1_dividend_reg_1_
+         div0/op1_dividend_reg_0_
+         div0/op2_divisor_reg_15_
+         div0/op2_divisor_reg_14_
+         div0/op2_divisor_reg_13_
+         div0/op2_divisor_reg_12_
+         div0/op2_divisor_reg_11_
+         div0/op2_divisor_reg_10_
+         div0/op2_divisor_reg_9_
+         div0/op2_divisor_reg_8_
+         div0/op2_divisor_reg_7_
+         div0/op2_divisor_reg_6_
+         div0/op2_divisor_reg_5_
+         div0/op2_divisor_reg_4_
+         div0/op2_divisor_reg_3_
+         div0/op2_divisor_reg_2_
+         div0/op2_divisor_reg_1_
+         div0/op2_divisor_reg_0_
+         div0/quotient_reg_15_
+         div0/quotient_reg_14_
+         div0/quotient_reg_13_
+         div0/quotient_reg_12_
+         div0/quotient_reg_11_
+         div0/quotient_reg_10_
+         div0/quotient_reg_9_
+         div0/quotient_reg_8_
+         div0/quotient_reg_7_
+         div0/quotient_reg_6_
+         div0/quotient_reg_5_
+         div0/quotient_reg_4_
+         div0/quotient_reg_3_
+         div0/quotient_reg_2_
+         div0/quotient_reg_1_
+         div0/quotient_reg_0_
+         div0/remainder_reg_15_
+         div0/remainder_reg_14_
+         div0/remainder_reg_13_
+         div0/remainder_reg_12_
+         div0/remainder_reg_11_
+         div0/remainder_reg_10_
+         div0/remainder_reg_9_
+         div0/remainder_reg_8_
+         div0/remainder_reg_7_
+         div0/remainder_reg_6_
+         div0/remainder_reg_5_
+         div0/remainder_reg_4_
+         div0/remainder_reg_3_
+         div0/remainder_reg_2_
+         div0/remainder_reg_1_
+         div0/remainder_reg_0_
+         div0/div_by_zero_reg
+         dbg_0/dbg_mem_rd_dly_reg
+         dbg_0/dbg_rd_rdy_reg
+         dbg_0/mem_cnt_reg_15_
+         dbg_0/mem_cnt_reg_0_
+         dbg_0/mem_cnt_reg_1_
+         dbg_0/mem_cnt_reg_2_
+         dbg_0/mem_cnt_reg_3_
+         dbg_0/mem_cnt_reg_4_
+         dbg_0/mem_cnt_reg_5_
+         dbg_0/mem_cnt_reg_6_
+         dbg_0/mem_cnt_reg_7_
+         dbg_0/mem_cnt_reg_8_
+         dbg_0/mem_cnt_reg_9_
+         dbg_0/mem_cnt_reg_10_
+         dbg_0/mem_cnt_reg_11_
+         dbg_0/mem_cnt_reg_12_
+         dbg_0/mem_cnt_reg_13_
+         dbg_0/mem_cnt_reg_14_
+         dbg_0/mem_burst_reg
+         dbg_0/mem_start_reg
+         dbg_0/mem_ctl_reg_1_
+         dbg_0/mem_ctl_reg_2_
+         dbg_0/mem_ctl_reg_3_
+         dbg_0/inc_step_reg_0_
+         dbg_0/inc_step_reg_1_
+         dbg_0/cpu_ctl_reg_3_
+         dbg_0/cpu_ctl_reg_4_
+         dbg_0/cpu_ctl_reg_5_
+         dbg_0/cpu_ctl_reg_6_
+         dbg_0/cpu_stat_reg_3_
+         dbg_0/cpu_stat_reg_2_
+         dbg_0/mem_startb_reg
+         dbg_0/mem_state_reg_1_
+         dbg_0/mem_state_reg_0_
+         dbg_0/halt_flag_reg
+         dbg_0/mem_addr_reg_15_
+         dbg_0/mem_addr_reg_0_
+         dbg_0/mem_addr_reg_1_
+         dbg_0/mem_addr_reg_2_
+         dbg_0/mem_addr_reg_3_
+         dbg_0/mem_addr_reg_4_
+         dbg_0/mem_addr_reg_5_
+         dbg_0/mem_addr_reg_6_
+         dbg_0/mem_addr_reg_7_
+         dbg_0/mem_addr_reg_8_
+         dbg_0/mem_addr_reg_9_
+         dbg_0/mem_addr_reg_10_
+         dbg_0/mem_addr_reg_11_
+         dbg_0/mem_addr_reg_12_
+         dbg_0/mem_addr_reg_13_
+         dbg_0/mem_addr_reg_14_
+         dbg_0/mem_data_reg_14_
+         dbg_0/mem_data_reg_13_
+         dbg_0/mem_data_reg_12_
+         dbg_0/mem_data_reg_11_
+         dbg_0/mem_data_reg_10_
+         dbg_0/mem_data_reg_9_
+         dbg_0/mem_data_reg_8_
+         dbg_0/mem_data_reg_15_
+         dbg_0/mem_data_reg_6_
+         dbg_0/mem_data_reg_5_
+         dbg_0/mem_data_reg_4_
+         dbg_0/mem_data_reg_3_
+         dbg_0/mem_data_reg_2_
+         dbg_0/mem_data_reg_1_
+         dbg_0/mem_data_reg_0_
+         dbg_0/mem_data_reg_7_
+         clock_module_0/sync_cell_dco_disable/data_sync_reg_0_
+         clock_module_0/sync_cell_dco_disable/data_sync_reg_1_
+         clock_module_0/clock_mux_mclk/in1_select_ss_reg
+         clock_module_0/clock_mux_mclk/in0_select_ss_reg
+         clock_module_0/clock_mux_mclk/in1_select_s_reg
+         clock_module_0/sync_reset_por/data_sync_reg_0_
+         clock_module_0/sync_reset_por/data_sync_reg_1_
+         execution_unit_0/register_file_0/r2_reg_8_
+         execution_unit_0/register_file_0/r2_reg_7_
+         execution_unit_0/register_file_0/r2_reg_6_
+         execution_unit_0/register_file_0/r2_reg_5_
+         execution_unit_0/register_file_0/r2_reg_4_
+         execution_unit_0/register_file_0/r2_reg_3_
+         execution_unit_0/register_file_0/r2_reg_2_
+         execution_unit_0/register_file_0/r2_reg_1_
+         execution_unit_0/register_file_0/r2_reg_0_
+         execution_unit_0/register_file_0/r3_reg_15_
+         execution_unit_0/register_file_0/r3_reg_14_
+         execution_unit_0/register_file_0/r3_reg_13_
+         execution_unit_0/register_file_0/r3_reg_12_
+         execution_unit_0/register_file_0/r3_reg_11_
+         execution_unit_0/register_file_0/r3_reg_10_
+         execution_unit_0/register_file_0/r3_reg_9_
+         execution_unit_0/register_file_0/r3_reg_8_
+         execution_unit_0/register_file_0/r3_reg_7_
+         execution_unit_0/register_file_0/r3_reg_6_
+         execution_unit_0/register_file_0/r3_reg_5_
+         execution_unit_0/register_file_0/r3_reg_4_
+         execution_unit_0/register_file_0/r3_reg_3_
+         execution_unit_0/register_file_0/r3_reg_2_
+         execution_unit_0/register_file_0/r3_reg_1_
+         execution_unit_0/register_file_0/r3_reg_0_
+         execution_unit_0/register_file_0/r15_reg_0_
+         execution_unit_0/register_file_0/r6_reg_0_
+         execution_unit_0/register_file_0/r7_reg_0_
+         execution_unit_0/register_file_0/r8_reg_0_
+         execution_unit_0/register_file_0/r9_reg_0_
+         execution_unit_0/register_file_0/r10_reg_0_
+         execution_unit_0/register_file_0/r11_reg_0_
+         execution_unit_0/register_file_0/r12_reg_0_
+         execution_unit_0/register_file_0/r13_reg_0_
+         execution_unit_0/register_file_0/r14_reg_0_
+         execution_unit_0/register_file_0/r4_reg_0_
+         execution_unit_0/register_file_0/r5_reg_0_
+         execution_unit_0/register_file_0/r6_reg_1_
+         execution_unit_0/register_file_0/r7_reg_1_
+         execution_unit_0/register_file_0/r8_reg_1_
+         execution_unit_0/register_file_0/r9_reg_1_
+         execution_unit_0/register_file_0/r10_reg_1_
+         execution_unit_0/register_file_0/r11_reg_1_
+         execution_unit_0/register_file_0/r12_reg_1_
+         execution_unit_0/register_file_0/r13_reg_1_
+         execution_unit_0/register_file_0/r14_reg_1_
+         execution_unit_0/register_file_0/r15_reg_1_
+         execution_unit_0/register_file_0/r1_reg_1_
+         execution_unit_0/register_file_0/r4_reg_1_
+         execution_unit_0/register_file_0/r5_reg_1_
+         execution_unit_0/register_file_0/r5_reg_2_
+         execution_unit_0/register_file_0/r6_reg_2_
+         execution_unit_0/register_file_0/r7_reg_2_
+         execution_unit_0/register_file_0/r8_reg_2_
+         execution_unit_0/register_file_0/r9_reg_2_
+         execution_unit_0/register_file_0/r10_reg_2_
+         execution_unit_0/register_file_0/r11_reg_2_
+         execution_unit_0/register_file_0/r12_reg_2_
+         execution_unit_0/register_file_0/r13_reg_2_
+         execution_unit_0/register_file_0/r14_reg_2_
+         execution_unit_0/register_file_0/r15_reg_2_
+         execution_unit_0/register_file_0/r1_reg_2_
+         execution_unit_0/register_file_0/r4_reg_2_
+         execution_unit_0/register_file_0/r5_reg_3_
+         execution_unit_0/register_file_0/r6_reg_3_
+         execution_unit_0/register_file_0/r7_reg_3_
+         execution_unit_0/register_file_0/r8_reg_3_
+         execution_unit_0/register_file_0/r9_reg_3_
+         execution_unit_0/register_file_0/r10_reg_3_
+         execution_unit_0/register_file_0/r11_reg_3_
+         execution_unit_0/register_file_0/r12_reg_3_
+         execution_unit_0/register_file_0/r13_reg_3_
+         execution_unit_0/register_file_0/r14_reg_3_
+         execution_unit_0/register_file_0/r15_reg_3_
+         execution_unit_0/register_file_0/r1_reg_3_
+         execution_unit_0/register_file_0/r4_reg_3_
+         execution_unit_0/register_file_0/r5_reg_4_
+         execution_unit_0/register_file_0/r6_reg_4_
+         execution_unit_0/register_file_0/r7_reg_4_
+         execution_unit_0/register_file_0/r8_reg_4_
+         execution_unit_0/register_file_0/r9_reg_4_
+         execution_unit_0/register_file_0/r10_reg_4_
+         execution_unit_0/register_file_0/r11_reg_4_
+         execution_unit_0/register_file_0/r12_reg_4_
+         execution_unit_0/register_file_0/r13_reg_4_
+         execution_unit_0/register_file_0/r14_reg_4_
+         execution_unit_0/register_file_0/r15_reg_4_
+         execution_unit_0/register_file_0/r1_reg_4_
+         execution_unit_0/register_file_0/r4_reg_4_
+         execution_unit_0/register_file_0/r5_reg_5_
+         execution_unit_0/register_file_0/r6_reg_5_
+         execution_unit_0/register_file_0/r7_reg_5_
+         execution_unit_0/register_file_0/r8_reg_5_
+         execution_unit_0/register_file_0/r9_reg_5_
+         execution_unit_0/register_file_0/r10_reg_5_
+         execution_unit_0/register_file_0/r11_reg_5_
+         execution_unit_0/register_file_0/r12_reg_5_
+         execution_unit_0/register_file_0/r13_reg_5_
+         execution_unit_0/register_file_0/r14_reg_5_
+         execution_unit_0/register_file_0/r15_reg_5_
+         execution_unit_0/register_file_0/r1_reg_5_
+         execution_unit_0/register_file_0/r4_reg_5_
+         execution_unit_0/register_file_0/r5_reg_6_
+         execution_unit_0/register_file_0/r6_reg_6_
+         execution_unit_0/register_file_0/r7_reg_6_
+         execution_unit_0/register_file_0/r8_reg_6_
+         execution_unit_0/register_file_0/r9_reg_6_
+         execution_unit_0/register_file_0/r10_reg_6_
+         execution_unit_0/register_file_0/r11_reg_6_
+         execution_unit_0/register_file_0/r12_reg_6_
+         execution_unit_0/register_file_0/r13_reg_6_
+         execution_unit_0/register_file_0/r14_reg_6_
+         execution_unit_0/register_file_0/r15_reg_6_
+         execution_unit_0/register_file_0/r1_reg_6_
+         execution_unit_0/register_file_0/r4_reg_6_
+         execution_unit_0/register_file_0/r5_reg_7_
+         execution_unit_0/register_file_0/r6_reg_7_
+         execution_unit_0/register_file_0/r7_reg_7_
+         execution_unit_0/register_file_0/r8_reg_7_
+         execution_unit_0/register_file_0/r9_reg_7_
+         execution_unit_0/register_file_0/r10_reg_7_
+         execution_unit_0/register_file_0/r11_reg_7_
+         execution_unit_0/register_file_0/r12_reg_7_
+         execution_unit_0/register_file_0/r13_reg_7_
+         execution_unit_0/register_file_0/r14_reg_7_
+         execution_unit_0/register_file_0/r15_reg_7_
+         execution_unit_0/register_file_0/r1_reg_7_
+         execution_unit_0/register_file_0/r4_reg_7_
+         execution_unit_0/register_file_0/r5_reg_8_
+         execution_unit_0/register_file_0/r6_reg_8_
+         execution_unit_0/register_file_0/r7_reg_8_
+         execution_unit_0/register_file_0/r8_reg_8_
+         execution_unit_0/register_file_0/r9_reg_8_
+         execution_unit_0/register_file_0/r10_reg_8_
+         execution_unit_0/register_file_0/r11_reg_8_
+         execution_unit_0/register_file_0/r12_reg_8_
+         execution_unit_0/register_file_0/r13_reg_8_
+         execution_unit_0/register_file_0/r14_reg_8_
+         execution_unit_0/register_file_0/r15_reg_8_
+         execution_unit_0/register_file_0/r1_reg_8_
+         execution_unit_0/register_file_0/r4_reg_8_
+         execution_unit_0/register_file_0/r5_reg_9_
+         execution_unit_0/register_file_0/r6_reg_9_
+         execution_unit_0/register_file_0/r7_reg_9_
+         execution_unit_0/register_file_0/r8_reg_9_
+         execution_unit_0/register_file_0/r9_reg_9_
+         execution_unit_0/register_file_0/r10_reg_9_
+         execution_unit_0/register_file_0/r11_reg_9_
+         execution_unit_0/register_file_0/r12_reg_9_
+         execution_unit_0/register_file_0/r13_reg_9_
+         execution_unit_0/register_file_0/r14_reg_9_
+         execution_unit_0/register_file_0/r15_reg_9_
+         execution_unit_0/register_file_0/r1_reg_9_
+         execution_unit_0/register_file_0/r4_reg_9_
+         execution_unit_0/register_file_0/r5_reg_10_
+         execution_unit_0/register_file_0/r6_reg_10_
+         execution_unit_0/register_file_0/r7_reg_10_
+         execution_unit_0/register_file_0/r8_reg_10_
+         execution_unit_0/register_file_0/r9_reg_10_
+         execution_unit_0/register_file_0/r10_reg_10_
+         execution_unit_0/register_file_0/r11_reg_10_
+         execution_unit_0/register_file_0/r12_reg_10_
+         execution_unit_0/register_file_0/r13_reg_10_
+         execution_unit_0/register_file_0/r14_reg_10_
+         execution_unit_0/register_file_0/r15_reg_10_
+         execution_unit_0/register_file_0/r1_reg_10_
+         execution_unit_0/register_file_0/r4_reg_10_
+         execution_unit_0/register_file_0/r5_reg_11_
+         execution_unit_0/register_file_0/r6_reg_11_
+         execution_unit_0/register_file_0/r7_reg_11_
+         execution_unit_0/register_file_0/r8_reg_11_
+         execution_unit_0/register_file_0/r9_reg_11_
+         execution_unit_0/register_file_0/r10_reg_11_
+         execution_unit_0/register_file_0/r11_reg_11_
+         execution_unit_0/register_file_0/r12_reg_11_
+         execution_unit_0/register_file_0/r13_reg_11_
+         execution_unit_0/register_file_0/r14_reg_11_
+         execution_unit_0/register_file_0/r15_reg_11_
+         execution_unit_0/register_file_0/r1_reg_11_
+         execution_unit_0/register_file_0/r4_reg_11_
+         execution_unit_0/register_file_0/r5_reg_12_
+         execution_unit_0/register_file_0/r6_reg_12_
+         execution_unit_0/register_file_0/r7_reg_12_
+         execution_unit_0/register_file_0/r8_reg_12_
+         execution_unit_0/register_file_0/r9_reg_12_
+         execution_unit_0/register_file_0/r10_reg_12_
+         execution_unit_0/register_file_0/r11_reg_12_
+         execution_unit_0/register_file_0/r12_reg_12_
+         execution_unit_0/register_file_0/r13_reg_12_
+         execution_unit_0/register_file_0/r14_reg_12_
+         execution_unit_0/register_file_0/r15_reg_12_
+         execution_unit_0/register_file_0/r1_reg_12_
+         execution_unit_0/register_file_0/r4_reg_12_
+         execution_unit_0/register_file_0/r5_reg_13_
+         execution_unit_0/register_file_0/r6_reg_13_
+         execution_unit_0/register_file_0/r7_reg_13_
+         execution_unit_0/register_file_0/r8_reg_13_
+         execution_unit_0/register_file_0/r9_reg_13_
+         execution_unit_0/register_file_0/r10_reg_13_
+         execution_unit_0/register_file_0/r11_reg_13_
+         execution_unit_0/register_file_0/r12_reg_13_
+         execution_unit_0/register_file_0/r13_reg_13_
+         execution_unit_0/register_file_0/r14_reg_13_
+         execution_unit_0/register_file_0/r15_reg_13_
+         execution_unit_0/register_file_0/r1_reg_13_
+         execution_unit_0/register_file_0/r4_reg_13_
+         execution_unit_0/register_file_0/r5_reg_14_
+         execution_unit_0/register_file_0/r6_reg_14_
+         execution_unit_0/register_file_0/r7_reg_14_
+         execution_unit_0/register_file_0/r8_reg_14_
+         execution_unit_0/register_file_0/r9_reg_14_
+         execution_unit_0/register_file_0/r10_reg_14_
+         execution_unit_0/register_file_0/r11_reg_14_
+         execution_unit_0/register_file_0/r12_reg_14_
+         execution_unit_0/register_file_0/r13_reg_14_
+         execution_unit_0/register_file_0/r14_reg_14_
+         execution_unit_0/register_file_0/r15_reg_14_
+         execution_unit_0/register_file_0/r1_reg_14_
+         execution_unit_0/register_file_0/r4_reg_14_
+         execution_unit_0/register_file_0/r5_reg_15_
+         execution_unit_0/register_file_0/r6_reg_15_
+         execution_unit_0/register_file_0/r7_reg_15_
+         execution_unit_0/register_file_0/r8_reg_15_
+         execution_unit_0/register_file_0/r9_reg_15_
+         execution_unit_0/register_file_0/r10_reg_15_
+         execution_unit_0/register_file_0/r11_reg_15_
+         execution_unit_0/register_file_0/r12_reg_15_
+         execution_unit_0/register_file_0/r13_reg_15_
+         execution_unit_0/register_file_0/r14_reg_15_
+         execution_unit_0/register_file_0/r15_reg_15_
+         execution_unit_0/register_file_0/r1_reg_15_
+         execution_unit_0/register_file_0/r4_reg_15_
+         dbg_0/dbg_uart_0/rxd_buf_reg_0_
+         dbg_0/dbg_uart_0/rxd_buf_reg_1_
+         dbg_0/dbg_uart_0/rxd_maj_reg
+         dbg_0/dbg_uart_0/xfer_buf_reg_18_
+         dbg_0/dbg_uart_0/uart_state_reg_0_
+         dbg_0/dbg_uart_0/sync_busy_reg
+         dbg_0/dbg_uart_0/sync_cnt_reg_17_
+         dbg_0/dbg_uart_0/sync_cnt_reg_0_
+         dbg_0/dbg_uart_0/sync_cnt_reg_1_
+         dbg_0/dbg_uart_0/sync_cnt_reg_2_
+         dbg_0/dbg_uart_0/sync_cnt_reg_3_
+         dbg_0/dbg_uart_0/sync_cnt_reg_4_
+         dbg_0/dbg_uart_0/sync_cnt_reg_5_
+         dbg_0/dbg_uart_0/sync_cnt_reg_6_
+         dbg_0/dbg_uart_0/sync_cnt_reg_7_
+         dbg_0/dbg_uart_0/sync_cnt_reg_8_
+         dbg_0/dbg_uart_0/sync_cnt_reg_9_
+         dbg_0/dbg_uart_0/sync_cnt_reg_10_
+         dbg_0/dbg_uart_0/sync_cnt_reg_11_
+         dbg_0/dbg_uart_0/sync_cnt_reg_12_
+         dbg_0/dbg_uart_0/sync_cnt_reg_13_
+         dbg_0/dbg_uart_0/sync_cnt_reg_14_
+         dbg_0/dbg_uart_0/sync_cnt_reg_15_
+         dbg_0/dbg_uart_0/sync_cnt_reg_16_
+         dbg_0/dbg_uart_0/sync_cnt_reg_18_
+         dbg_0/dbg_uart_0/xfer_cnt_reg_14_
+         dbg_0/dbg_uart_0/xfer_buf_reg_19_
+         dbg_0/dbg_uart_0/uart_state_reg_1_
+         dbg_0/dbg_uart_0/uart_state_reg_2_
+         dbg_0/dbg_uart_0/xfer_cnt_reg_15_
+         dbg_0/dbg_uart_0/xfer_cnt_reg_0_
+         dbg_0/dbg_uart_0/xfer_cnt_reg_1_
+         dbg_0/dbg_uart_0/xfer_cnt_reg_2_
+         dbg_0/dbg_uart_0/xfer_cnt_reg_3_
+         dbg_0/dbg_uart_0/xfer_cnt_reg_4_
+         dbg_0/dbg_uart_0/xfer_cnt_reg_5_
+         dbg_0/dbg_uart_0/xfer_cnt_reg_6_
+         dbg_0/dbg_uart_0/xfer_cnt_reg_7_
+         dbg_0/dbg_uart_0/xfer_cnt_reg_8_
+         dbg_0/dbg_uart_0/xfer_cnt_reg_9_
+         dbg_0/dbg_uart_0/xfer_cnt_reg_10_
+         dbg_0/dbg_uart_0/xfer_cnt_reg_11_
+         dbg_0/dbg_uart_0/xfer_cnt_reg_12_
+         dbg_0/dbg_uart_0/xfer_cnt_reg_13_
+         dbg_0/dbg_uart_0/xfer_bit_reg_3_
+         dbg_0/dbg_uart_0/xfer_bit_reg_0_
+         dbg_0/dbg_uart_0/xfer_bit_reg_1_
+         dbg_0/dbg_uart_0/xfer_bit_reg_2_
+         dbg_0/dbg_uart_0/xfer_buf_reg_17_
+         dbg_0/dbg_uart_0/xfer_buf_reg_16_
+         dbg_0/dbg_uart_0/xfer_buf_reg_15_
+         dbg_0/dbg_uart_0/xfer_buf_reg_14_
+         dbg_0/dbg_uart_0/xfer_buf_reg_13_
+         dbg_0/dbg_uart_0/xfer_buf_reg_12_
+         dbg_0/dbg_uart_0/xfer_buf_reg_11_
+         dbg_0/dbg_uart_0/xfer_buf_reg_10_
+         dbg_0/dbg_uart_0/xfer_buf_reg_9_
+         dbg_0/dbg_uart_0/xfer_buf_reg_8_
+         dbg_0/dbg_uart_0/xfer_buf_reg_7_
+         dbg_0/dbg_uart_0/xfer_buf_reg_6_
+         dbg_0/dbg_uart_0/xfer_buf_reg_5_
+         dbg_0/dbg_uart_0/xfer_buf_reg_4_
+         dbg_0/dbg_uart_0/xfer_buf_reg_3_
+         dbg_0/dbg_uart_0/xfer_buf_reg_2_
+         dbg_0/dbg_uart_0/xfer_buf_reg_1_
+         dbg_0/dbg_uart_0/xfer_buf_reg_0_
+         dbg_0/dbg_uart_0/dbg_uart_txd_reg
+         dbg_0/dbg_uart_0/dbg_addr_reg_5_
+         dbg_0/dbg_uart_0/dbg_addr_reg_4_
+         dbg_0/dbg_uart_0/dbg_addr_reg_3_
+         dbg_0/dbg_uart_0/dbg_addr_reg_2_
+         dbg_0/dbg_uart_0/dbg_addr_reg_1_
+         dbg_0/dbg_uart_0/dbg_addr_reg_0_
+         dbg_0/dbg_uart_0/dbg_bw_reg
+         dbg_0/dbg_uart_0/sync_cell_uart_rxd/data_sync_reg_0_
+         dbg_0/dbg_uart_0/sync_cell_uart_rxd/data_sync_reg_1_
+         watchdog_0/sync_cell_wdt_evt/data_sync_reg_0_
+         watchdog_0/sync_cell_wdt_evt/data_sync_reg_1_
+         watchdog_0/sync_cell_wdtcnt_incr/data_sync_reg_0_
+         watchdog_0/sync_cell_wdtcnt_incr/data_sync_reg_1_
+         watchdog_0/sync_cell_wdtcnt_clr/data_sync_reg_0_
+         watchdog_0/sync_cell_wdtcnt_clr/data_sync_reg_1_
+         sfr_0/sync_cell_nmi/data_sync_reg_0_
+         sfr_0/sync_cell_nmi/data_sync_reg_1_
+         clock_module_0/sync_cell_puc/data_sync_reg_0_
+         clock_module_0/sync_cell_puc/data_sync_reg_1_
+         clock_module_0/sync_cell_scg1/data_sync_reg_0_
+         clock_module_0/sync_cell_scg1/data_sync_reg_1_
+         clock_module_0/sync_cell_puc_sm/data_sync_reg_0_
+         clock_module_0/sync_cell_puc_sm/data_sync_reg_1_
+         clock_module_0/sync_cell_oscoff/data_sync_reg_0_
+         clock_module_0/sync_cell_oscoff/data_sync_reg_1_
+         clock_module_0/sync_cell_puc_lfxt/data_sync_reg_0_
+         clock_module_0/sync_cell_puc_lfxt/data_sync_reg_1_
+         clock_module_0/sync_cell_mclk_wkup/data_sync_reg_0_
+         clock_module_0/sync_cell_mclk_wkup/data_sync_reg_1_
+         clock_module_0/sync_cell_cpu_sm_en/data_sync_reg_0_
+         clock_module_0/sync_cell_cpu_sm_en/data_sync_reg_1_
+         clock_module_0/sync_cell_cpu_aux_en/data_sync_reg_0_
+         clock_module_0/sync_cell_cpu_aux_en/data_sync_reg_1_
+         clock_module_0/sync_cell_lfxt_wkup/data_sync_reg_0_
+         clock_module_0/sync_cell_lfxt_wkup/data_sync_reg_1_
+         clock_module_0/sync_cell_lfxt_disable/data_sync_reg_0_
+         clock_module_0/sync_cell_lfxt_disable/data_sync_reg_1_
+         clock_module_0/sync_cell_dco_wkup/data_sync_reg_1_
+         watchdog_0/clock_mux_watchdog/in1_select_ss_reg
+         watchdog_0/clock_mux_watchdog/in0_select_ss_reg
+         watchdog_0/clock_mux_watchdog/in1_select_s_reg
+         clock_module_0/clock_mux_smclk/in1_select_ss_reg
+         clock_module_0/clock_mux_smclk/in0_select_ss_reg
+         clock_module_0/clock_mux_smclk/in1_select_s_reg
+         watchdog_0/sync_reset_por/data_sync_reg_0_
+         watchdog_0/sync_reset_por/data_sync_reg_1_
+
+Information: Test design rule checking completed. (TEST-123)
+1

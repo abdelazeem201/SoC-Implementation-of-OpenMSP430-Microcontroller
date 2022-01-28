@@ -1,0 +1,68 @@
+In mode: all_dft...
+  Pre-DFT DRC enabled
+
+Information: Starting test design rule checking. (TEST-222)
+  Loading test protocol
+  ...basic checks...
+  ...basic sequential cell checks...
+  	...checking for scan equivalents...
+  ...checking vector rules...
+  ...checking pre-dft rules...
+  ...saving simulation value info...
+
+-----------------------------------------------------------------
+Begin Modeling violations...
+
+Warning: No scan equivalent exists for cell clock_module_0/clock_gate_mclk/enable_latch_reg (LATCHX1). (TEST-120)
+Information: There are 32 other cells with the same violation. (TEST-171)
+
+Modeling violations completed...
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Begin Pre-DFT violations...
+
+ Warning: Clock input CLK of DFF sfr_0/wakeup_cell_nmi/wkup_out_reg was not controlled. (D1-1)
+Information: There is 1 other cell with the same violation. (TEST-173)
+ Warning: Reset input RSTB of DFF sfr_0/wakeup_cell_nmi/wkup_out_reg was not controlled. (D3-1)
+Information: There is 1 other cell with the same violation. (TEST-173)
+ Warning: Clock dco_clk can capture new data on TE input CLK of DFF clock_module_0/lfxt_disable_reg. (D14-1)
+         Source of violation: input CLK of DFF execution_unit_0/register_file_0/r2_reg_5_.
+Information: There are 5 other cells with the same violation. (TEST-171)
+
+Pre-DFT violations completed...
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+  DRC Report
+
+  Total violations: 43
+
+-----------------------------------------------------------------
+
+33 MODELING VIOLATIONS
+    33 Cell has no scan equivalent violations (TEST-120)
+
+10 PRE-DFT VIOLATIONS
+     2 Uncontrollable clock input of flip-flop violations (D1)
+     2 DFF set/reset line not controlled violations (D3)
+     6 Data path affected by clock captured by clock in trailing edge clock_port violations (D14)
+
+
+Warning: Violations occurred during test design rule checking. (TEST-124)
+
+-----------------------------------------------------------------
+  Sequential Cell Report
+
+  41 out of 850 sequential cells have violations
+
+-----------------------------------------------------------------
+
+SEQUENTIAL CELLS WITH VIOLATIONS
+      *  35 cells have test design rule violations
+      *   6 cells have capture violations
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+      * 809 cells are valid scan cells
+
+Information: Test design rule checking completed. (TEST-123)
+1

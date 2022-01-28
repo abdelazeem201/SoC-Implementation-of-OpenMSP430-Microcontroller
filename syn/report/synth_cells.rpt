@@ -1,0 +1,100 @@
+ 
+****************************************
+Report : cell
+Design : openMSP430
+Version: K-2015.06
+Date   : Wed Jan 26 23:48:30 2022
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U5                        OR4X1           saed90nm_typ_ht 10.137600 
+U8                        OR3X1           saed90nm_typ_ht 9.216000  
+U9                        OR4X1           saed90nm_typ_ht 10.137600 
+U11                       OR4X1           saed90nm_typ_ht 10.137600 
+U12                       OR3X1           saed90nm_typ_ht 9.216000  
+U13                       OR4X1           saed90nm_typ_ht 10.137600 
+U15                       OR4X1           saed90nm_typ_ht 10.137600 
+U17                       OR4X1           saed90nm_typ_ht 10.137600 
+U18                       OR3X1           saed90nm_typ_ht 9.216000  
+U23                       OR4X1           saed90nm_typ_ht 10.137600 
+U25                       OR4X1           saed90nm_typ_ht 10.137600 
+U32                       OR3X1           saed90nm_typ_ht 9.216000  
+U33                       INVX0           saed90nm_typ_ht 5.529600  
+U35                       INVX0           saed90nm_typ_ht 5.529600  
+U37                       INVX0           saed90nm_typ_ht 5.529600  
+U39                       INVX0           saed90nm_typ_ht 5.529600  
+U41                       INVX0           saed90nm_typ_ht 5.529600  
+U43                       INVX0           saed90nm_typ_ht 5.529600  
+U45                       INVX0           saed90nm_typ_ht 5.529600  
+U47                       INVX0           saed90nm_typ_ht 5.529600  
+U49                       INVX0           saed90nm_typ_ht 5.529600  
+U50                       INVX0           saed90nm_typ_ht 5.529600  
+U51                       INVX0           saed90nm_typ_ht 5.529600  
+U52                       INVX0           saed90nm_typ_ht 5.529600  
+U53                       NBUFFX2         saed90nm_typ_ht 5.529600  
+U54                       OR2X1           saed90nm_typ_ht 7.372800  
+U55                       OR2X1           saed90nm_typ_ht 7.372800  
+U56                       OR2X1           saed90nm_typ_ht 7.372800  
+U57                       OR2X1           saed90nm_typ_ht 7.372800  
+U58                       OR2X1           saed90nm_typ_ht 7.372800  
+U59                       OR2X1           saed90nm_typ_ht 7.372800  
+U60                       NAND2X1         saed90nm_typ_ht 5.529600  
+U61                       OR2X1           saed90nm_typ_ht 7.372800  
+U62                       OR2X1           saed90nm_typ_ht 7.372800  
+U63                       NAND2X1         saed90nm_typ_ht 5.529600  
+U64                       OR2X1           saed90nm_typ_ht 7.372800  
+U65                       OR2X1           saed90nm_typ_ht 7.372800  
+U66                       OR2X1           saed90nm_typ_ht 7.372800  
+U67                       OR2X1           saed90nm_typ_ht 7.372800  
+U68                       NAND2X1         saed90nm_typ_ht 5.529600  
+U69                       OR2X1           saed90nm_typ_ht 7.372800  
+U70                       OR2X1           saed90nm_typ_ht 7.372800  
+U71                       NAND2X1         saed90nm_typ_ht 5.529600  
+U72                       OR2X1           saed90nm_typ_ht 7.372800  
+U73                       OR2X1           saed90nm_typ_ht 7.372800  
+U74                       NAND2X1         saed90nm_typ_ht 5.529600  
+U75                       NAND2X1         saed90nm_typ_ht 5.529600  
+U76                       NAND2X1         saed90nm_typ_ht 5.529600  
+U77                       NAND2X1         saed90nm_typ_ht 5.529600  
+U78                       NAND2X1         saed90nm_typ_ht 5.529600  
+U79                       NAND2X1         saed90nm_typ_ht 5.529600  
+U80                       INVX0           saed90nm_typ_ht 5.529600  
+U81                       INVX0           saed90nm_typ_ht 5.529600  
+U82                       INVX0           saed90nm_typ_ht 5.529600  
+U83                       INVX0           saed90nm_typ_ht 5.529600  
+U84                       INVX0           saed90nm_typ_ht 5.529600  
+U85                       INVX0           saed90nm_typ_ht 5.529600  
+U86                       INVX0           saed90nm_typ_ht 5.529600  
+U87                       INVX0           saed90nm_typ_ht 5.529600  
+U88                       INVX0           saed90nm_typ_ht 5.529600  
+U89                       INVX0           saed90nm_typ_ht 5.529600  
+U90                       INVX0           saed90nm_typ_ht 5.529600  
+clock_module_0            omsp_clock_module               3850.444730
+                                                                    h, n
+dbg_0                     omsp_dbg                        10833.407783
+                                                                    h, n
+div0                      omsp_divider_16b                11296.051092
+                                                                    h, n
+execution_unit_0          omsp_execution_unit             24431.615706
+                                                                    h, n
+frontend_0                omsp_frontend                   9274.060669
+                                                                    h, n
+mem_backbone_0            omsp_mem_backbone               3523.276772
+                                                                    h, n
+multiplier_0              omsp_multiplier                 11139.379064
+                                                                    h, n
+sfr_0                     omsp_sfr                        831.283199
+                                                                    h, n
+watchdog_0                omsp_watchdog                   2908.569552
+                                                                    h, n
+--------------------------------------------------------------------------------
+Total 71 cells                                            78512.024568
+1
