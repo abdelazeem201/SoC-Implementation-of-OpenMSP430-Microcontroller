@@ -1,0 +1,213 @@
+#@ # 
+#@ # Running fm_shell Version F-2011.09-SP2 for amd64 -- Nov 22, 2011
+#@ # Date:   Sat Apr 28 22:12:50 2012
+#@ # Run by: amk5vx@class5.ee.Virginia.EDU
+#@ 
+
+source /app/synopsys/formality/F-2011.12/admin/setup/.synopsys_fm.setup
+#@ #
+#@ # .synopsys_fm.setup: Initialization File for Formality
+#@ #
+#@ 
+#@ 
+#@ #
+#@ # Enable stack trace output on fatal.  Not available for all architectures.
+#@ #
+#@ if { $sh_arch == "sparc" || $sh_arch == "sparcOS5" ||      $sh_arch == "hp700" || $sh_arch == "hpux10" } {
+#@   set_unix_variable SYNOPSYS_TRACE ""
+#@ }
+#@ 
+#@ #
+#@ # Variable settings
+#@ #
+#@ set sh_new_variable_message true
+#@ 
+#@ #
+#@ # Synopsys strongly recommends that you uncomment the following command
+#@ # in order to set sh_command_abbrev_mode to the value "Command-Line-Only".
+#@ # Command abbreviation is intended as an interactive convenience.  Using
+#@ # abbreviations in scripts can cause commands to fail in subsequent releases.
+#@ # 
+#@ #set sh_command_abbrev_mode "Command-Line-Only"
+#@ 
+#@ #
+#@ # Some useful aliases
+#@ #
+#@ alias list_commands		help
+#@ 
+#@ #
+#@ # The alias of q to quit is commented out.  Remove the comment 
+#@ # character if you want this alias.  Some users find that having 
+#@ # this particular alias causes problems when mixed with page-mode
+#@ # for reports - an accidental repeated 'q' not only cancels the
+#@ # output but exits the tool.
+#@ #
+#@ #alias q quit
+#@ # -- End source /app/synopsys/formality/F-2011.12/admin/setup/.synopsys_fm.setup
+
+start_gui
+set_svf -append { /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/formality/pre_layout/source/openMSP430.svf } 
+read_verilog -container r -libname WORK -01 { /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_alu.v /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_and_gate.v /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_clock_gate.v /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_clock_module.v /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_clock_mux.v /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_dbg.v /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_dbg_hwbrk.v /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_dbg_uart.v /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_divider_16b.v /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_execution_unit.v /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_frontend.v /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_mem_backbone.v /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_multiplier.v /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_register_file.v /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_scan_mux.v /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_sfr.v /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_sync_cell.v /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_sync_reset.v /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_wakeup_cell.v /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_watchdog.v /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/formality/pre_layout/source/openMSP430.v } 
+read_db -container r { /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/formality/pre_layout/ref/models/saed90nm_typ_ht.db } 
+read_ddc -container r { /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/dc/results/openMSP430.ddc } 
+set_top r:/WORK/openMSP430 
+read_verilog -container i -libname WORK -01 { /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/formality/pre_layout/source/dc_out_v/openMSP430_dc.v } 
+read_db -container i { /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/formality/pre_layout/ref/models/saed90nm_typ_ht.db } 
+read_ddc -container i { /net/plato.ee.Virginia.EDU/users/amk5vx/synopsys/msp430/dc/results/openMSP430.ddc } 
+set_top i:/WORK/openMSP430 
+set_constant -type port r:/WORK/openMSP430/cpu_en 0 
+set_constant -type port r:/WORK/openMSP430/dbg_en 0 
+set_constant -type port r:/WORK/openMSP430/dbg_uart_rxd 0 
+set_constant -type port r:/WORK/openMSP430/dco_clk 0 
+set_constant -type port {r:/WORK/openMSP430/dmem_dout[0]} 0 
+set_constant -type port {r:/WORK/openMSP430/dmem_dout[1]} 0 
+set_constant -type port {r:/WORK/openMSP430/dmem_dout[2]} 0 
+set_constant -type port {r:/WORK/openMSP430/dmem_dout[3]} 0 
+set_constant -type port {r:/WORK/openMSP430/dmem_dout[4]} 0 
+set_constant -type port {r:/WORK/openMSP430/dmem_dout[5]} 0 
+set_constant -type port {r:/WORK/openMSP430/dmem_dout[6]} 0 
+set_constant -type port {r:/WORK/openMSP430/dmem_dout[7]} 0 
+set_constant -type port {r:/WORK/openMSP430/dmem_dout[8]} 0 
+set_constant -type port {r:/WORK/openMSP430/dmem_dout[9]} 0 
+set_constant -type port {r:/WORK/openMSP430/dmem_dout[10]} 0 
+set_constant -type port {r:/WORK/openMSP430/dmem_dout[11]} 0 
+set_constant -type port {r:/WORK/openMSP430/dmem_dout[12]} 0 
+set_constant -type port {r:/WORK/openMSP430/dmem_dout[13]} 0 
+set_constant -type port {r:/WORK/openMSP430/dmem_dout[14]} 0 
+set_constant -type port {r:/WORK/openMSP430/dmem_dout[15]} 0 
+set_constant -type port {r:/WORK/openMSP430/irq[0]} 0 
+set_constant -type port {r:/WORK/openMSP430/irq[0]} 0 
+set_constant -type port {r:/WORK/openMSP430/irq[1]} 0 
+set_constant -type port {r:/WORK/openMSP430/irq[2]} 0 
+set_constant -type port {r:/WORK/openMSP430/irq[3]} 0 
+set_constant -type port {r:/WORK/openMSP430/irq[4]} 0 
+set_constant -type port {r:/WORK/openMSP430/irq[5]} 0 
+set_constant -type port {r:/WORK/openMSP430/irq[6]} 0 
+set_constant -type port {r:/WORK/openMSP430/irq[7]} 0 
+set_constant -type port {r:/WORK/openMSP430/irq[8]} 0 
+set_constant -type port {r:/WORK/openMSP430/irq[9]} 0 
+set_constant -type port {r:/WORK/openMSP430/irq[10]} 0 
+set_constant -type port {r:/WORK/openMSP430/irq[11]} 0 
+set_constant -type port {r:/WORK/openMSP430/irq[12]} 0 
+set_constant -type port {r:/WORK/openMSP430/irq[13]} 0 
+set_constant -type port r:/WORK/openMSP430/lfxt_clk 0 
+set_constant -type port r:/WORK/openMSP430/nmi 0 
+set_constant -type port {r:/WORK/openMSP430/per_dout[0]} 0 
+set_constant -type port {r:/WORK/openMSP430/per_dout[1]} 0 
+set_constant -type port {r:/WORK/openMSP430/per_dout[2]} 0 
+set_constant -type port {r:/WORK/openMSP430/per_dout[3]} 0 
+set_constant -type port {r:/WORK/openMSP430/per_dout[4]} 0 
+set_constant -type port {r:/WORK/openMSP430/per_dout[4]} 0 
+set_constant -type port {r:/WORK/openMSP430/per_dout[5]} 0 
+set_constant -type port {r:/WORK/openMSP430/per_dout[6]} 0 
+set_constant -type port {r:/WORK/openMSP430/per_dout[7]} 0 
+set_constant -type port {r:/WORK/openMSP430/per_dout[8]} 0 
+set_constant -type port {r:/WORK/openMSP430/per_dout[9]} 0 
+set_constant -type port {r:/WORK/openMSP430/per_dout[10]} 0 
+set_constant -type port {r:/WORK/openMSP430/per_dout[11]} 0 
+set_constant -type port {r:/WORK/openMSP430/per_dout[12]} 0 
+set_constant -type port {r:/WORK/openMSP430/per_dout[13]} 0 
+set_constant -type port {r:/WORK/openMSP430/per_dout[14]} 0 
+set_constant -type port {r:/WORK/openMSP430/per_dout[15]} 0 
+set_constant -type port {r:/WORK/openMSP430/pmem_dout[0]} 0 
+set_constant -type port {r:/WORK/openMSP430/pmem_dout[1]} 0 
+set_constant -type port {r:/WORK/openMSP430/pmem_dout[2]} 0 
+set_constant -type port {r:/WORK/openMSP430/pmem_dout[3]} 0 
+set_constant -type port {r:/WORK/openMSP430/pmem_dout[4]} 0 
+set_constant -type port {r:/WORK/openMSP430/pmem_dout[5]} 0 
+set_constant -type port {r:/WORK/openMSP430/pmem_dout[6]} 0 
+set_constant -type port {r:/WORK/openMSP430/pmem_dout[7]} 0 
+set_constant -type port {r:/WORK/openMSP430/pmem_dout[8]} 0 
+set_constant -type port {r:/WORK/openMSP430/pmem_dout[9]} 0 
+set_constant -type port {r:/WORK/openMSP430/pmem_dout[10]} 0 
+set_constant -type port {r:/WORK/openMSP430/pmem_dout[11]} 0 
+set_constant -type port {r:/WORK/openMSP430/pmem_dout[12]} 0 
+set_constant -type port {r:/WORK/openMSP430/pmem_dout[13]} 0 
+set_constant -type port {r:/WORK/openMSP430/pmem_dout[14]} 0 
+set_constant -type port {r:/WORK/openMSP430/pmem_dout[15]} 0 
+set_constant -type port r:/WORK/openMSP430/reset_n 0 
+set_constant -type port r:/WORK/openMSP430/scan_enable 0 
+set_constant -type port r:/WORK/openMSP430/scan_mode 0 
+set_constant -type port r:/WORK/openMSP430/test_si1 0 
+set_constant -type port r:/WORK/openMSP430/test_si2 0 
+set_constant -type port r:/WORK/openMSP430/test_si3 0 
+set_constant -type port r:/WORK/openMSP430/wkup 0 
+set_constant -type port i:/WORK/openMSP430/cpu_en 0 
+set_constant -type port i:/WORK/openMSP430/dbg_en 0 
+set_constant -type port i:/WORK/openMSP430/dbg_uart_rxd 0 
+set_constant -type port i:/WORK/openMSP430/dco_clk 0 
+set_constant -type port {i:/WORK/openMSP430/dmem_dout[0]} 0 
+set_constant -type port {i:/WORK/openMSP430/dmem_dout[1]} 0 
+set_constant -type port {i:/WORK/openMSP430/dmem_dout[2]} 0 
+set_constant -type port {i:/WORK/openMSP430/dmem_dout[3]} 0 
+set_constant -type port {i:/WORK/openMSP430/dmem_dout[4]} 0 
+set_constant -type port {i:/WORK/openMSP430/dmem_dout[5]} 0 
+set_constant -type port {i:/WORK/openMSP430/dmem_dout[6]} 0 
+set_constant -type port {i:/WORK/openMSP430/dmem_dout[7]} 0 
+set_constant -type port {i:/WORK/openMSP430/dmem_dout[8]} 0 
+set_constant -type port {i:/WORK/openMSP430/dmem_dout[9]} 0 
+set_constant -type port {i:/WORK/openMSP430/dmem_dout[10]} 0 
+set_constant -type port {i:/WORK/openMSP430/dmem_dout[11]} 0 
+set_constant -type port {i:/WORK/openMSP430/dmem_dout[12]} 0 
+set_constant -type port {i:/WORK/openMSP430/dmem_dout[13]} 0 
+set_constant -type port {i:/WORK/openMSP430/dmem_dout[14]} 0 
+set_constant -type port {i:/WORK/openMSP430/dmem_dout[15]} 0 
+set_constant -type port {i:/WORK/openMSP430/irq[0]} 0 
+set_constant -type port {i:/WORK/openMSP430/irq[1]} 0 
+set_constant -type port {i:/WORK/openMSP430/irq[2]} 0 
+set_constant -type port {i:/WORK/openMSP430/irq[3]} 0 
+set_constant -type port {i:/WORK/openMSP430/irq[4]} 0 
+set_constant -type port {i:/WORK/openMSP430/irq[5]} 0 
+set_constant -type port {i:/WORK/openMSP430/irq[6]} 0 
+set_constant -type port {i:/WORK/openMSP430/irq[7]} 0 
+set_constant -type port {i:/WORK/openMSP430/irq[8]} 0 
+set_constant -type port {i:/WORK/openMSP430/irq[9]} 0 
+set_constant -type port {i:/WORK/openMSP430/irq[10]} 0 
+set_constant -type port {i:/WORK/openMSP430/irq[11]} 0 
+set_constant -type port {i:/WORK/openMSP430/irq[12]} 0 
+set_constant -type port {i:/WORK/openMSP430/irq[13]} 0 
+set_constant -type port i:/WORK/openMSP430/lfxt_clk 0 
+set_constant -type port i:/WORK/openMSP430/nmi 0 
+set_constant -type port {i:/WORK/openMSP430/per_dout[0]} 0 
+set_constant -type port {i:/WORK/openMSP430/per_dout[1]} 0 
+set_constant -type port {i:/WORK/openMSP430/per_dout[2]} 0 
+set_constant -type port {i:/WORK/openMSP430/per_dout[3]} 0 
+set_constant -type port {i:/WORK/openMSP430/per_dout[4]} 0 
+set_constant -type port {i:/WORK/openMSP430/per_dout[5]} 0 
+set_constant -type port {i:/WORK/openMSP430/per_dout[6]} 0 
+set_constant -type port {i:/WORK/openMSP430/per_dout[7]} 0 
+set_constant -type port {i:/WORK/openMSP430/per_dout[8]} 0 
+set_constant -type port {i:/WORK/openMSP430/per_dout[9]} 0 
+set_constant -type port {i:/WORK/openMSP430/per_dout[10]} 0 
+set_constant -type port {i:/WORK/openMSP430/per_dout[11]} 0 
+set_constant -type port {i:/WORK/openMSP430/per_dout[12]} 0 
+set_constant -type port {i:/WORK/openMSP430/per_dout[13]} 0 
+set_constant -type port {i:/WORK/openMSP430/per_dout[14]} 0 
+set_constant -type port {i:/WORK/openMSP430/per_dout[15]} 0 
+set_constant -type port {i:/WORK/openMSP430/pmem_dout[0]} 0 
+set_constant -type port {i:/WORK/openMSP430/pmem_dout[1]} 0 
+set_constant -type port {i:/WORK/openMSP430/pmem_dout[2]} 0 
+set_constant -type port {i:/WORK/openMSP430/pmem_dout[3]} 0 
+set_constant -type port {i:/WORK/openMSP430/pmem_dout[4]} 0 
+set_constant -type port {i:/WORK/openMSP430/pmem_dout[5]} 0 
+set_constant -type port {i:/WORK/openMSP430/pmem_dout[6]} 0 
+set_constant -type port {i:/WORK/openMSP430/pmem_dout[7]} 0 
+set_constant -type port {i:/WORK/openMSP430/pmem_dout[8]} 0 
+set_constant -type port {i:/WORK/openMSP430/pmem_dout[9]} 0 
+set_constant -type port {i:/WORK/openMSP430/pmem_dout[10]} 0 
+set_constant -type port {i:/WORK/openMSP430/pmem_dout[11]} 0 
+set_constant -type port {i:/WORK/openMSP430/pmem_dout[12]} 0 
+set_constant -type port {i:/WORK/openMSP430/pmem_dout[13]} 0 
+set_constant -type port {i:/WORK/openMSP430/pmem_dout[14]} 0 
+set_constant -type port {i:/WORK/openMSP430/pmem_dout[15]} 0 
+set_constant -type port i:/WORK/openMSP430/reset_n 0 
+set_constant -type port i:/WORK/openMSP430/scan_enable 0 
+set_constant -type port i:/WORK/openMSP430/scan_mode 0 
+set_constant -type port i:/WORK/openMSP430/test_si1 0 
+set_constant -type port i:/WORK/openMSP430/test_si2 0 
+set_constant -type port i:/WORK/openMSP430/test_si3 0 
+set_constant -type port i:/WORK/openMSP430/wkup 0 
+set_constant -type port i:/WORK/openMSP430/test_si3 0 
+match 
+verify 
+exit

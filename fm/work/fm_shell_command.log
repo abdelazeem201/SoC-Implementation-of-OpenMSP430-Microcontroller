@@ -1,0 +1,57 @@
+#@ # 
+#@ # Running fm_shell Version F-2011.09-SP2 for amd64 -- Nov 22, 2011
+#@ # Date:   Mon Apr 23 22:01:22 2012
+#@ # Run by: amk5vx@ivycreek.ece.Virginia.EDU
+#@ 
+
+source /app/synopsys/formality/F-2011.12/admin/setup/.synopsys_fm.setup
+#@ #
+#@ # .synopsys_fm.setup: Initialization File for Formality
+#@ #
+#@ 
+#@ 
+#@ #
+#@ # Enable stack trace output on fatal.  Not available for all architectures.
+#@ #
+#@ if { $sh_arch == "sparc" || $sh_arch == "sparcOS5" ||      $sh_arch == "hp700" || $sh_arch == "hpux10" } {
+#@   set_unix_variable SYNOPSYS_TRACE ""
+#@ }
+#@ 
+#@ #
+#@ # Variable settings
+#@ #
+#@ set sh_new_variable_message true
+#@ 
+#@ #
+#@ # Synopsys strongly recommends that you uncomment the following command
+#@ # in order to set sh_command_abbrev_mode to the value "Command-Line-Only".
+#@ # Command abbreviation is intended as an interactive convenience.  Using
+#@ # abbreviations in scripts can cause commands to fail in subsequent releases.
+#@ # 
+#@ #set sh_command_abbrev_mode "Command-Line-Only"
+#@ 
+#@ #
+#@ # Some useful aliases
+#@ #
+#@ alias list_commands		help
+#@ 
+#@ #
+#@ # The alias of q to quit is commented out.  Remove the comment 
+#@ # character if you want this alias.  Some users find that having 
+#@ # this particular alias causes problems when mixed with page-mode
+#@ # for reports - an accidental repeated 'q' not only cancels the
+#@ # output but exits the tool.
+#@ #
+#@ #alias q quit
+#@ # -- End source /app/synopsys/formality/F-2011.12/admin/setup/.synopsys_fm.setup
+
+start_gui
+set search_path "/app/synopsys/syn32/F-2011.09-SP3/dw/syn_ver/"
+read_verilog -container r -libname WORK -01 { /net/plato.ee.virginia.edu/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_alu.v /net/plato.ee.virginia.edu/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_and_gate.v /net/plato.ee.virginia.edu/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_clock_gate.v /net/plato.ee.virginia.edu/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_clock_module.v /net/plato.ee.virginia.edu/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_clock_mux.v /net/plato.ee.virginia.edu/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_dbg.v /net/plato.ee.virginia.edu/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_dbg_hwbrk.v /net/plato.ee.virginia.edu/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_dbg_uart.v /net/plato.ee.virginia.edu/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_divider_16b.v /net/plato.ee.virginia.edu/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_execution_unit.v /net/plato.ee.virginia.edu/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_frontend.v /net/plato.ee.virginia.edu/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_mem_backbone.v /net/plato.ee.virginia.edu/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_multiplier.v /net/plato.ee.virginia.edu/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_register_file.v /net/plato.ee.virginia.edu/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_scan_mux.v /net/plato.ee.virginia.edu/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_sfr.v /net/plato.ee.virginia.edu/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_sync_cell.v /net/plato.ee.virginia.edu/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_sync_reset.v /net/plato.ee.virginia.edu/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_wakeup_cell.v /net/plato.ee.virginia.edu/users/amk5vx/synopsys/msp430/formality/pre_layout/source/omsp_watchdog.v /net/plato.ee.virginia.edu/users/amk5vx/synopsys/msp430/formality/pre_layout/source/openMSP430.v } 
+read_db -container r { /net/plato.ee.virginia.edu/users/amk5vx/synopsys/msp430/formality/pre_layout/ref/models/dw_foundation.sldb /net/plato.ee.virginia.edu/users/amk5vx/synopsys/msp430/formality/pre_layout/ref/models/saed90nm_typ_ht.lib } 
+read_db -container r { /net/plato.ee.virginia.edu/users/amk5vx/synopsys/msp430/formality/pre_layout/ref/models/saed90nm_typ_ht.db } 
+set_top r:/WORK/openMSP430 
+set search_path ". ../ /app/synopsys/syn32/F-2011.09-SP3/dw/syn_ver/"
+set_top r:/WORK/openMSP430 
+set search_path ". ../ /app/synopsys/syn32/F-2011.09-SP3/dw/syn_ver"
+set_top r:/WORK/openMSP430 
