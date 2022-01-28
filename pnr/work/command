@@ -1,0 +1,14 @@
+#@ # 
+#@ # Running icc_shell Version F-2015.09-ICC-SP2-1 for amd64 -- Dec 18, 2017
+#@ # Date:   Thu May  3 13:55:09 2017
+#@ # Run by: abdelazeem@ahmed_abdelazeem@outlook.com
+#@ 
+
+start_gui
+open_mw_lib /net/users/abdelazeem/synopsys/msp430/icc/work/COUNT
+open_mw_cel openMSP430
+win_set_filter -class cell -filter {cell_array }
+win_set_filter -class placement_blockage -filter {wiring } -layer {}
+win_set_filter -expand_cell_types {std io hard_macro soft_macro ilm other  }
+win_set_select_class {cell port plan_group group shape via placement_blockage }
+create_power_domain divider -scope {div0}
