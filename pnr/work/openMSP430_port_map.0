@@ -1,0 +1,83 @@
+set_user_match   -inverted   $svf_ref/openMSP430/multiplier_0/per_addr[2]   $svf_impl/openMSP430/multiplier_0/per_addr[2]
+set_user_match   -inverted   $svf_ref/openMSP430/clock_module_0/per_addr[2]   $svf_impl/openMSP430/clock_module_0/per_addr[2]
+guide_constraints -body { multiplier_0 } -equivalent { multiplier_0/per_addr[2]  ~ multiplier_0/IN0 }
+set_user_match   -inverted   $svf_ref/openMSP430/sfr_0/per_addr[1]   $svf_impl/openMSP430/sfr_0/per_addr[1]
+set_user_match   -inverted   $svf_ref/openMSP430/multiplier_0/per_addr[1]   $svf_impl/openMSP430/multiplier_0/per_addr[1]
+set_user_match   -inverted   $svf_ref/openMSP430/div0/per_addr[1]   $svf_impl/openMSP430/div0/per_addr[1]
+guide_constraints -body { sfr_0 } -equivalent { sfr_0/per_addr[1]  ~ sfr_0/IN0 }
+guide_constraints -body { multiplier_0 } -equivalent { multiplier_0/per_addr[1]  ~ multiplier_0/IN1 }
+guide_constraints -body { div0 } -equivalent { div0/per_addr[1]  ~ div0/IN0 }
+set_user_match   -inverted   $svf_ref/openMSP430/sfr_0/per_addr[0]   $svf_impl/openMSP430/sfr_0/per_addr[0]
+set_user_match   -inverted   $svf_ref/openMSP430/multiplier_0/per_addr[0]   $svf_impl/openMSP430/multiplier_0/per_addr[0]
+guide_constraints -body { multiplier_0 } -equivalent { multiplier_0/per_addr[0]  ~ multiplier_0/IN2 }
+guide_constraints -body { sfr_0 } -equivalent { sfr_0/per_addr[0]  ~ sfr_0/IN1 }
+guide_constraints -body { mem_backbone_0 } -equivalent { mem_backbone_0/dbg_mem_en    mem_backbone_0/IN0 }
+set_user_match   -inverted   $svf_ref/openMSP430/watchdog_0/sync_cell_wdtcnt_clr/rst   $svf_impl/openMSP430/watchdog_0/sync_cell_wdtcnt_clr/rst
+set_user_match   -inverted   $svf_ref/openMSP430/watchdog_0/sync_cell_wdtcnt_incr/rst   $svf_impl/openMSP430/watchdog_0/sync_cell_wdtcnt_incr/rst
+set_user_match   -inverted   $svf_ref/openMSP430/clock_module_0/sync_cell_puc_lfxt/rst   $svf_impl/openMSP430/clock_module_0/sync_cell_puc_lfxt/rst
+set_user_match   -inverted   $svf_ref/openMSP430/clock_module_0/sync_cell_puc_sm/rst   $svf_impl/openMSP430/clock_module_0/sync_cell_puc_sm/rst
+set_user_match   -inverted   $svf_ref/openMSP430/clock_module_0/sync_cell_mclk_wkup/rst   $svf_impl/openMSP430/clock_module_0/sync_cell_mclk_wkup/rst
+set_user_match   -inverted   $svf_ref/openMSP430/frontend_0/puc_rst   $svf_impl/openMSP430/frontend_0/puc_rst
+set_user_match   -inverted   $svf_ref/openMSP430/execution_unit_0/puc_rst   $svf_impl/openMSP430/execution_unit_0/puc_rst
+set_user_match   -inverted   $svf_ref/openMSP430/execution_unit_0/register_file_0/puc_rst   $svf_impl/openMSP430/execution_unit_0/register_file_0/puc_rst
+set_user_match   -inverted   $svf_ref/openMSP430/mem_backbone_0/puc_rst   $svf_impl/openMSP430/mem_backbone_0/puc_rst
+set_user_match   -inverted   $svf_ref/openMSP430/sfr_0/puc_rst   $svf_impl/openMSP430/sfr_0/puc_rst
+set_user_match   -inverted   $svf_ref/openMSP430/sfr_0/sync_cell_nmi/rst   $svf_impl/openMSP430/sfr_0/sync_cell_nmi/rst
+set_user_match   -inverted   $svf_ref/openMSP430/watchdog_0/puc_rst   $svf_impl/openMSP430/watchdog_0/puc_rst
+set_user_match   -inverted   $svf_ref/openMSP430/watchdog_0/sync_reset_por/rst_a   $svf_impl/openMSP430/watchdog_0/sync_reset_por/rst_a
+set_user_match   -inverted   $svf_ref/openMSP430/watchdog_0/sync_cell_wdt_evt/rst   $svf_impl/openMSP430/watchdog_0/sync_cell_wdt_evt/rst
+set_user_match   -inverted   $svf_ref/openMSP430/watchdog_0/clock_mux_watchdog/reset   $svf_impl/openMSP430/watchdog_0/clock_mux_watchdog/reset
+set_user_match   -inverted   $svf_ref/openMSP430/multiplier_0/puc_rst   $svf_impl/openMSP430/multiplier_0/puc_rst
+set_user_match   -inverted   $svf_ref/openMSP430/div0/puc_rst   $svf_impl/openMSP430/div0/puc_rst
+guide_constraints -body { mem_backbone_0 } -equivalent { mem_backbone_0/puc_rst  ~ mem_backbone_0/IN1 ~ mem_backbone_0/IN2 ~ mem_backbone_0/IN3 }
+guide_constraints -body { div0 } -equivalent { div0/puc_rst  ~ div0/IN1 ~ div0/IN2 ~ div0/IN3 }
+guide_constraints -body { multiplier_0 } -equivalent { multiplier_0/puc_rst  ~ multiplier_0/IN3 ~ multiplier_0/IN4 ~ multiplier_0/IN5 ~ multiplier_0/IN6 ~ multiplier_0/IN7 ~ multiplier_0/IN8 }
+guide_constraints -body { execution_unit_0 } -equivalent { execution_unit_0/puc_rst  ~ execution_unit_0/IN1 ~ execution_unit_0/IN2 ~ execution_unit_0/IN3 ~ execution_unit_0/IN4 ~ execution_unit_0/IN5 ~ execution_unit_0/IN6 ~ execution_unit_0/IN7 ~ execution_unit_0/IN8 }
+guide_constraints -body { execution_unit_0/register_file_0 } -equivalent { execution_unit_0/register_file_0/puc_rst  ~ execution_unit_0/register_file_0/IN0 ~ execution_unit_0/register_file_0/IN1 ~ execution_unit_0/register_file_0/IN2 ~ execution_unit_0/register_file_0/IN3 ~ execution_unit_0/register_file_0/IN4 }
+guide_constraints -body { frontend_0 } -equivalent { frontend_0/puc_rst  ~ frontend_0/IN0 ~ frontend_0/IN1 ~ frontend_0/IN2 ~ frontend_0/IN3 }
+guide_constraints -body { watchdog_0 } -equivalent { watchdog_0/puc_rst  ~ watchdog_0/IN2 ~ watchdog_0/IN3 ~ watchdog_0/IN4 }
+guide_constraints -body { sfr_0 } -equivalent { sfr_0/puc_rst  ~ sfr_0/IN2 ~ sfr_0/IN3 }
+set_user_match   -inverted   $svf_ref/openMSP430/dbg_0/dbg_uart_0/dbg_rst   $svf_impl/openMSP430/dbg_0/dbg_uart_0/dbg_rst
+set_user_match   -inverted   $svf_ref/openMSP430/dbg_0/dbg_uart_0/sync_cell_uart_rxd/rst   $svf_impl/openMSP430/dbg_0/dbg_uart_0/sync_cell_uart_rxd/rst
+guide_constraints -body { dbg_0/dbg_uart_0 } -equivalent { dbg_0/dbg_uart_0/dbg_rst  ~ dbg_0/dbg_uart_0/IN0 ~ dbg_0/dbg_uart_0/IN1 }
+guide_constraints -body { execution_unit_0/alu_0 } -equivalent { execution_unit_0/alu_0/inst_bw  ~ execution_unit_0/alu_0/IN1   execution_unit_0/alu_0/IN2 }
+guide_constraints -body { execution_unit_0/register_file_0 } -equivalent { execution_unit_0/register_file_0/inst_bw  ~ execution_unit_0/register_file_0/IN5 }
+guide_constraints -body { execution_unit_0 } -equivalent { execution_unit_0/inst_bw    execution_unit_0/IN9 }
+set_user_match   -inverted   $svf_ref/openMSP430/clock_module_0/clock_mux_smclk/reset   $svf_impl/openMSP430/clock_module_0/clock_mux_smclk/reset
+set_user_match   -inverted   $svf_ref/openMSP430/clock_module_0/sync_cell_cpu_aux_en/rst   $svf_impl/openMSP430/clock_module_0/sync_cell_cpu_aux_en/rst
+set_user_match   -inverted   $svf_ref/openMSP430/clock_module_0/sync_cell_cpu_sm_en/rst   $svf_impl/openMSP430/clock_module_0/sync_cell_cpu_sm_en/rst
+set_user_match   -inverted   $svf_ref/openMSP430/clock_module_0/clock_mux_mclk/reset   $svf_impl/openMSP430/clock_module_0/clock_mux_mclk/reset
+set_user_match   -inverted   $svf_ref/openMSP430/clock_module_0/sync_cell_lfxt_disable/rst   $svf_impl/openMSP430/clock_module_0/sync_cell_lfxt_disable/rst
+set_user_match   -inverted   $svf_ref/openMSP430/clock_module_0/sync_cell_dco_disable/rst   $svf_impl/openMSP430/clock_module_0/sync_cell_dco_disable/rst
+set_user_match   -inverted   $svf_ref/openMSP430/watchdog_0/por   $svf_impl/openMSP430/watchdog_0/por
+set_user_match   -inverted   $svf_ref/openMSP430/clock_module_0/cpu_en   $svf_impl/openMSP430/clock_module_0/cpu_en
+set_user_match   -inverted   $svf_ref/openMSP430/clock_module_0/and_lfxt_dis4/a   $svf_impl/openMSP430/clock_module_0/and_lfxt_dis4/a
+set_user_match   -inverted   $svf_ref/openMSP430/clock_module_0/and_dco_dis4/a   $svf_impl/openMSP430/clock_module_0/and_dco_dis4/a
+set_user_match   -inverted   $svf_ref/openMSP430/frontend_0/cpu_en_s   $svf_impl/openMSP430/frontend_0/cpu_en_s
+set_user_match   -inverted   $svf_ref/openMSP430/dbg_0/cpu_en_s   $svf_impl/openMSP430/dbg_0/cpu_en_s
+guide_constraints -body { clock_module_0 } -equivalent { clock_module_0/cpu_en  ~ clock_module_0/IN4 }
+guide_constraints -body { frontend_0 } -equivalent { frontend_0/cpu_en_s  ~ frontend_0/IN6 }
+guide_constraints -body { execution_unit_0 } -equivalent { execution_unit_0/scan_enable    execution_unit_0/IN10   execution_unit_0/IN11   execution_unit_0/IN12   execution_unit_0/IN13   execution_unit_0/IN14   execution_unit_0/IN15   execution_unit_0/IN16   execution_unit_0/IN17   execution_unit_0/IN18   execution_unit_0/IN19 }
+guide_constraints -body { dbg_0 } -equivalent { dbg_0/test_se    dbg_0/IN1   dbg_0/IN2   dbg_0/IN3   dbg_0/IN4   dbg_0/IN5 }
+guide_constraints -body { watchdog_0 } -equivalent { watchdog_0/scan_enable    watchdog_0/IN5   watchdog_0/IN6   watchdog_0/IN7 }
+guide_constraints -body { multiplier_0 } -equivalent { multiplier_0/scan_enable    multiplier_0/IN9   multiplier_0/IN10   multiplier_0/IN11   multiplier_0/IN12 }
+guide_constraints -body { clock_module_0 } -equivalent { clock_module_0/scan_enable    clock_module_0/IN5   clock_module_0/IN6   clock_module_0/IN7   clock_module_0/IN8 }
+guide_constraints -body { watchdog_0/sync_reset_por } -equivalent { watchdog_0/sync_reset_por/test_se    watchdog_0/sync_reset_por/IN0 }
+guide_constraints -body { div0 } -equivalent { div0/scan_enable    div0/IN4   div0/IN5   div0/IN6 }
+guide_constraints -body { sfr_0 } -equivalent { sfr_0/test_se    sfr_0/IN4 }
+guide_constraints -body { clock_module_0/clock_mux_mclk } -equivalent { clock_module_0/clock_mux_mclk/test_se    clock_module_0/clock_mux_mclk/IN0 }
+guide_constraints -body { frontend_0 } -equivalent { frontend_0/scan_enable    frontend_0/IN7   frontend_0/IN8   frontend_0/IN9   frontend_0/IN10   frontend_0/IN11   frontend_0/IN12 }
+guide_constraints -body { execution_unit_0/register_file_0 } -equivalent { execution_unit_0/register_file_0/scan_enable    execution_unit_0/register_file_0/IN6   execution_unit_0/register_file_0/IN7   execution_unit_0/register_file_0/IN8   execution_unit_0/register_file_0/IN9   execution_unit_0/register_file_0/IN10 }
+guide_constraints -body { mem_backbone_0 } -equivalent { mem_backbone_0/scan_enable    mem_backbone_0/IN4   mem_backbone_0/IN5   mem_backbone_0/IN6 }
+guide_constraints -body { dbg_0/dbg_uart_0 } -equivalent { dbg_0/dbg_uart_0/test_se    dbg_0/dbg_uart_0/IN2   dbg_0/dbg_uart_0/IN3 }
+set_user_match   -inverted   $svf_ref/openMSP430/clock_module_0/scan_mux_por/data_in_scan   $svf_impl/openMSP430/clock_module_0/scan_mux_por/data_in_scan
+set_user_match   -inverted   $svf_ref/openMSP430/clock_module_0/scan_mux_dbg_rst/data_in_scan   $svf_impl/openMSP430/clock_module_0/scan_mux_dbg_rst/data_in_scan
+set_user_match   -inverted   $svf_ref/openMSP430/clock_module_0/scan_mux_puc_rst_a/data_in_scan   $svf_impl/openMSP430/clock_module_0/scan_mux_puc_rst_a/data_in_scan
+set_user_match   -inverted   $svf_ref/openMSP430/clock_module_0/scan_mux_puc_rst/data_in_scan   $svf_impl/openMSP430/clock_module_0/scan_mux_puc_rst/data_in_scan
+set_user_match   -inverted   $svf_ref/openMSP430/clock_module_0/scan_mux_puc_lfxt/data_in_scan   $svf_impl/openMSP430/clock_module_0/scan_mux_puc_lfxt/data_in_scan
+set_user_match   -inverted   $svf_ref/openMSP430/clock_module_0/scan_mux_puc_sm/data_in_scan   $svf_impl/openMSP430/clock_module_0/scan_mux_puc_sm/data_in_scan
+set_user_match   -inverted   $svf_ref/openMSP430/clock_module_0/scan_mux_lfxt_wkup/data_in_scan   $svf_impl/openMSP430/clock_module_0/scan_mux_lfxt_wkup/data_in_scan
+set_user_match   -inverted   $svf_ref/openMSP430/clock_module_0/scan_mux_dco_wkup/data_in_scan   $svf_impl/openMSP430/clock_module_0/scan_mux_dco_wkup/data_in_scan
+
+#-------------------------------------------------------------------
+

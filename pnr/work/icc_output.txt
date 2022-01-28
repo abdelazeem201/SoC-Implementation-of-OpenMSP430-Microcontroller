@@ -1,0 +1,17 @@
+Initializing gui preferences from file  /var/home/abdelazeem/.synopsys_icc_prefs.tcl
+icc_shell> start_gui
+Information: Visibility is turned ON for cells and cell contents because the task is set to Block Implementation (GUI-026)
+icc_shell> open_mw_lib /net/plato.ee.virginia.edu/users/abdelazeem/synopsys/msp430/icc/work/COUNT
+{COUNT}
+icc_shell> open_mw_cel openMSP430
+Preparing data for query................... 
+Warning: No valid link library found, please specify link_library. (IFS-008)
+Information: Opened "openMSP430.CEL;1" from "/net/plato.ee.virginia.edu/users/abdelazeem/synopsys/openMSP430/icc/work/COUNT" library. (MWUI-068)
+icc_shell> 
+Error: Cannot read file 'your_library.db'. (UID-58)
+icc_shell> create_power_domain divider -scope {div0}
+Error: Cannot read file 'your_library.db'. (UID-58)
+Error: Cannot read file 'your_library.db'. (UID-58)
+div0/divider
+icc_shell> 
+Exit IC Compiler!
